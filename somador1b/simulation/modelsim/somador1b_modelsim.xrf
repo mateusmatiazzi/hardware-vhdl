@@ -1,0 +1,15 @@
+vendor_name = ModelSim
+source_file = 1, Z:/LH/somador1b/somador1b.vhd
+source_file = 1, Z:/LH/somador1b/db/somador1b.cbx.xml
+source_file = 1, c:/altera/13.1/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
+source_file = 1, c:/altera/13.1/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
+source_file = 1, c:/altera/13.1/quartus/libraries/vhdl/ieee/timing_b.vhd
+source_file = 1, c:/altera/13.1/quartus/libraries/vhdl/ieee/timing_p.vhd
+design_name = somador1b
+instance = comp, \cout~output\, cout~output, somador1b, 1
+instance = comp, \sum~output\, sum~output, somador1b, 1
+instance = comp, \b~input\, b~input, somador1b, 1
+instance = comp, \a~input\, a~input, somador1b, 1
+instance = comp, \cin~input\, cin~input, somador1b, 1
+instance = comp, \cout~0\, cout~0, somador1b, 1
+instance = comp, \sum~0\, sum~0, somador1b, 1
