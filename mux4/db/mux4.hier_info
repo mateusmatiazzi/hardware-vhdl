@@ -1,0 +1,14 @@
+|mux4
+d0 => r.DATAB
+d1 => r.DATAB
+d2 => r.DATAB
+d3 => r.DATAA
+c0 => r.IN0
+c0 => r.IN0
+c0 => r.IN0
+c1 => r.IN1
+c1 => r.IN1
+c1 => r.IN1
+r << r.DB_MAX_OUTPUT_PORT_TYPE
+
+
