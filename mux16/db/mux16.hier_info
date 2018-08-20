@@ -1,0 +1,190 @@
+|mux16
+d0 => mux4:m0.d0
+d1 => mux4:m0.d1
+d2 => mux4:m0.d2
+d3 => mux4:m0.d3
+d4 => mux4:m1.d0
+d5 => mux4:m1.d1
+d6 => mux4:m1.d2
+d7 => mux4:m1.d3
+d8 => mux4:m2.d0
+d9 => mux4:m2.d1
+d10 => mux4:m2.d2
+d11 => mux4:m2.d3
+d12 => mux4:m3.d0
+d13 => mux4:m3.d1
+d14 => mux4:m3.d2
+d15 => mux4:m3.d3
+c0 => mux4:m0.c0
+c0 => mux4:m1.c0
+c0 => mux4:m2.c0
+c0 => mux4:m3.c0
+c1 => mux4:m0.c1
+c1 => mux4:m1.c1
+c1 => mux4:m2.c1
+c1 => mux4:m3.c1
+c2 => mux4:m4.c0
+c3 => mux4:m4.c1
+r <= mux4:m4.r
+
+
+|mux16|mux4:m0
+d0 => mux2:m0.d0
+d1 => mux2:m0.d1
+d2 => mux2:m1.d0
+d3 => mux2:m1.d1
+c0 => mux2:m0.c
+c0 => mux2:m1.c
+c1 => mux2:m2.c
+r <= mux2:m2.r
+
+
+|mux16|mux4:m0|mux2:m0
+d0 => r.DATAB
+d1 => r.DATAA
+c => r.OUTPUTSELECT
+r <= r.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mux16|mux4:m0|mux2:m1
+d0 => r.DATAB
+d1 => r.DATAA
+c => r.OUTPUTSELECT
+r <= r.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mux16|mux4:m0|mux2:m2
+d0 => r.DATAB
+d1 => r.DATAA
+c => r.OUTPUTSELECT
+r <= r.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mux16|mux4:m1
+d0 => mux2:m0.d0
+d1 => mux2:m0.d1
+d2 => mux2:m1.d0
+d3 => mux2:m1.d1
+c0 => mux2:m0.c
+c0 => mux2:m1.c
+c1 => mux2:m2.c
+r <= mux2:m2.r
+
+
+|mux16|mux4:m1|mux2:m0
+d0 => r.DATAB
+d1 => r.DATAA
+c => r.OUTPUTSELECT
+r <= r.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mux16|mux4:m1|mux2:m1
+d0 => r.DATAB
+d1 => r.DATAA
+c => r.OUTPUTSELECT
+r <= r.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mux16|mux4:m1|mux2:m2
+d0 => r.DATAB
+d1 => r.DATAA
+c => r.OUTPUTSELECT
+r <= r.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mux16|mux4:m2
+d0 => mux2:m0.d0
+d1 => mux2:m0.d1
+d2 => mux2:m1.d0
+d3 => mux2:m1.d1
+c0 => mux2:m0.c
+c0 => mux2:m1.c
+c1 => mux2:m2.c
+r <= mux2:m2.r
+
+
+|mux16|mux4:m2|mux2:m0
+d0 => r.DATAB
+d1 => r.DATAA
+c => r.OUTPUTSELECT
+r <= r.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mux16|mux4:m2|mux2:m1
+d0 => r.DATAB
+d1 => r.DATAA
+c => r.OUTPUTSELECT
+r <= r.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mux16|mux4:m2|mux2:m2
+d0 => r.DATAB
+d1 => r.DATAA
+c => r.OUTPUTSELECT
+r <= r.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mux16|mux4:m3
+d0 => mux2:m0.d0
+d1 => mux2:m0.d1
+d2 => mux2:m1.d0
+d3 => mux2:m1.d1
+c0 => mux2:m0.c
+c0 => mux2:m1.c
+c1 => mux2:m2.c
+r <= mux2:m2.r
+
+
+|mux16|mux4:m3|mux2:m0
+d0 => r.DATAB
+d1 => r.DATAA
+c => r.OUTPUTSELECT
+r <= r.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mux16|mux4:m3|mux2:m1
+d0 => r.DATAB
+d1 => r.DATAA
+c => r.OUTPUTSELECT
+r <= r.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mux16|mux4:m3|mux2:m2
+d0 => r.DATAB
+d1 => r.DATAA
+c => r.OUTPUTSELECT
+r <= r.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mux16|mux4:m4
+d0 => mux2:m0.d0
+d1 => mux2:m0.d1
+d2 => mux2:m1.d0
+d3 => mux2:m1.d1
+c0 => mux2:m0.c
+c0 => mux2:m1.c
+c1 => mux2:m2.c
+r <= mux2:m2.r
+
+
+|mux16|mux4:m4|mux2:m0
+d0 => r.DATAB
+d1 => r.DATAA
+c => r.OUTPUTSELECT
+r <= r.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mux16|mux4:m4|mux2:m1
+d0 => r.DATAB
+d1 => r.DATAA
+c => r.OUTPUTSELECT
+r <= r.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mux16|mux4:m4|mux2:m2
+d0 => r.DATAB
+d1 => r.DATAA
+c => r.OUTPUTSELECT
+r <= r.DB_MAX_OUTPUT_PORT_TYPE
+
+

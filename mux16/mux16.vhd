@@ -1,0 +1,25 @@
+--Autor: Mateus Paiva Matiazzi
+--Multiplexador de 4 entradas e 2 bits de controle
+entity mux16 is
+port
+(
+	d0, d1, d2, d3, d4, d5, d6, d7, d8, d9, d10, d11, d12, d13, d14, d15: in bit;
+	c0, c1, c2, c3: in bit;
+	r: out bit
+);
+end mux16;
+architecture dataflow of mux16 is
+	signal s0, s1, s2, s3: bit;
+begin
+	m0: entity work.mux4(structural)
+		port map (d0,d1,d2,d3, c0,c1,s0);
+	m1: entity work.mux4(structural)
+		port map (d4,d5,d6,d7, c0,c1,s1);
+	m2: entity work.mux4(structural)
+		port map (d8,d9,d10,d11, c0,c1,s2);
+	m3: entity work.mux4(structural)
+		port map (d12,d13,d14,d15, c0,c1,s3);
+	m4: entity work.mux4(structural)
+		port map (s0,s1,s2,s3, c2,c3,r);
+		
+end dataflow;
