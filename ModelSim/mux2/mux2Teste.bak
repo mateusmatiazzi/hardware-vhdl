@@ -1,0 +1,13 @@
+vcom mux2.vhdl
+vsim mux2
+add wave d0
+add wave d1
+add wave c
+add wave r
+
+force d0 0 0, 1 50ps -repeat 100ps -cancel 1000ps
+force d1 0 0, 1 100ps -repeat 200ps -cancel 1000ps
+force c 0 0, 1 200ps -repeat 400ps -cancel 1000ps
+
+run -all
+quit -sim

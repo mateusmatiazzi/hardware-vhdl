@@ -1,0 +1,50 @@
+m255
+K3
+13
+cModel Technology
+dZ:\LH\ModelSim
+Emux2
+Z0 w1534960256
+Z1 dZ:\LH\ModelSim\mux2
+Z2 8mux2.vhdl
+Z3 Fmux2.vhdl
+l0
+L3
+V]F4nE9X=gT`ZUK[1RdU6U1
+!s100 KO<N::hba3<Q:G:bAbl0H1
+Z4 OV;C;10.1d;51
+32
+!i10b 1
+Z5 !s108 1534962855.849000
+Z6 !s90 -reportprogress|300|mux2.vhdl|
+Z7 !s107 mux2.vhdl|
+o-O0
+Z8 tExplicit 1
+Aalgorithm
+Z9 DEx4 work 4 mux2 0 22 ]F4nE9X=gT`ZUK[1RdU6U1
+l18
+L17
+Z10 V?z65Sn7oT8JS0hXX5]QE80
+Z11 !s100 @@:28g`<VI`djfP6D3z=_0
+R4
+32
+!i10b 1
+R5
+R6
+R7
+o-O0
+R8
+Adataflow
+R9
+l12
+L11
+Z12 VmI_k>jNcFc47XkXfXh0<C1
+Z13 !s100 Y?K>F37lzMD3^3EDUBjWP0
+R4
+32
+!i10b 1
+R5
+R6
+R7
+o-O0
+R8
