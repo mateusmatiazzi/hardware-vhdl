@@ -1,0 +1,18 @@
+vcom mux2.vhd
+vcom mux4.vhd
+vcom mux16.vhd
+vsim mux16
+
+add wave d
+add wave c
+add wave r
+
+force d(15) 0 0, 1 100ps -repeat 200ps -cancel 1000ps
+force d(14) 0 0, 1 50ps -repeat 100ps -cancel 1000ps
+force d(13) 0 0, 1 25ps -repeat 50ps -cancel 1000ps
+
+force c(3) 0 1, 0 100ps -repeat 200ps -cancel 1000ps
+force c(2) 0 1, 0 50ps -repeat 100ps -cancel 1000ps
+force c(1) 0 1, 0 25ps -repeat 50ps -cancel 1000ps
+
+run -all

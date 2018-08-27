@@ -1,0 +1,114 @@
+m255
+K3
+13
+cModel Technology
+dZ:\LH\ModelSim\mux2
+Emux16
+Z0 w1535393439
+Z1 dZ:\LH\ModelSim\mux16modificado
+Z2 8mux16.vhd
+Z3 Fmux16.vhd
+l0
+L3
+VLPfZT0@0ld3k`9c6>87:c3
+!s100 GclYM8Sg@>DTVH=Ib^GmJ0
+Z4 OV;C;10.1d;51
+32
+!i10b 1
+Z5 !s108 1535395464.444000
+Z6 !s90 -reportprogress|300|mux16.vhd|
+Z7 !s107 mux16.vhd|
+o-O0
+Z8 tExplicit 1
+Adataflow
+Z9 DEx4 work 4 mux4 0 22 aDJgQU>n3acd0dheezagZ1
+Z10 DEx4 work 5 mux16 0 22 LPfZT0@0ld3k`9c6>87:c3
+l13
+L11
+Z11 V<LNO;W7PARgekCzhf:G2S2
+Z12 !s100 AYmG`jgSf;ODb5OXmB07T3
+R4
+32
+!i10b 1
+R5
+R6
+R7
+o-O0
+R8
+Emux2
+Z13 w1534788346
+R1
+Z14 8mux2.vhd
+Z15 Fmux2.vhd
+l0
+L3
+V]F4nE9X=gT`ZUK[1RdU6U1
+R4
+32
+Z16 !s108 1535395463.539000
+Z17 !s90 -reportprogress|300|mux2.vhd|
+Z18 !s107 mux2.vhd|
+o-O0
+R8
+!s100 KO<N::hba3<Q:G:bAbl0H1
+!i10b 1
+Aalgorithm
+Z19 DEx4 work 4 mux2 0 22 ]F4nE9X=gT`ZUK[1RdU6U1
+l18
+L17
+V?z65Sn7oT8JS0hXX5]QE80
+R4
+32
+R16
+R17
+R18
+o-O0
+R8
+!s100 @@:28g`<VI`djfP6D3z=_0
+!i10b 1
+Adataflow
+R19
+l12
+L11
+VmI_k>jNcFc47XkXfXh0<C1
+R4
+32
+R16
+R17
+R18
+o-O0
+R8
+!s100 Y?K>F37lzMD3^3EDUBjWP0
+!i10b 1
+Emux4
+Z20 w1534788330
+R1
+Z21 8mux4.vhd
+Z22 Fmux4.vhd
+l0
+L3
+VaDJgQU>n3acd0dheezagZ1
+R4
+32
+Z23 !s108 1535395464.054000
+Z24 !s90 -reportprogress|300|mux4.vhd|
+Z25 !s107 mux4.vhd|
+o-O0
+R8
+!s100 4l19beWkHAIN0@XJ7>ZVc3
+!i10b 1
+Astructural
+R19
+R9
+l40
+L38
+VkhaZNzV6Hf?GHUZ2FV`671
+!s100 UMoM7hRRI_D<]`BjAMnAh1
+R4
+32
+R23
+R24
+R25
+o-O0
+R8
+!i10b 1
