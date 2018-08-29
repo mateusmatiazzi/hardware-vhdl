@@ -1,0 +1,7 @@
+Z:/LH/Quartus/somador1b/somador1b.vhd {1 {vcom -work work -2002 -explicit Z:/LH/Quartus/somador1b/somador1b.vhd
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Compiling entity somador1b
+-- Compiling architecture comportamental of somador1b
+
+} {} {}}

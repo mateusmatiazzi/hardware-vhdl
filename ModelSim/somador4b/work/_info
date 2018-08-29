@@ -1,0 +1,68 @@
+m255
+K3
+13
+cModel Technology
+dZ:\LH\ModelSim\mux16modificado
+Esomador1b
+Z0 w1534184707
+Z1 dZ:\LH\ModelSim\somador4b
+Z2 8somador1b.vhd
+Z3 Fsomador1b.vhd
+l0
+L3
+VFR87aZIAXcc^[_QaXL8mA3
+Z4 OV;C;10.1d;51
+32
+Z5 !s108 1535568000.615000
+Z6 !s90 -reportprogress|300|somador1b.vhd|
+Z7 !s107 somador1b.vhd|
+o-O0
+Z8 tExplicit 1
+!s100 V>f0=<AhTh<mEBk^3PVl11
+!i10b 1
+Acomportamental
+Z9 DEx4 work 9 somador1b 0 22 FR87aZIAXcc^[_QaXL8mA3
+l12
+L11
+V6:Kj`>GPJIii4Jg3Q>D6`0
+!s100 `4GW=dEVOah2l6h:AV]YC3
+R4
+32
+R5
+R6
+R7
+o-O0
+R8
+!i10b 1
+Esomador4b
+Z10 w1535567973
+R1
+Z11 8somador4b.vhd
+Z12 Fsomador4b.vhd
+l0
+L3
+V@CcehjPRFoV<1dZF_?2k:0
+!s100 A[[z8G@a40>lFfeRLAA=73
+R4
+32
+!i10b 1
+Z13 !s108 1535568000.974000
+Z14 !s90 -reportprogress|300|somador4b.vhd|
+Z15 !s107 somador4b.vhd|
+o-O0
+R8
+Adataflow
+R9
+DEx4 work 9 somador4b 0 22 @CcehjPRFoV<1dZF_?2k:0
+l14
+L12
+V<;4DhWf=OkMH6>RF;Ik`^3
+!s100 ;EV[hBP0J8M:?=WNKfgF>3
+R4
+32
+!i10b 1
+R13
+R14
+R15
+o-O0
+R8

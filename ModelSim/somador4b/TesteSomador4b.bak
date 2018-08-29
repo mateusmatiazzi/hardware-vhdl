@@ -1,0 +1,15 @@
+vcom somador1b.vhd
+vcom somador4b.vhd
+vsim somador4b
+
+add wave a
+add wave b
+add wave cin
+add wave cout
+add wave saida
+
+force a 0000 0, 0001 100ps, 1010 200ps, 1110 300ps  -cancel 1000ps
+force b 0010 0, 0001 100ps, 0011 200ps, 0011 300ps  -cancel 1000ps
+force cin 0 0, 1 500ps -cancel 1000ps
+
+run -all

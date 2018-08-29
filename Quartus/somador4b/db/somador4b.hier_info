@@ -1,0 +1,73 @@
+|somador4b
+a[0] => somador1b:m0.a
+a[1] => somador1b:m1.a
+a[2] => somador1b:m2.a
+a[3] => somador1b:m3.a
+b[0] => somador1b:m0.b
+b[1] => somador1b:m1.b
+b[2] => somador1b:m2.b
+b[3] => somador1b:m3.b
+cin => somador1b:m0.cin
+cout <= somador1b:m3.cout
+saida[0] <= somador1b:m0.sum
+saida[1] <= somador1b:m1.sum
+saida[2] <= somador1b:m2.sum
+saida[3] <= somador1b:m3.sum
+
+
+|somador4b|somador1b:m0
+a => sum.IN0
+a => cout.IN0
+a => cout.IN0
+b => sum.IN1
+b => cout.IN1
+b => cout.IN0
+cin => sum.IN1
+cin => cout.IN1
+cin => cout.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador4b|somador1b:m1
+a => sum.IN0
+a => cout.IN0
+a => cout.IN0
+b => sum.IN1
+b => cout.IN1
+b => cout.IN0
+cin => sum.IN1
+cin => cout.IN1
+cin => cout.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador4b|somador1b:m2
+a => sum.IN0
+a => cout.IN0
+a => cout.IN0
+b => sum.IN1
+b => cout.IN1
+b => cout.IN0
+cin => sum.IN1
+cin => cout.IN1
+cin => cout.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador4b|somador1b:m3
+a => sum.IN0
+a => cout.IN0
+a => cout.IN0
+b => sum.IN1
+b => cout.IN1
+b => cout.IN0
+cin => sum.IN1
+cin => cout.IN1
+cin => cout.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
