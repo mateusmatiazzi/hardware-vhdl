@@ -1,0 +1,16 @@
+|paridade
+entrada[0] => s.IN1
+entrada[0] => saida[1].DATAIN
+entrada[1] => s.IN1
+entrada[1] => saida[2].DATAIN
+entrada[2] => s.IN0
+entrada[2] => saida[3].DATAIN
+entrada[3] => s.IN1
+entrada[3] => saida[4].DATAIN
+saida[0] <= s.DB_MAX_OUTPUT_PORT_TYPE
+saida[1] <= entrada[0].DB_MAX_OUTPUT_PORT_TYPE
+saida[2] <= entrada[1].DB_MAX_OUTPUT_PORT_TYPE
+saida[3] <= entrada[2].DB_MAX_OUTPUT_PORT_TYPE
+saida[4] <= entrada[3].DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,36 @@
+m255
+K3
+13
+cModel Technology
+dZ:\LH\ModelSim\demux8
+Eparidade
+Z0 w1535999496
+Z1 dZ:\LH\ModelSim\paridade
+Z2 8paridade.vhd
+Z3 Fparidade.vhd
+l0
+L2
+V2^>?7B5B^97C_cF82407i0
+!s100 D5RN@JSRLBg0Sno``b`K=0
+Z4 OV;C;10.1d;51
+32
+!i10b 1
+Z5 !s108 1535999678.411000
+Z6 !s90 -reportprogress|300|paridade.vhd|
+Z7 !s107 paridade.vhd|
+o-O0
+Z8 tExplicit 1
+Adataflow
+DEx4 work 8 paridade 0 22 2^>?7B5B^97C_cF82407i0
+l11
+L9
+V:CF[fNHKm`KSX6U[CUDI72
+!s100 B5oTYnJJe2O]W?c^QSzD91
+R4
+32
+!i10b 1
+R5
+R6
+R7
+o-O0
+R8

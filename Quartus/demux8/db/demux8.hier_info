@@ -1,0 +1,83 @@
+|demux8
+e => demux2:m0.e
+se[0] => ~NO_FANOUT~
+se[1] => demux2:m1.se
+se[1] => demux2:m2.se
+se[2] => demux2:m0.se
+se[2] => demux2:m3.se
+se[2] => demux2:m4.se
+se[2] => demux2:m5.se
+se[2] => demux2:m6.se
+saida[0] <= demux2:m3.s1
+saida[1] <= demux2:m3.s0
+saida[2] <= demux2:m4.s1
+saida[3] <= demux2:m4.s0
+saida[4] <= demux2:m5.s1
+saida[5] <= demux2:m5.s0
+saida[6] <= demux2:m6.s1
+saida[7] <= demux2:m6.s0
+
+
+|demux8|demux2:m0
+e => s0.IN0
+e => s1.IN0
+se => s1.IN1
+se => s0.IN1
+s1 <= s1.DB_MAX_OUTPUT_PORT_TYPE
+s0 <= s0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demux8|demux2:m1
+e => s0.IN0
+e => s1.IN0
+se => s1.IN1
+se => s0.IN1
+s1 <= s1.DB_MAX_OUTPUT_PORT_TYPE
+s0 <= s0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demux8|demux2:m2
+e => s0.IN0
+e => s1.IN0
+se => s1.IN1
+se => s0.IN1
+s1 <= s1.DB_MAX_OUTPUT_PORT_TYPE
+s0 <= s0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demux8|demux2:m3
+e => s0.IN0
+e => s1.IN0
+se => s1.IN1
+se => s0.IN1
+s1 <= s1.DB_MAX_OUTPUT_PORT_TYPE
+s0 <= s0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demux8|demux2:m4
+e => s0.IN0
+e => s1.IN0
+se => s1.IN1
+se => s0.IN1
+s1 <= s1.DB_MAX_OUTPUT_PORT_TYPE
+s0 <= s0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demux8|demux2:m5
+e => s0.IN0
+e => s1.IN0
+se => s1.IN1
+se => s0.IN1
+s1 <= s1.DB_MAX_OUTPUT_PORT_TYPE
+s0 <= s0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|demux8|demux2:m6
+e => s0.IN0
+e => s1.IN0
+se => s1.IN1
+se => s0.IN1
+s1 <= s1.DB_MAX_OUTPUT_PORT_TYPE
+s0 <= s0.DB_MAX_OUTPUT_PORT_TYPE
+
+

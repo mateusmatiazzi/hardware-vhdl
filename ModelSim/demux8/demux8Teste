@@ -1,0 +1,12 @@
+vcom demux2.vhd
+vcom demux8.vhd
+vsim demux8
+
+add wave e
+add wave se
+add wave saida
+
+force e 0 0, 1 100 -r 200 -cancel 1000
+force se "000" 0, "101" 100, "111" 200, "001" 300, "011" 400 -cancel 1000
+
+run -all
