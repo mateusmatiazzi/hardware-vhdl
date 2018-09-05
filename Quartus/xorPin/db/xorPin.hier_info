@@ -1,0 +1,6 @@
+|xorPin
+a => r.IN0
+b => r.IN1
+r << r.DB_MAX_OUTPUT_PORT_TYPE
+
+

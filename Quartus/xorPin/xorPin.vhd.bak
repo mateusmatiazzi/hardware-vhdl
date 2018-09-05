@@ -1,0 +1,12 @@
+--Autor: Mateus Paiva Matiazzi
+entity xorPin is
+port
+(
+	a, b: in bit;
+	r out bit
+);
+end xorPint;
+architecture comportamental of xorPin is
+begin
+	r <= a xor b;
+end comportamental;
