@@ -1,0 +1,119 @@
+|somador3b
+a[0] => somador1b:m0.a
+a[0] => Equal15.IN0
+a[0] => Equal16.IN2
+a[0] => Equal17.IN1
+a[0] => Equal18.IN2
+a[0] => Equal19.IN1
+a[0] => Equal20.IN2
+a[0] => Equal21.IN2
+a[1] => somador1b:m1.a
+a[1] => Equal15.IN2
+a[1] => Equal16.IN0
+a[1] => Equal17.IN0
+a[1] => Equal18.IN1
+a[1] => Equal19.IN2
+a[1] => Equal20.IN1
+a[1] => Equal21.IN1
+a[2] => somador1b:m2.a
+a[2] => Equal15.IN1
+a[2] => Equal16.IN1
+a[2] => Equal17.IN2
+a[2] => Equal18.IN0
+a[2] => Equal19.IN0
+a[2] => Equal20.IN0
+a[2] => Equal21.IN0
+b[0] => somador1b:m0.b
+b[0] => Equal22.IN0
+b[0] => Equal23.IN2
+b[0] => Equal24.IN1
+b[0] => Equal25.IN2
+b[0] => Equal26.IN1
+b[0] => Equal27.IN2
+b[0] => Equal28.IN2
+b[1] => somador1b:m1.b
+b[1] => Equal22.IN2
+b[1] => Equal23.IN0
+b[1] => Equal24.IN0
+b[1] => Equal25.IN1
+b[1] => Equal26.IN2
+b[1] => Equal27.IN1
+b[1] => Equal28.IN1
+b[2] => somador1b:m2.b
+b[2] => Equal22.IN1
+b[2] => Equal23.IN1
+b[2] => Equal24.IN2
+b[2] => Equal25.IN0
+b[2] => Equal26.IN0
+b[2] => Equal27.IN0
+b[2] => Equal28.IN0
+opA[7] << <VCC>
+opA[6] << opA.DB_MAX_OUTPUT_PORT_TYPE
+opA[5] << opA.DB_MAX_OUTPUT_PORT_TYPE
+opA[4] << opA.DB_MAX_OUTPUT_PORT_TYPE
+opA[3] << opA.DB_MAX_OUTPUT_PORT_TYPE
+opA[2] << opA.DB_MAX_OUTPUT_PORT_TYPE
+opA[1] << opA.DB_MAX_OUTPUT_PORT_TYPE
+opA[0] << opA.DB_MAX_OUTPUT_PORT_TYPE
+opB[7] << <VCC>
+opB[6] << opB.DB_MAX_OUTPUT_PORT_TYPE
+opB[5] << opB.DB_MAX_OUTPUT_PORT_TYPE
+opB[4] << opB.DB_MAX_OUTPUT_PORT_TYPE
+opB[3] << opB.DB_MAX_OUTPUT_PORT_TYPE
+opB[2] << opB.DB_MAX_OUTPUT_PORT_TYPE
+opB[1] << opB.DB_MAX_OUTPUT_PORT_TYPE
+opB[0] << opB.DB_MAX_OUTPUT_PORT_TYPE
+cin => somador1b:m0.cin
+cout << <GND>
+sum[7] << <VCC>
+sum[6] << sum.DB_MAX_OUTPUT_PORT_TYPE
+sum[5] << sum.DB_MAX_OUTPUT_PORT_TYPE
+sum[4] << sum.DB_MAX_OUTPUT_PORT_TYPE
+sum[3] << sum.DB_MAX_OUTPUT_PORT_TYPE
+sum[2] << sum.DB_MAX_OUTPUT_PORT_TYPE
+sum[1] << sum.DB_MAX_OUTPUT_PORT_TYPE
+sum[0] << sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador3b|somador1b:m0
+a => sum.IN0
+a => cout.IN0
+a => cout.IN0
+b => sum.IN1
+b => cout.IN1
+b => cout.IN0
+cin => sum.IN1
+cin => cout.IN1
+cin => cout.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador3b|somador1b:m1
+a => sum.IN0
+a => cout.IN0
+a => cout.IN0
+b => sum.IN1
+b => cout.IN1
+b => cout.IN0
+cin => sum.IN1
+cin => cout.IN1
+cin => cout.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador3b|somador1b:m2
+a => sum.IN0
+a => cout.IN0
+a => cout.IN0
+b => sum.IN1
+b => cout.IN1
+b => cout.IN0
+cin => sum.IN1
+cin => cout.IN1
+cin => cout.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
