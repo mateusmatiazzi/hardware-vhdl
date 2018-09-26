@@ -1,0 +1,9 @@
+vcom contador.vhd
+vsim contador
+
+add wave clk
+add wave saida
+
+force clk 0 0, 1 10 -r 20 -cancel 5000
+
+run -all

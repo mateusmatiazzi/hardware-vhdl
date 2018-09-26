@@ -1,0 +1,1586 @@
+TimeQuest Timing Analyzer report for contadorHexa
+Wed Sep 26 14:43:04 2018
+Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow 1200mV 85C Model Fmax Summary
+  6. Timing Closure Recommendations
+  7. Slow 1200mV 85C Model Setup Summary
+  8. Slow 1200mV 85C Model Hold Summary
+  9. Slow 1200mV 85C Model Recovery Summary
+ 10. Slow 1200mV 85C Model Removal Summary
+ 11. Slow 1200mV 85C Model Minimum Pulse Width Summary
+ 12. Slow 1200mV 85C Model Setup: 'clk'
+ 13. Slow 1200mV 85C Model Hold: 'clk'
+ 14. Slow 1200mV 85C Model Minimum Pulse Width: 'clk'
+ 15. Clock to Output Times
+ 16. Minimum Clock to Output Times
+ 17. Slow 1200mV 85C Model Metastability Report
+ 18. Slow 1200mV 0C Model Fmax Summary
+ 19. Slow 1200mV 0C Model Setup Summary
+ 20. Slow 1200mV 0C Model Hold Summary
+ 21. Slow 1200mV 0C Model Recovery Summary
+ 22. Slow 1200mV 0C Model Removal Summary
+ 23. Slow 1200mV 0C Model Minimum Pulse Width Summary
+ 24. Slow 1200mV 0C Model Setup: 'clk'
+ 25. Slow 1200mV 0C Model Hold: 'clk'
+ 26. Slow 1200mV 0C Model Minimum Pulse Width: 'clk'
+ 27. Clock to Output Times
+ 28. Minimum Clock to Output Times
+ 29. Slow 1200mV 0C Model Metastability Report
+ 30. Fast 1200mV 0C Model Setup Summary
+ 31. Fast 1200mV 0C Model Hold Summary
+ 32. Fast 1200mV 0C Model Recovery Summary
+ 33. Fast 1200mV 0C Model Removal Summary
+ 34. Fast 1200mV 0C Model Minimum Pulse Width Summary
+ 35. Fast 1200mV 0C Model Setup: 'clk'
+ 36. Fast 1200mV 0C Model Hold: 'clk'
+ 37. Fast 1200mV 0C Model Minimum Pulse Width: 'clk'
+ 38. Clock to Output Times
+ 39. Minimum Clock to Output Times
+ 40. Fast 1200mV 0C Model Metastability Report
+ 41. Multicorner Timing Analysis Summary
+ 42. Clock to Output Times
+ 43. Minimum Clock to Output Times
+ 44. Board Trace Model Assignments
+ 45. Input Transition Times
+ 46. Slow Corner Signal Integrity Metrics
+ 47. Fast Corner Signal Integrity Metrics
+ 48. Setup Transfers
+ 49. Hold Transfers
+ 50. Report TCCS
+ 51. Report RSKM
+ 52. Unconstrained Paths
+ 53. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                       ;
++--------------------+----------------------------------------------------+
+; Quartus II Version ; Version 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
+; Revision Name      ; contadorHexa                                       ;
+; Device Family      ; Cyclone III                                        ;
+; Device Name        ; EP3C16F484C6                                       ;
+; Timing Models      ; Final                                              ;
+; Delay Model        ; Combined                                           ;
+; Rise/Fall Delays   ; Enabled                                            ;
++--------------------+----------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 2      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                          ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; clk        ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+
+
++--------------------------------------------------+
+; Slow 1200mV 85C Model Fmax Summary               ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 183.99 MHz ; 183.99 MHz      ; clk        ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
+----------------------------------
+; Timing Closure Recommendations ;
+----------------------------------
+HTML report is unavailable in plain text report export.
+
+
++-------------------------------------+
+; Slow 1200mV 85C Model Setup Summary ;
++-------+--------+--------------------+
+; Clock ; Slack  ; End Point TNS      ;
++-------+--------+--------------------+
+; clk   ; -4.435 ; -202.443           ;
++-------+--------+--------------------+
+
+
++------------------------------------+
+; Slow 1200mV 85C Model Hold Summary ;
++-------+-------+--------------------+
+; Clock ; Slack ; End Point TNS      ;
++-------+-------+--------------------+
+; clk   ; 0.548 ; 0.000              ;
++-------+-------+--------------------+
+
+
+------------------------------------------
+; Slow 1200mV 85C Model Recovery Summary ;
+------------------------------------------
+No paths to report.
+
+
+-----------------------------------------
+; Slow 1200mV 85C Model Removal Summary ;
+-----------------------------------------
+No paths to report.
+
+
++---------------------------------------------------+
+; Slow 1200mV 85C Model Minimum Pulse Width Summary ;
++-------+--------+----------------------------------+
+; Clock ; Slack  ; End Point TNS                    ;
++-------+--------+----------------------------------+
+; clk   ; -3.000 ; -65.000                          ;
++-------+--------+----------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Setup: 'clk'                                                                              ;
++--------+--------------+-------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node    ; To Node           ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------+-------------------+--------------+-------------+--------------+------------+------------+
+; -4.435 ; \sel:aux[1]  ; \sel:auxSaida[14] ; clk          ; clk         ; 1.000        ; 0.290      ; 5.720      ;
+; -4.435 ; \sel:aux[1]  ; \sel:auxSaida[13] ; clk          ; clk         ; 1.000        ; 0.290      ; 5.720      ;
+; -4.435 ; \sel:aux[1]  ; \sel:auxSaida[12] ; clk          ; clk         ; 1.000        ; 0.290      ; 5.720      ;
+; -4.435 ; \sel:aux[1]  ; \sel:auxSaida[11] ; clk          ; clk         ; 1.000        ; 0.290      ; 5.720      ;
+; -4.435 ; \sel:aux[1]  ; \sel:auxSaida[10] ; clk          ; clk         ; 1.000        ; 0.290      ; 5.720      ;
+; -4.435 ; \sel:aux[1]  ; \sel:auxSaida[9]  ; clk          ; clk         ; 1.000        ; 0.290      ; 5.720      ;
+; -4.435 ; \sel:aux[1]  ; \sel:auxSaida[8]  ; clk          ; clk         ; 1.000        ; 0.290      ; 5.720      ;
+; -4.435 ; \sel:aux[1]  ; \sel:auxSaida[7]  ; clk          ; clk         ; 1.000        ; 0.290      ; 5.720      ;
+; -4.435 ; \sel:aux[1]  ; \sel:auxSaida[6]  ; clk          ; clk         ; 1.000        ; 0.290      ; 5.720      ;
+; -4.435 ; \sel:aux[1]  ; \sel:auxSaida[5]  ; clk          ; clk         ; 1.000        ; 0.290      ; 5.720      ;
+; -4.435 ; \sel:aux[1]  ; \sel:auxSaida[3]  ; clk          ; clk         ; 1.000        ; 0.290      ; 5.720      ;
+; -4.435 ; \sel:aux[1]  ; \sel:auxSaida[2]  ; clk          ; clk         ; 1.000        ; 0.290      ; 5.720      ;
+; -4.435 ; \sel:aux[1]  ; \sel:auxSaida[1]  ; clk          ; clk         ; 1.000        ; 0.290      ; 5.720      ;
+; -4.435 ; \sel:aux[1]  ; \sel:auxSaida[0]  ; clk          ; clk         ; 1.000        ; 0.290      ; 5.720      ;
+; -4.431 ; \sel:aux[7]  ; \sel:auxSaida[14] ; clk          ; clk         ; 1.000        ; 0.293      ; 5.719      ;
+; -4.431 ; \sel:aux[7]  ; \sel:auxSaida[13] ; clk          ; clk         ; 1.000        ; 0.293      ; 5.719      ;
+; -4.431 ; \sel:aux[7]  ; \sel:auxSaida[12] ; clk          ; clk         ; 1.000        ; 0.293      ; 5.719      ;
+; -4.431 ; \sel:aux[7]  ; \sel:auxSaida[11] ; clk          ; clk         ; 1.000        ; 0.293      ; 5.719      ;
+; -4.431 ; \sel:aux[7]  ; \sel:auxSaida[10] ; clk          ; clk         ; 1.000        ; 0.293      ; 5.719      ;
+; -4.431 ; \sel:aux[7]  ; \sel:auxSaida[9]  ; clk          ; clk         ; 1.000        ; 0.293      ; 5.719      ;
+; -4.431 ; \sel:aux[7]  ; \sel:auxSaida[8]  ; clk          ; clk         ; 1.000        ; 0.293      ; 5.719      ;
+; -4.431 ; \sel:aux[7]  ; \sel:auxSaida[7]  ; clk          ; clk         ; 1.000        ; 0.293      ; 5.719      ;
+; -4.431 ; \sel:aux[7]  ; \sel:auxSaida[6]  ; clk          ; clk         ; 1.000        ; 0.293      ; 5.719      ;
+; -4.431 ; \sel:aux[7]  ; \sel:auxSaida[5]  ; clk          ; clk         ; 1.000        ; 0.293      ; 5.719      ;
+; -4.431 ; \sel:aux[7]  ; \sel:auxSaida[3]  ; clk          ; clk         ; 1.000        ; 0.293      ; 5.719      ;
+; -4.431 ; \sel:aux[7]  ; \sel:auxSaida[2]  ; clk          ; clk         ; 1.000        ; 0.293      ; 5.719      ;
+; -4.431 ; \sel:aux[7]  ; \sel:auxSaida[1]  ; clk          ; clk         ; 1.000        ; 0.293      ; 5.719      ;
+; -4.431 ; \sel:aux[7]  ; \sel:auxSaida[0]  ; clk          ; clk         ; 1.000        ; 0.293      ; 5.719      ;
+; -4.423 ; \sel:aux[1]  ; \sel:auxSaida[4]  ; clk          ; clk         ; 1.000        ; 0.284      ; 5.702      ;
+; -4.419 ; \sel:aux[7]  ; \sel:auxSaida[4]  ; clk          ; clk         ; 1.000        ; 0.287      ; 5.701      ;
+; -4.351 ; \sel:aux[0]  ; \sel:auxSaida[14] ; clk          ; clk         ; 1.000        ; 0.290      ; 5.636      ;
+; -4.351 ; \sel:aux[0]  ; \sel:auxSaida[13] ; clk          ; clk         ; 1.000        ; 0.290      ; 5.636      ;
+; -4.351 ; \sel:aux[0]  ; \sel:auxSaida[12] ; clk          ; clk         ; 1.000        ; 0.290      ; 5.636      ;
+; -4.351 ; \sel:aux[0]  ; \sel:auxSaida[11] ; clk          ; clk         ; 1.000        ; 0.290      ; 5.636      ;
+; -4.351 ; \sel:aux[0]  ; \sel:auxSaida[10] ; clk          ; clk         ; 1.000        ; 0.290      ; 5.636      ;
+; -4.351 ; \sel:aux[0]  ; \sel:auxSaida[9]  ; clk          ; clk         ; 1.000        ; 0.290      ; 5.636      ;
+; -4.351 ; \sel:aux[0]  ; \sel:auxSaida[8]  ; clk          ; clk         ; 1.000        ; 0.290      ; 5.636      ;
+; -4.351 ; \sel:aux[0]  ; \sel:auxSaida[7]  ; clk          ; clk         ; 1.000        ; 0.290      ; 5.636      ;
+; -4.351 ; \sel:aux[0]  ; \sel:auxSaida[6]  ; clk          ; clk         ; 1.000        ; 0.290      ; 5.636      ;
+; -4.351 ; \sel:aux[0]  ; \sel:auxSaida[5]  ; clk          ; clk         ; 1.000        ; 0.290      ; 5.636      ;
+; -4.351 ; \sel:aux[0]  ; \sel:auxSaida[3]  ; clk          ; clk         ; 1.000        ; 0.290      ; 5.636      ;
+; -4.351 ; \sel:aux[0]  ; \sel:auxSaida[2]  ; clk          ; clk         ; 1.000        ; 0.290      ; 5.636      ;
+; -4.351 ; \sel:aux[0]  ; \sel:auxSaida[1]  ; clk          ; clk         ; 1.000        ; 0.290      ; 5.636      ;
+; -4.351 ; \sel:aux[0]  ; \sel:auxSaida[0]  ; clk          ; clk         ; 1.000        ; 0.290      ; 5.636      ;
+; -4.339 ; \sel:aux[0]  ; \sel:auxSaida[4]  ; clk          ; clk         ; 1.000        ; 0.284      ; 5.618      ;
+; -4.320 ; \sel:aux[3]  ; \sel:auxSaida[14] ; clk          ; clk         ; 1.000        ; 0.290      ; 5.605      ;
+; -4.320 ; \sel:aux[3]  ; \sel:auxSaida[13] ; clk          ; clk         ; 1.000        ; 0.290      ; 5.605      ;
+; -4.320 ; \sel:aux[3]  ; \sel:auxSaida[12] ; clk          ; clk         ; 1.000        ; 0.290      ; 5.605      ;
+; -4.320 ; \sel:aux[3]  ; \sel:auxSaida[11] ; clk          ; clk         ; 1.000        ; 0.290      ; 5.605      ;
+; -4.320 ; \sel:aux[3]  ; \sel:auxSaida[10] ; clk          ; clk         ; 1.000        ; 0.290      ; 5.605      ;
+; -4.320 ; \sel:aux[3]  ; \sel:auxSaida[9]  ; clk          ; clk         ; 1.000        ; 0.290      ; 5.605      ;
+; -4.320 ; \sel:aux[3]  ; \sel:auxSaida[8]  ; clk          ; clk         ; 1.000        ; 0.290      ; 5.605      ;
+; -4.320 ; \sel:aux[3]  ; \sel:auxSaida[7]  ; clk          ; clk         ; 1.000        ; 0.290      ; 5.605      ;
+; -4.320 ; \sel:aux[3]  ; \sel:auxSaida[6]  ; clk          ; clk         ; 1.000        ; 0.290      ; 5.605      ;
+; -4.320 ; \sel:aux[3]  ; \sel:auxSaida[5]  ; clk          ; clk         ; 1.000        ; 0.290      ; 5.605      ;
+; -4.320 ; \sel:aux[3]  ; \sel:auxSaida[3]  ; clk          ; clk         ; 1.000        ; 0.290      ; 5.605      ;
+; -4.320 ; \sel:aux[3]  ; \sel:auxSaida[2]  ; clk          ; clk         ; 1.000        ; 0.290      ; 5.605      ;
+; -4.320 ; \sel:aux[3]  ; \sel:auxSaida[1]  ; clk          ; clk         ; 1.000        ; 0.290      ; 5.605      ;
+; -4.320 ; \sel:aux[3]  ; \sel:auxSaida[0]  ; clk          ; clk         ; 1.000        ; 0.290      ; 5.605      ;
+; -4.308 ; \sel:aux[3]  ; \sel:auxSaida[4]  ; clk          ; clk         ; 1.000        ; 0.284      ; 5.587      ;
+; -4.239 ; \sel:aux[2]  ; \sel:auxSaida[14] ; clk          ; clk         ; 1.000        ; 0.290      ; 5.524      ;
+; -4.239 ; \sel:aux[2]  ; \sel:auxSaida[13] ; clk          ; clk         ; 1.000        ; 0.290      ; 5.524      ;
+; -4.239 ; \sel:aux[2]  ; \sel:auxSaida[12] ; clk          ; clk         ; 1.000        ; 0.290      ; 5.524      ;
+; -4.239 ; \sel:aux[2]  ; \sel:auxSaida[11] ; clk          ; clk         ; 1.000        ; 0.290      ; 5.524      ;
+; -4.239 ; \sel:aux[2]  ; \sel:auxSaida[10] ; clk          ; clk         ; 1.000        ; 0.290      ; 5.524      ;
+; -4.239 ; \sel:aux[2]  ; \sel:auxSaida[9]  ; clk          ; clk         ; 1.000        ; 0.290      ; 5.524      ;
+; -4.239 ; \sel:aux[2]  ; \sel:auxSaida[8]  ; clk          ; clk         ; 1.000        ; 0.290      ; 5.524      ;
+; -4.239 ; \sel:aux[2]  ; \sel:auxSaida[7]  ; clk          ; clk         ; 1.000        ; 0.290      ; 5.524      ;
+; -4.239 ; \sel:aux[2]  ; \sel:auxSaida[6]  ; clk          ; clk         ; 1.000        ; 0.290      ; 5.524      ;
+; -4.239 ; \sel:aux[2]  ; \sel:auxSaida[5]  ; clk          ; clk         ; 1.000        ; 0.290      ; 5.524      ;
+; -4.239 ; \sel:aux[2]  ; \sel:auxSaida[3]  ; clk          ; clk         ; 1.000        ; 0.290      ; 5.524      ;
+; -4.239 ; \sel:aux[2]  ; \sel:auxSaida[2]  ; clk          ; clk         ; 1.000        ; 0.290      ; 5.524      ;
+; -4.239 ; \sel:aux[2]  ; \sel:auxSaida[1]  ; clk          ; clk         ; 1.000        ; 0.290      ; 5.524      ;
+; -4.239 ; \sel:aux[2]  ; \sel:auxSaida[0]  ; clk          ; clk         ; 1.000        ; 0.290      ; 5.524      ;
+; -4.227 ; \sel:aux[2]  ; \sel:auxSaida[4]  ; clk          ; clk         ; 1.000        ; 0.284      ; 5.506      ;
+; -4.202 ; \sel:aux[5]  ; \sel:auxSaida[14] ; clk          ; clk         ; 1.000        ; 0.290      ; 5.487      ;
+; -4.202 ; \sel:aux[5]  ; \sel:auxSaida[13] ; clk          ; clk         ; 1.000        ; 0.290      ; 5.487      ;
+; -4.202 ; \sel:aux[5]  ; \sel:auxSaida[12] ; clk          ; clk         ; 1.000        ; 0.290      ; 5.487      ;
+; -4.202 ; \sel:aux[5]  ; \sel:auxSaida[11] ; clk          ; clk         ; 1.000        ; 0.290      ; 5.487      ;
+; -4.202 ; \sel:aux[5]  ; \sel:auxSaida[10] ; clk          ; clk         ; 1.000        ; 0.290      ; 5.487      ;
+; -4.202 ; \sel:aux[5]  ; \sel:auxSaida[9]  ; clk          ; clk         ; 1.000        ; 0.290      ; 5.487      ;
+; -4.202 ; \sel:aux[5]  ; \sel:auxSaida[8]  ; clk          ; clk         ; 1.000        ; 0.290      ; 5.487      ;
+; -4.202 ; \sel:aux[5]  ; \sel:auxSaida[7]  ; clk          ; clk         ; 1.000        ; 0.290      ; 5.487      ;
+; -4.202 ; \sel:aux[5]  ; \sel:auxSaida[6]  ; clk          ; clk         ; 1.000        ; 0.290      ; 5.487      ;
+; -4.202 ; \sel:aux[5]  ; \sel:auxSaida[5]  ; clk          ; clk         ; 1.000        ; 0.290      ; 5.487      ;
+; -4.202 ; \sel:aux[5]  ; \sel:auxSaida[3]  ; clk          ; clk         ; 1.000        ; 0.290      ; 5.487      ;
+; -4.202 ; \sel:aux[5]  ; \sel:auxSaida[2]  ; clk          ; clk         ; 1.000        ; 0.290      ; 5.487      ;
+; -4.202 ; \sel:aux[5]  ; \sel:auxSaida[1]  ; clk          ; clk         ; 1.000        ; 0.290      ; 5.487      ;
+; -4.202 ; \sel:aux[5]  ; \sel:auxSaida[0]  ; clk          ; clk         ; 1.000        ; 0.290      ; 5.487      ;
+; -4.190 ; \sel:aux[5]  ; \sel:auxSaida[4]  ; clk          ; clk         ; 1.000        ; 0.284      ; 5.469      ;
+; -4.164 ; \sel:aux[12] ; \sel:auxSaida[14] ; clk          ; clk         ; 1.000        ; -0.077     ; 5.082      ;
+; -4.164 ; \sel:aux[12] ; \sel:auxSaida[13] ; clk          ; clk         ; 1.000        ; -0.077     ; 5.082      ;
+; -4.164 ; \sel:aux[12] ; \sel:auxSaida[12] ; clk          ; clk         ; 1.000        ; -0.077     ; 5.082      ;
+; -4.164 ; \sel:aux[12] ; \sel:auxSaida[11] ; clk          ; clk         ; 1.000        ; -0.077     ; 5.082      ;
+; -4.164 ; \sel:aux[12] ; \sel:auxSaida[10] ; clk          ; clk         ; 1.000        ; -0.077     ; 5.082      ;
+; -4.164 ; \sel:aux[12] ; \sel:auxSaida[9]  ; clk          ; clk         ; 1.000        ; -0.077     ; 5.082      ;
+; -4.164 ; \sel:aux[12] ; \sel:auxSaida[8]  ; clk          ; clk         ; 1.000        ; -0.077     ; 5.082      ;
+; -4.164 ; \sel:aux[12] ; \sel:auxSaida[7]  ; clk          ; clk         ; 1.000        ; -0.077     ; 5.082      ;
+; -4.164 ; \sel:aux[12] ; \sel:auxSaida[6]  ; clk          ; clk         ; 1.000        ; -0.077     ; 5.082      ;
+; -4.164 ; \sel:aux[12] ; \sel:auxSaida[5]  ; clk          ; clk         ; 1.000        ; -0.077     ; 5.082      ;
++--------+--------------+-------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Hold: 'clk'                                                                                   ;
++-------+-------------------+-------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node         ; To Node           ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------+-------------------+--------------+-------------+--------------+------------+------------+
+; 0.548 ; \sel:aux[5]       ; \sel:aux[5]       ; clk          ; clk         ; 0.000        ; 0.062      ; 0.767      ;
+; 0.548 ; \sel:aux[2]       ; \sel:aux[2]       ; clk          ; clk         ; 0.000        ; 0.062      ; 0.767      ;
+; 0.549 ; \sel:aux[30]      ; \sel:aux[30]      ; clk          ; clk         ; 0.000        ; 0.062      ; 0.768      ;
+; 0.549 ; \sel:aux[28]      ; \sel:aux[28]      ; clk          ; clk         ; 0.000        ; 0.062      ; 0.768      ;
+; 0.549 ; \sel:aux[18]      ; \sel:aux[18]      ; clk          ; clk         ; 0.000        ; 0.062      ; 0.768      ;
+; 0.549 ; \sel:aux[4]       ; \sel:aux[4]       ; clk          ; clk         ; 0.000        ; 0.062      ; 0.768      ;
+; 0.549 ; \sel:aux[1]       ; \sel:aux[1]       ; clk          ; clk         ; 0.000        ; 0.062      ; 0.768      ;
+; 0.550 ; \sel:aux[29]      ; \sel:aux[29]      ; clk          ; clk         ; 0.000        ; 0.062      ; 0.769      ;
+; 0.550 ; \sel:aux[27]      ; \sel:aux[27]      ; clk          ; clk         ; 0.000        ; 0.062      ; 0.769      ;
+; 0.550 ; \sel:aux[26]      ; \sel:aux[26]      ; clk          ; clk         ; 0.000        ; 0.062      ; 0.769      ;
+; 0.550 ; \sel:aux[3]       ; \sel:aux[3]       ; clk          ; clk         ; 0.000        ; 0.062      ; 0.769      ;
+; 0.551 ; \sel:aux[16]      ; \sel:aux[16]      ; clk          ; clk         ; 0.000        ; 0.062      ; 0.770      ;
+; 0.551 ; \sel:aux[9]       ; \sel:aux[9]       ; clk          ; clk         ; 0.000        ; 0.062      ; 0.770      ;
+; 0.553 ; \sel:aux[24]      ; \sel:aux[24]      ; clk          ; clk         ; 0.000        ; 0.062      ; 0.772      ;
+; 0.553 ; \sel:aux[6]       ; \sel:aux[6]       ; clk          ; clk         ; 0.000        ; 0.062      ; 0.772      ;
+; 0.554 ; \sel:auxSaida[15] ; \sel:auxSaida[15] ; clk          ; clk         ; 0.000        ; 0.076      ; 0.787      ;
+; 0.554 ; \sel:auxSaida[14] ; \sel:auxSaida[14] ; clk          ; clk         ; 0.000        ; 0.076      ; 0.787      ;
+; 0.554 ; \sel:auxSaida[12] ; \sel:auxSaida[12] ; clk          ; clk         ; 0.000        ; 0.076      ; 0.787      ;
+; 0.554 ; \sel:auxSaida[5]  ; \sel:auxSaida[5]  ; clk          ; clk         ; 0.000        ; 0.076      ; 0.787      ;
+; 0.555 ; \sel:auxSaida[30] ; \sel:auxSaida[30] ; clk          ; clk         ; 0.000        ; 0.076      ; 0.788      ;
+; 0.555 ; \sel:auxSaida[28] ; \sel:auxSaida[28] ; clk          ; clk         ; 0.000        ; 0.076      ; 0.788      ;
+; 0.555 ; \sel:auxSaida[26] ; \sel:auxSaida[26] ; clk          ; clk         ; 0.000        ; 0.076      ; 0.788      ;
+; 0.555 ; \sel:auxSaida[21] ; \sel:auxSaida[21] ; clk          ; clk         ; 0.000        ; 0.076      ; 0.788      ;
+; 0.555 ; \sel:auxSaida[18] ; \sel:auxSaida[18] ; clk          ; clk         ; 0.000        ; 0.076      ; 0.788      ;
+; 0.555 ; \sel:auxSaida[17] ; \sel:auxSaida[17] ; clk          ; clk         ; 0.000        ; 0.076      ; 0.788      ;
+; 0.555 ; \sel:auxSaida[13] ; \sel:auxSaida[13] ; clk          ; clk         ; 0.000        ; 0.076      ; 0.788      ;
+; 0.555 ; \sel:auxSaida[10] ; \sel:auxSaida[10] ; clk          ; clk         ; 0.000        ; 0.076      ; 0.788      ;
+; 0.555 ; \sel:auxSaida[1]  ; \sel:auxSaida[1]  ; clk          ; clk         ; 0.000        ; 0.076      ; 0.788      ;
+; 0.556 ; \sel:auxSaida[29] ; \sel:auxSaida[29] ; clk          ; clk         ; 0.000        ; 0.076      ; 0.789      ;
+; 0.556 ; \sel:auxSaida[27] ; \sel:auxSaida[27] ; clk          ; clk         ; 0.000        ; 0.076      ; 0.789      ;
+; 0.556 ; \sel:auxSaida[20] ; \sel:auxSaida[20] ; clk          ; clk         ; 0.000        ; 0.076      ; 0.789      ;
+; 0.556 ; \sel:auxSaida[19] ; \sel:auxSaida[19] ; clk          ; clk         ; 0.000        ; 0.076      ; 0.789      ;
+; 0.556 ; \sel:auxSaida[11] ; \sel:auxSaida[11] ; clk          ; clk         ; 0.000        ; 0.076      ; 0.789      ;
+; 0.557 ; \sel:auxSaida[25] ; \sel:auxSaida[25] ; clk          ; clk         ; 0.000        ; 0.076      ; 0.790      ;
+; 0.557 ; \sel:auxSaida[23] ; \sel:auxSaida[23] ; clk          ; clk         ; 0.000        ; 0.076      ; 0.790      ;
+; 0.557 ; \sel:auxSaida[16] ; \sel:auxSaida[16] ; clk          ; clk         ; 0.000        ; 0.076      ; 0.790      ;
+; 0.557 ; \sel:auxSaida[9]  ; \sel:auxSaida[9]  ; clk          ; clk         ; 0.000        ; 0.076      ; 0.790      ;
+; 0.557 ; \sel:auxSaida[7]  ; \sel:auxSaida[7]  ; clk          ; clk         ; 0.000        ; 0.076      ; 0.790      ;
+; 0.558 ; \sel:auxSaida[8]  ; \sel:auxSaida[8]  ; clk          ; clk         ; 0.000        ; 0.076      ; 0.791      ;
+; 0.559 ; \sel:auxSaida[24] ; \sel:auxSaida[24] ; clk          ; clk         ; 0.000        ; 0.076      ; 0.792      ;
+; 0.559 ; \sel:auxSaida[22] ; \sel:auxSaida[22] ; clk          ; clk         ; 0.000        ; 0.076      ; 0.792      ;
+; 0.559 ; \sel:auxSaida[6]  ; \sel:auxSaida[6]  ; clk          ; clk         ; 0.000        ; 0.076      ; 0.792      ;
+; 0.571 ; \sel:aux[0]       ; \sel:aux[0]       ; clk          ; clk         ; 0.000        ; 0.062      ; 0.790      ;
+; 0.576 ; \sel:auxSaida[0]  ; \sel:auxSaida[0]  ; clk          ; clk         ; 0.000        ; 0.076      ; 0.809      ;
+; 0.675 ; \sel:auxSaida[3]  ; \sel:auxSaida[3]  ; clk          ; clk         ; 0.000        ; 0.076      ; 0.908      ;
+; 0.683 ; \sel:aux[8]       ; \sel:aux[8]       ; clk          ; clk         ; 0.000        ; 0.062      ; 0.902      ;
+; 0.685 ; \sel:aux[10]      ; \sel:aux[10]      ; clk          ; clk         ; 0.000        ; 0.062      ; 0.904      ;
+; 0.688 ; \sel:aux[11]      ; \sel:aux[11]      ; clk          ; clk         ; 0.000        ; 0.062      ; 0.907      ;
+; 0.823 ; \sel:aux[1]       ; \sel:aux[2]       ; clk          ; clk         ; 0.000        ; 0.062      ; 1.042      ;
+; 0.823 ; \sel:aux[5]       ; \sel:aux[6]       ; clk          ; clk         ; 0.000        ; 0.062      ; 1.042      ;
+; 0.824 ; \sel:aux[29]      ; \sel:aux[30]      ; clk          ; clk         ; 0.000        ; 0.062      ; 1.043      ;
+; 0.824 ; \sel:aux[27]      ; \sel:aux[28]      ; clk          ; clk         ; 0.000        ; 0.062      ; 1.043      ;
+; 0.824 ; \sel:aux[3]       ; \sel:aux[4]       ; clk          ; clk         ; 0.000        ; 0.062      ; 1.043      ;
+; 0.825 ; \sel:aux[9]       ; \sel:aux[10]      ; clk          ; clk         ; 0.000        ; 0.062      ; 1.044      ;
+; 0.828 ; \sel:auxSaida[15] ; \sel:auxSaida[16] ; clk          ; clk         ; 0.000        ; 0.076      ; 1.061      ;
+; 0.829 ; \sel:auxSaida[13] ; \sel:auxSaida[14] ; clk          ; clk         ; 0.000        ; 0.076      ; 1.062      ;
+; 0.829 ; \sel:auxSaida[17] ; \sel:auxSaida[18] ; clk          ; clk         ; 0.000        ; 0.076      ; 1.062      ;
+; 0.829 ; \sel:auxSaida[5]  ; \sel:auxSaida[6]  ; clk          ; clk         ; 0.000        ; 0.076      ; 1.062      ;
+; 0.830 ; \sel:auxSaida[11] ; \sel:auxSaida[12] ; clk          ; clk         ; 0.000        ; 0.076      ; 1.063      ;
+; 0.830 ; \sel:auxSaida[29] ; \sel:auxSaida[30] ; clk          ; clk         ; 0.000        ; 0.076      ; 1.063      ;
+; 0.830 ; \sel:auxSaida[27] ; \sel:auxSaida[28] ; clk          ; clk         ; 0.000        ; 0.076      ; 1.063      ;
+; 0.830 ; \sel:auxSaida[19] ; \sel:auxSaida[20] ; clk          ; clk         ; 0.000        ; 0.076      ; 1.063      ;
+; 0.830 ; \sel:auxSaida[21] ; \sel:auxSaida[22] ; clk          ; clk         ; 0.000        ; 0.076      ; 1.063      ;
+; 0.831 ; \sel:auxSaida[25] ; \sel:auxSaida[26] ; clk          ; clk         ; 0.000        ; 0.076      ; 1.064      ;
+; 0.831 ; \sel:auxSaida[9]  ; \sel:auxSaida[10] ; clk          ; clk         ; 0.000        ; 0.076      ; 1.064      ;
+; 0.831 ; \sel:auxSaida[7]  ; \sel:auxSaida[8]  ; clk          ; clk         ; 0.000        ; 0.076      ; 1.064      ;
+; 0.831 ; \sel:auxSaida[23] ; \sel:auxSaida[24] ; clk          ; clk         ; 0.000        ; 0.076      ; 1.064      ;
+; 0.836 ; \sel:aux[2]       ; \sel:aux[3]       ; clk          ; clk         ; 0.000        ; 0.062      ; 1.055      ;
+; 0.837 ; \sel:aux[4]       ; \sel:aux[5]       ; clk          ; clk         ; 0.000        ; 0.062      ; 1.056      ;
+; 0.837 ; \sel:aux[28]      ; \sel:aux[29]      ; clk          ; clk         ; 0.000        ; 0.062      ; 1.056      ;
+; 0.838 ; \sel:aux[0]       ; \sel:aux[1]       ; clk          ; clk         ; 0.000        ; 0.062      ; 1.057      ;
+; 0.838 ; \sel:aux[26]      ; \sel:aux[27]      ; clk          ; clk         ; 0.000        ; 0.062      ; 1.057      ;
+; 0.838 ; \sel:aux[2]       ; \sel:aux[4]       ; clk          ; clk         ; 0.000        ; 0.062      ; 1.057      ;
+; 0.839 ; \sel:aux[4]       ; \sel:aux[6]       ; clk          ; clk         ; 0.000        ; 0.062      ; 1.058      ;
+; 0.839 ; \sel:aux[28]      ; \sel:aux[30]      ; clk          ; clk         ; 0.000        ; 0.062      ; 1.058      ;
+; 0.840 ; \sel:aux[16]      ; \sel:aux[18]      ; clk          ; clk         ; 0.000        ; 0.062      ; 1.059      ;
+; 0.840 ; \sel:aux[0]       ; \sel:aux[2]       ; clk          ; clk         ; 0.000        ; 0.062      ; 1.059      ;
+; 0.840 ; \sel:aux[26]      ; \sel:aux[28]      ; clk          ; clk         ; 0.000        ; 0.062      ; 1.059      ;
+; 0.842 ; \sel:aux[24]      ; \sel:aux[26]      ; clk          ; clk         ; 0.000        ; 0.062      ; 1.061      ;
+; 0.842 ; \sel:auxSaida[12] ; \sel:auxSaida[13] ; clk          ; clk         ; 0.000        ; 0.076      ; 1.075      ;
+; 0.842 ; \sel:aux[6]       ; \sel:aux[8]       ; clk          ; clk         ; 0.000        ; 0.062      ; 1.061      ;
+; 0.843 ; \sel:auxSaida[0]  ; \sel:auxSaida[1]  ; clk          ; clk         ; 0.000        ; 0.076      ; 1.076      ;
+; 0.843 ; \sel:auxSaida[28] ; \sel:auxSaida[29] ; clk          ; clk         ; 0.000        ; 0.076      ; 1.076      ;
+; 0.843 ; \sel:auxSaida[26] ; \sel:auxSaida[27] ; clk          ; clk         ; 0.000        ; 0.076      ; 1.076      ;
+; 0.843 ; \sel:auxSaida[18] ; \sel:auxSaida[19] ; clk          ; clk         ; 0.000        ; 0.076      ; 1.076      ;
+; 0.843 ; \sel:auxSaida[10] ; \sel:auxSaida[11] ; clk          ; clk         ; 0.000        ; 0.076      ; 1.076      ;
+; 0.844 ; \sel:auxSaida[20] ; \sel:auxSaida[21] ; clk          ; clk         ; 0.000        ; 0.076      ; 1.077      ;
+; 0.844 ; \sel:auxSaida[16] ; \sel:auxSaida[17] ; clk          ; clk         ; 0.000        ; 0.076      ; 1.077      ;
+; 0.844 ; \sel:auxSaida[2]  ; \sel:auxSaida[3]  ; clk          ; clk         ; 0.000        ; 0.076      ; 1.077      ;
+; 0.844 ; \sel:auxSaida[12] ; \sel:auxSaida[14] ; clk          ; clk         ; 0.000        ; 0.076      ; 1.077      ;
+; 0.845 ; \sel:auxSaida[14] ; \sel:auxSaida[15] ; clk          ; clk         ; 0.000        ; 0.073      ; 1.075      ;
+; 0.845 ; \sel:auxSaida[8]  ; \sel:auxSaida[9]  ; clk          ; clk         ; 0.000        ; 0.076      ; 1.078      ;
+; 0.845 ; \sel:auxSaida[10] ; \sel:auxSaida[12] ; clk          ; clk         ; 0.000        ; 0.076      ; 1.078      ;
+; 0.845 ; \sel:auxSaida[28] ; \sel:auxSaida[30] ; clk          ; clk         ; 0.000        ; 0.076      ; 1.078      ;
+; 0.845 ; \sel:auxSaida[26] ; \sel:auxSaida[28] ; clk          ; clk         ; 0.000        ; 0.076      ; 1.078      ;
+; 0.845 ; \sel:auxSaida[18] ; \sel:auxSaida[20] ; clk          ; clk         ; 0.000        ; 0.076      ; 1.078      ;
+; 0.846 ; \sel:auxSaida[24] ; \sel:auxSaida[25] ; clk          ; clk         ; 0.000        ; 0.076      ; 1.079      ;
+; 0.846 ; \sel:auxSaida[22] ; \sel:auxSaida[23] ; clk          ; clk         ; 0.000        ; 0.076      ; 1.079      ;
+; 0.846 ; \sel:auxSaida[6]  ; \sel:auxSaida[7]  ; clk          ; clk         ; 0.000        ; 0.076      ; 1.079      ;
+; 0.846 ; \sel:auxSaida[16] ; \sel:auxSaida[18] ; clk          ; clk         ; 0.000        ; 0.076      ; 1.079      ;
++-------+-------------------+-------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Minimum Pulse Width: 'clk'                                                  ;
++--------+--------------+----------------+-----------------+-------+------------+-------------------+
+; Slack  ; Actual Width ; Required Width ; Type            ; Clock ; Clock Edge ; Target            ;
++--------+--------------+----------------+-----------------+-------+------------+-------------------+
+; -3.000 ; 1.000        ; 4.000          ; Port Rate       ; clk   ; Rise       ; clk               ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:auxSaida[0]  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:auxSaida[10] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:auxSaida[11] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:auxSaida[12] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:auxSaida[13] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:auxSaida[14] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:auxSaida[15] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:auxSaida[16] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:auxSaida[17] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:auxSaida[18] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:auxSaida[19] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:auxSaida[1]  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:auxSaida[20] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:auxSaida[21] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:auxSaida[22] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:auxSaida[23] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:auxSaida[24] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:auxSaida[25] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:auxSaida[26] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:auxSaida[27] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:auxSaida[28] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:auxSaida[29] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:auxSaida[2]  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:auxSaida[30] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:auxSaida[3]  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:auxSaida[4]  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:auxSaida[5]  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:auxSaida[6]  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:auxSaida[7]  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:auxSaida[8]  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:auxSaida[9]  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:aux[0]       ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:aux[10]      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:aux[11]      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:aux[12]      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:aux[13]      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:aux[14]      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:aux[15]      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:aux[16]      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:aux[17]      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:aux[18]      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:aux[19]      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:aux[1]       ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:aux[20]      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:aux[21]      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:aux[22]      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:aux[23]      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:aux[24]      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:aux[25]      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:aux[26]      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:aux[27]      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:aux[28]      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:aux[29]      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:aux[2]       ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:aux[30]      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:aux[3]       ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:aux[4]       ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:aux[5]       ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:aux[6]       ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:aux[7]       ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:aux[8]       ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:aux[9]       ;
+; 0.169  ; 0.353        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; \sel:auxSaida[15] ;
+; 0.169  ; 0.353        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; \sel:auxSaida[16] ;
+; 0.169  ; 0.353        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; \sel:auxSaida[17] ;
+; 0.169  ; 0.353        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; \sel:auxSaida[18] ;
+; 0.169  ; 0.353        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; \sel:auxSaida[19] ;
+; 0.169  ; 0.353        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; \sel:auxSaida[20] ;
+; 0.169  ; 0.353        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; \sel:auxSaida[21] ;
+; 0.169  ; 0.353        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; \sel:auxSaida[22] ;
+; 0.169  ; 0.353        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; \sel:auxSaida[23] ;
+; 0.169  ; 0.353        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; \sel:auxSaida[24] ;
+; 0.169  ; 0.353        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; \sel:auxSaida[25] ;
+; 0.169  ; 0.353        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; \sel:auxSaida[26] ;
+; 0.169  ; 0.353        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; \sel:auxSaida[27] ;
+; 0.169  ; 0.353        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; \sel:auxSaida[28] ;
+; 0.169  ; 0.353        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; \sel:auxSaida[29] ;
+; 0.169  ; 0.353        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; \sel:auxSaida[30] ;
+; 0.169  ; 0.353        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; \sel:aux[15]      ;
+; 0.169  ; 0.353        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; \sel:aux[17]      ;
+; 0.169  ; 0.353        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; \sel:aux[25]      ;
+; 0.170  ; 0.354        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; \sel:auxSaida[0]  ;
+; 0.170  ; 0.354        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; \sel:auxSaida[10] ;
+; 0.170  ; 0.354        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; \sel:auxSaida[11] ;
+; 0.170  ; 0.354        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; \sel:auxSaida[12] ;
+; 0.170  ; 0.354        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; \sel:auxSaida[13] ;
+; 0.170  ; 0.354        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; \sel:auxSaida[14] ;
+; 0.170  ; 0.354        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; \sel:auxSaida[1]  ;
+; 0.170  ; 0.354        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; \sel:auxSaida[2]  ;
+; 0.170  ; 0.354        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; \sel:auxSaida[3]  ;
+; 0.170  ; 0.354        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; \sel:auxSaida[4]  ;
+; 0.170  ; 0.354        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; \sel:auxSaida[5]  ;
+; 0.170  ; 0.354        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; \sel:auxSaida[6]  ;
+; 0.170  ; 0.354        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; \sel:auxSaida[7]  ;
+; 0.170  ; 0.354        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; \sel:auxSaida[8]  ;
+; 0.170  ; 0.354        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; \sel:auxSaida[9]  ;
+; 0.170  ; 0.354        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; \sel:aux[19]      ;
+; 0.170  ; 0.354        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; \sel:aux[20]      ;
+; 0.170  ; 0.354        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; \sel:aux[21]      ;
++--------+--------------+----------------+-----------------+-------+------------+-------------------+
+
+
++----------------------------------------------------------------------------+
+; Clock to Output Times                                                      ;
++--------------+------------+--------+--------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++--------------+------------+--------+--------+------------+-----------------+
+; contador[*]  ; clk        ; 10.738 ; 10.694 ; Rise       ; clk             ;
+;  contador[1] ; clk        ; 9.122  ; 9.085  ; Rise       ; clk             ;
+;  contador[2] ; clk        ; 10.728 ; 10.694 ; Rise       ; clk             ;
+;  contador[3] ; clk        ; 10.295 ; 10.268 ; Rise       ; clk             ;
+;  contador[4] ; clk        ; 10.595 ; 10.559 ; Rise       ; clk             ;
+;  contador[5] ; clk        ; 10.738 ; 10.637 ; Rise       ; clk             ;
+;  contador[6] ; clk        ; 10.642 ; 10.598 ; Rise       ; clk             ;
+;  contador[7] ; clk        ; 10.628 ; 10.576 ; Rise       ; clk             ;
++--------------+------------+--------+--------+------------+-----------------+
+
+
++--------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                            ;
++--------------+------------+-------+-------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++--------------+------------+-------+-------+------------+-----------------+
+; contador[*]  ; clk        ; 6.557 ; 6.491 ; Rise       ; clk             ;
+;  contador[1] ; clk        ; 6.589 ; 6.514 ; Rise       ; clk             ;
+;  contador[2] ; clk        ; 7.060 ; 6.975 ; Rise       ; clk             ;
+;  contador[3] ; clk        ; 6.940 ; 6.961 ; Rise       ; clk             ;
+;  contador[4] ; clk        ; 6.557 ; 6.491 ; Rise       ; clk             ;
+;  contador[5] ; clk        ; 7.124 ; 6.964 ; Rise       ; clk             ;
+;  contador[6] ; clk        ; 7.030 ; 6.867 ; Rise       ; clk             ;
+;  contador[7] ; clk        ; 7.159 ; 7.067 ; Rise       ; clk             ;
++--------------+------------+-------+-------+------------+-----------------+
+
+
+----------------------------------------------
+; Slow 1200mV 85C Model Metastability Report ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
++--------------------------------------------------+
+; Slow 1200mV 0C Model Fmax Summary                ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 205.21 MHz ; 205.21 MHz      ; clk        ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++------------------------------------+
+; Slow 1200mV 0C Model Setup Summary ;
++-------+--------+-------------------+
+; Clock ; Slack  ; End Point TNS     ;
++-------+--------+-------------------+
+; clk   ; -3.873 ; -174.389          ;
++-------+--------+-------------------+
+
+
++-----------------------------------+
+; Slow 1200mV 0C Model Hold Summary ;
++-------+-------+-------------------+
+; Clock ; Slack ; End Point TNS     ;
++-------+-------+-------------------+
+; clk   ; 0.493 ; 0.000             ;
++-------+-------+-------------------+
+
+
+-----------------------------------------
+; Slow 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Slow 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++--------------------------------------------------+
+; Slow 1200mV 0C Model Minimum Pulse Width Summary ;
++-------+--------+---------------------------------+
+; Clock ; Slack  ; End Point TNS                   ;
++-------+--------+---------------------------------+
+; clk   ; -3.000 ; -65.000                         ;
++-------+--------+---------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Setup: 'clk'                                                                               ;
++--------+--------------+-------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node    ; To Node           ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------+-------------------+--------------+-------------+--------------+------------+------------+
+; -3.873 ; \sel:aux[1]  ; \sel:auxSaida[14] ; clk          ; clk         ; 1.000        ; 0.260      ; 5.128      ;
+; -3.873 ; \sel:aux[1]  ; \sel:auxSaida[13] ; clk          ; clk         ; 1.000        ; 0.260      ; 5.128      ;
+; -3.873 ; \sel:aux[1]  ; \sel:auxSaida[12] ; clk          ; clk         ; 1.000        ; 0.260      ; 5.128      ;
+; -3.873 ; \sel:aux[1]  ; \sel:auxSaida[11] ; clk          ; clk         ; 1.000        ; 0.260      ; 5.128      ;
+; -3.873 ; \sel:aux[1]  ; \sel:auxSaida[10] ; clk          ; clk         ; 1.000        ; 0.260      ; 5.128      ;
+; -3.873 ; \sel:aux[1]  ; \sel:auxSaida[9]  ; clk          ; clk         ; 1.000        ; 0.260      ; 5.128      ;
+; -3.873 ; \sel:aux[1]  ; \sel:auxSaida[8]  ; clk          ; clk         ; 1.000        ; 0.260      ; 5.128      ;
+; -3.873 ; \sel:aux[1]  ; \sel:auxSaida[7]  ; clk          ; clk         ; 1.000        ; 0.260      ; 5.128      ;
+; -3.873 ; \sel:aux[1]  ; \sel:auxSaida[6]  ; clk          ; clk         ; 1.000        ; 0.260      ; 5.128      ;
+; -3.873 ; \sel:aux[1]  ; \sel:auxSaida[5]  ; clk          ; clk         ; 1.000        ; 0.260      ; 5.128      ;
+; -3.873 ; \sel:aux[1]  ; \sel:auxSaida[3]  ; clk          ; clk         ; 1.000        ; 0.260      ; 5.128      ;
+; -3.873 ; \sel:aux[1]  ; \sel:auxSaida[2]  ; clk          ; clk         ; 1.000        ; 0.260      ; 5.128      ;
+; -3.873 ; \sel:aux[1]  ; \sel:auxSaida[1]  ; clk          ; clk         ; 1.000        ; 0.260      ; 5.128      ;
+; -3.873 ; \sel:aux[1]  ; \sel:auxSaida[0]  ; clk          ; clk         ; 1.000        ; 0.260      ; 5.128      ;
+; -3.852 ; \sel:aux[1]  ; \sel:auxSaida[4]  ; clk          ; clk         ; 1.000        ; 0.254      ; 5.101      ;
+; -3.849 ; \sel:aux[7]  ; \sel:auxSaida[14] ; clk          ; clk         ; 1.000        ; 0.262      ; 5.106      ;
+; -3.849 ; \sel:aux[7]  ; \sel:auxSaida[13] ; clk          ; clk         ; 1.000        ; 0.262      ; 5.106      ;
+; -3.849 ; \sel:aux[7]  ; \sel:auxSaida[12] ; clk          ; clk         ; 1.000        ; 0.262      ; 5.106      ;
+; -3.849 ; \sel:aux[7]  ; \sel:auxSaida[11] ; clk          ; clk         ; 1.000        ; 0.262      ; 5.106      ;
+; -3.849 ; \sel:aux[7]  ; \sel:auxSaida[10] ; clk          ; clk         ; 1.000        ; 0.262      ; 5.106      ;
+; -3.849 ; \sel:aux[7]  ; \sel:auxSaida[9]  ; clk          ; clk         ; 1.000        ; 0.262      ; 5.106      ;
+; -3.849 ; \sel:aux[7]  ; \sel:auxSaida[8]  ; clk          ; clk         ; 1.000        ; 0.262      ; 5.106      ;
+; -3.849 ; \sel:aux[7]  ; \sel:auxSaida[7]  ; clk          ; clk         ; 1.000        ; 0.262      ; 5.106      ;
+; -3.849 ; \sel:aux[7]  ; \sel:auxSaida[6]  ; clk          ; clk         ; 1.000        ; 0.262      ; 5.106      ;
+; -3.849 ; \sel:aux[7]  ; \sel:auxSaida[5]  ; clk          ; clk         ; 1.000        ; 0.262      ; 5.106      ;
+; -3.849 ; \sel:aux[7]  ; \sel:auxSaida[3]  ; clk          ; clk         ; 1.000        ; 0.262      ; 5.106      ;
+; -3.849 ; \sel:aux[7]  ; \sel:auxSaida[2]  ; clk          ; clk         ; 1.000        ; 0.262      ; 5.106      ;
+; -3.849 ; \sel:aux[7]  ; \sel:auxSaida[1]  ; clk          ; clk         ; 1.000        ; 0.262      ; 5.106      ;
+; -3.849 ; \sel:aux[7]  ; \sel:auxSaida[0]  ; clk          ; clk         ; 1.000        ; 0.262      ; 5.106      ;
+; -3.839 ; \sel:aux[7]  ; \sel:auxSaida[4]  ; clk          ; clk         ; 1.000        ; 0.256      ; 5.090      ;
+; -3.802 ; \sel:aux[0]  ; \sel:auxSaida[14] ; clk          ; clk         ; 1.000        ; 0.260      ; 5.057      ;
+; -3.802 ; \sel:aux[0]  ; \sel:auxSaida[13] ; clk          ; clk         ; 1.000        ; 0.260      ; 5.057      ;
+; -3.802 ; \sel:aux[0]  ; \sel:auxSaida[12] ; clk          ; clk         ; 1.000        ; 0.260      ; 5.057      ;
+; -3.802 ; \sel:aux[0]  ; \sel:auxSaida[11] ; clk          ; clk         ; 1.000        ; 0.260      ; 5.057      ;
+; -3.802 ; \sel:aux[0]  ; \sel:auxSaida[10] ; clk          ; clk         ; 1.000        ; 0.260      ; 5.057      ;
+; -3.802 ; \sel:aux[0]  ; \sel:auxSaida[9]  ; clk          ; clk         ; 1.000        ; 0.260      ; 5.057      ;
+; -3.802 ; \sel:aux[0]  ; \sel:auxSaida[8]  ; clk          ; clk         ; 1.000        ; 0.260      ; 5.057      ;
+; -3.802 ; \sel:aux[0]  ; \sel:auxSaida[7]  ; clk          ; clk         ; 1.000        ; 0.260      ; 5.057      ;
+; -3.802 ; \sel:aux[0]  ; \sel:auxSaida[6]  ; clk          ; clk         ; 1.000        ; 0.260      ; 5.057      ;
+; -3.802 ; \sel:aux[0]  ; \sel:auxSaida[5]  ; clk          ; clk         ; 1.000        ; 0.260      ; 5.057      ;
+; -3.802 ; \sel:aux[0]  ; \sel:auxSaida[3]  ; clk          ; clk         ; 1.000        ; 0.260      ; 5.057      ;
+; -3.802 ; \sel:aux[0]  ; \sel:auxSaida[2]  ; clk          ; clk         ; 1.000        ; 0.260      ; 5.057      ;
+; -3.802 ; \sel:aux[0]  ; \sel:auxSaida[1]  ; clk          ; clk         ; 1.000        ; 0.260      ; 5.057      ;
+; -3.802 ; \sel:aux[0]  ; \sel:auxSaida[0]  ; clk          ; clk         ; 1.000        ; 0.260      ; 5.057      ;
+; -3.781 ; \sel:aux[0]  ; \sel:auxSaida[4]  ; clk          ; clk         ; 1.000        ; 0.254      ; 5.030      ;
+; -3.773 ; \sel:aux[3]  ; \sel:auxSaida[14] ; clk          ; clk         ; 1.000        ; 0.260      ; 5.028      ;
+; -3.773 ; \sel:aux[3]  ; \sel:auxSaida[13] ; clk          ; clk         ; 1.000        ; 0.260      ; 5.028      ;
+; -3.773 ; \sel:aux[3]  ; \sel:auxSaida[12] ; clk          ; clk         ; 1.000        ; 0.260      ; 5.028      ;
+; -3.773 ; \sel:aux[3]  ; \sel:auxSaida[11] ; clk          ; clk         ; 1.000        ; 0.260      ; 5.028      ;
+; -3.773 ; \sel:aux[3]  ; \sel:auxSaida[10] ; clk          ; clk         ; 1.000        ; 0.260      ; 5.028      ;
+; -3.773 ; \sel:aux[3]  ; \sel:auxSaida[9]  ; clk          ; clk         ; 1.000        ; 0.260      ; 5.028      ;
+; -3.773 ; \sel:aux[3]  ; \sel:auxSaida[8]  ; clk          ; clk         ; 1.000        ; 0.260      ; 5.028      ;
+; -3.773 ; \sel:aux[3]  ; \sel:auxSaida[7]  ; clk          ; clk         ; 1.000        ; 0.260      ; 5.028      ;
+; -3.773 ; \sel:aux[3]  ; \sel:auxSaida[6]  ; clk          ; clk         ; 1.000        ; 0.260      ; 5.028      ;
+; -3.773 ; \sel:aux[3]  ; \sel:auxSaida[5]  ; clk          ; clk         ; 1.000        ; 0.260      ; 5.028      ;
+; -3.773 ; \sel:aux[3]  ; \sel:auxSaida[3]  ; clk          ; clk         ; 1.000        ; 0.260      ; 5.028      ;
+; -3.773 ; \sel:aux[3]  ; \sel:auxSaida[2]  ; clk          ; clk         ; 1.000        ; 0.260      ; 5.028      ;
+; -3.773 ; \sel:aux[3]  ; \sel:auxSaida[1]  ; clk          ; clk         ; 1.000        ; 0.260      ; 5.028      ;
+; -3.773 ; \sel:aux[3]  ; \sel:auxSaida[0]  ; clk          ; clk         ; 1.000        ; 0.260      ; 5.028      ;
+; -3.752 ; \sel:aux[3]  ; \sel:auxSaida[4]  ; clk          ; clk         ; 1.000        ; 0.254      ; 5.001      ;
+; -3.707 ; \sel:aux[2]  ; \sel:auxSaida[14] ; clk          ; clk         ; 1.000        ; 0.260      ; 4.962      ;
+; -3.707 ; \sel:aux[2]  ; \sel:auxSaida[13] ; clk          ; clk         ; 1.000        ; 0.260      ; 4.962      ;
+; -3.707 ; \sel:aux[2]  ; \sel:auxSaida[12] ; clk          ; clk         ; 1.000        ; 0.260      ; 4.962      ;
+; -3.707 ; \sel:aux[2]  ; \sel:auxSaida[11] ; clk          ; clk         ; 1.000        ; 0.260      ; 4.962      ;
+; -3.707 ; \sel:aux[2]  ; \sel:auxSaida[10] ; clk          ; clk         ; 1.000        ; 0.260      ; 4.962      ;
+; -3.707 ; \sel:aux[2]  ; \sel:auxSaida[9]  ; clk          ; clk         ; 1.000        ; 0.260      ; 4.962      ;
+; -3.707 ; \sel:aux[2]  ; \sel:auxSaida[8]  ; clk          ; clk         ; 1.000        ; 0.260      ; 4.962      ;
+; -3.707 ; \sel:aux[2]  ; \sel:auxSaida[7]  ; clk          ; clk         ; 1.000        ; 0.260      ; 4.962      ;
+; -3.707 ; \sel:aux[2]  ; \sel:auxSaida[6]  ; clk          ; clk         ; 1.000        ; 0.260      ; 4.962      ;
+; -3.707 ; \sel:aux[2]  ; \sel:auxSaida[5]  ; clk          ; clk         ; 1.000        ; 0.260      ; 4.962      ;
+; -3.707 ; \sel:aux[2]  ; \sel:auxSaida[3]  ; clk          ; clk         ; 1.000        ; 0.260      ; 4.962      ;
+; -3.707 ; \sel:aux[2]  ; \sel:auxSaida[2]  ; clk          ; clk         ; 1.000        ; 0.260      ; 4.962      ;
+; -3.707 ; \sel:aux[2]  ; \sel:auxSaida[1]  ; clk          ; clk         ; 1.000        ; 0.260      ; 4.962      ;
+; -3.707 ; \sel:aux[2]  ; \sel:auxSaida[0]  ; clk          ; clk         ; 1.000        ; 0.260      ; 4.962      ;
+; -3.686 ; \sel:aux[2]  ; \sel:auxSaida[4]  ; clk          ; clk         ; 1.000        ; 0.254      ; 4.935      ;
+; -3.671 ; \sel:aux[5]  ; \sel:auxSaida[14] ; clk          ; clk         ; 1.000        ; 0.260      ; 4.926      ;
+; -3.671 ; \sel:aux[5]  ; \sel:auxSaida[13] ; clk          ; clk         ; 1.000        ; 0.260      ; 4.926      ;
+; -3.671 ; \sel:aux[5]  ; \sel:auxSaida[12] ; clk          ; clk         ; 1.000        ; 0.260      ; 4.926      ;
+; -3.671 ; \sel:aux[5]  ; \sel:auxSaida[11] ; clk          ; clk         ; 1.000        ; 0.260      ; 4.926      ;
+; -3.671 ; \sel:aux[5]  ; \sel:auxSaida[10] ; clk          ; clk         ; 1.000        ; 0.260      ; 4.926      ;
+; -3.671 ; \sel:aux[5]  ; \sel:auxSaida[9]  ; clk          ; clk         ; 1.000        ; 0.260      ; 4.926      ;
+; -3.671 ; \sel:aux[5]  ; \sel:auxSaida[8]  ; clk          ; clk         ; 1.000        ; 0.260      ; 4.926      ;
+; -3.671 ; \sel:aux[5]  ; \sel:auxSaida[7]  ; clk          ; clk         ; 1.000        ; 0.260      ; 4.926      ;
+; -3.671 ; \sel:aux[5]  ; \sel:auxSaida[6]  ; clk          ; clk         ; 1.000        ; 0.260      ; 4.926      ;
+; -3.671 ; \sel:aux[5]  ; \sel:auxSaida[5]  ; clk          ; clk         ; 1.000        ; 0.260      ; 4.926      ;
+; -3.671 ; \sel:aux[5]  ; \sel:auxSaida[3]  ; clk          ; clk         ; 1.000        ; 0.260      ; 4.926      ;
+; -3.671 ; \sel:aux[5]  ; \sel:auxSaida[2]  ; clk          ; clk         ; 1.000        ; 0.260      ; 4.926      ;
+; -3.671 ; \sel:aux[5]  ; \sel:auxSaida[1]  ; clk          ; clk         ; 1.000        ; 0.260      ; 4.926      ;
+; -3.671 ; \sel:aux[5]  ; \sel:auxSaida[0]  ; clk          ; clk         ; 1.000        ; 0.260      ; 4.926      ;
+; -3.650 ; \sel:aux[5]  ; \sel:auxSaida[4]  ; clk          ; clk         ; 1.000        ; 0.254      ; 4.899      ;
+; -3.631 ; \sel:aux[12] ; \sel:auxSaida[14] ; clk          ; clk         ; 1.000        ; -0.068     ; 4.558      ;
+; -3.631 ; \sel:aux[12] ; \sel:auxSaida[13] ; clk          ; clk         ; 1.000        ; -0.068     ; 4.558      ;
+; -3.631 ; \sel:aux[12] ; \sel:auxSaida[12] ; clk          ; clk         ; 1.000        ; -0.068     ; 4.558      ;
+; -3.631 ; \sel:aux[12] ; \sel:auxSaida[11] ; clk          ; clk         ; 1.000        ; -0.068     ; 4.558      ;
+; -3.631 ; \sel:aux[12] ; \sel:auxSaida[10] ; clk          ; clk         ; 1.000        ; -0.068     ; 4.558      ;
+; -3.631 ; \sel:aux[12] ; \sel:auxSaida[9]  ; clk          ; clk         ; 1.000        ; -0.068     ; 4.558      ;
+; -3.631 ; \sel:aux[12] ; \sel:auxSaida[8]  ; clk          ; clk         ; 1.000        ; -0.068     ; 4.558      ;
+; -3.631 ; \sel:aux[12] ; \sel:auxSaida[7]  ; clk          ; clk         ; 1.000        ; -0.068     ; 4.558      ;
+; -3.631 ; \sel:aux[12] ; \sel:auxSaida[6]  ; clk          ; clk         ; 1.000        ; -0.068     ; 4.558      ;
+; -3.631 ; \sel:aux[12] ; \sel:auxSaida[5]  ; clk          ; clk         ; 1.000        ; -0.068     ; 4.558      ;
++--------+--------------+-------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Hold: 'clk'                                                                                    ;
++-------+-------------------+-------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node         ; To Node           ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------+-------------------+--------------+-------------+--------------+------------+------------+
+; 0.493 ; \sel:aux[5]       ; \sel:aux[5]       ; clk          ; clk         ; 0.000        ; 0.055      ; 0.692      ;
+; 0.493 ; \sel:aux[2]       ; \sel:aux[2]       ; clk          ; clk         ; 0.000        ; 0.055      ; 0.692      ;
+; 0.494 ; \sel:aux[30]      ; \sel:aux[30]      ; clk          ; clk         ; 0.000        ; 0.054      ; 0.692      ;
+; 0.494 ; \sel:aux[28]      ; \sel:aux[28]      ; clk          ; clk         ; 0.000        ; 0.054      ; 0.692      ;
+; 0.494 ; \sel:aux[18]      ; \sel:aux[18]      ; clk          ; clk         ; 0.000        ; 0.054      ; 0.692      ;
+; 0.494 ; \sel:aux[4]       ; \sel:aux[4]       ; clk          ; clk         ; 0.000        ; 0.055      ; 0.693      ;
+; 0.494 ; \sel:aux[1]       ; \sel:aux[1]       ; clk          ; clk         ; 0.000        ; 0.055      ; 0.693      ;
+; 0.495 ; \sel:aux[29]      ; \sel:aux[29]      ; clk          ; clk         ; 0.000        ; 0.054      ; 0.693      ;
+; 0.495 ; \sel:aux[26]      ; \sel:aux[26]      ; clk          ; clk         ; 0.000        ; 0.054      ; 0.693      ;
+; 0.495 ; \sel:aux[9]       ; \sel:aux[9]       ; clk          ; clk         ; 0.000        ; 0.055      ; 0.694      ;
+; 0.495 ; \sel:aux[3]       ; \sel:aux[3]       ; clk          ; clk         ; 0.000        ; 0.055      ; 0.694      ;
+; 0.496 ; \sel:aux[27]      ; \sel:aux[27]      ; clk          ; clk         ; 0.000        ; 0.054      ; 0.694      ;
+; 0.497 ; \sel:aux[16]      ; \sel:aux[16]      ; clk          ; clk         ; 0.000        ; 0.054      ; 0.695      ;
+; 0.498 ; \sel:auxSaida[30] ; \sel:auxSaida[30] ; clk          ; clk         ; 0.000        ; 0.068      ; 0.710      ;
+; 0.498 ; \sel:auxSaida[28] ; \sel:auxSaida[28] ; clk          ; clk         ; 0.000        ; 0.068      ; 0.710      ;
+; 0.498 ; \sel:auxSaida[21] ; \sel:auxSaida[21] ; clk          ; clk         ; 0.000        ; 0.068      ; 0.710      ;
+; 0.498 ; \sel:auxSaida[18] ; \sel:auxSaida[18] ; clk          ; clk         ; 0.000        ; 0.068      ; 0.710      ;
+; 0.498 ; \sel:auxSaida[15] ; \sel:auxSaida[15] ; clk          ; clk         ; 0.000        ; 0.068      ; 0.710      ;
+; 0.498 ; \sel:auxSaida[14] ; \sel:auxSaida[14] ; clk          ; clk         ; 0.000        ; 0.067      ; 0.709      ;
+; 0.498 ; \sel:auxSaida[12] ; \sel:auxSaida[12] ; clk          ; clk         ; 0.000        ; 0.067      ; 0.709      ;
+; 0.498 ; \sel:auxSaida[5]  ; \sel:auxSaida[5]  ; clk          ; clk         ; 0.000        ; 0.067      ; 0.709      ;
+; 0.498 ; \sel:aux[6]       ; \sel:aux[6]       ; clk          ; clk         ; 0.000        ; 0.055      ; 0.697      ;
+; 0.499 ; \sel:auxSaida[29] ; \sel:auxSaida[29] ; clk          ; clk         ; 0.000        ; 0.068      ; 0.711      ;
+; 0.499 ; \sel:auxSaida[26] ; \sel:auxSaida[26] ; clk          ; clk         ; 0.000        ; 0.068      ; 0.711      ;
+; 0.499 ; \sel:auxSaida[20] ; \sel:auxSaida[20] ; clk          ; clk         ; 0.000        ; 0.068      ; 0.711      ;
+; 0.499 ; \sel:auxSaida[17] ; \sel:auxSaida[17] ; clk          ; clk         ; 0.000        ; 0.068      ; 0.711      ;
+; 0.499 ; \sel:auxSaida[13] ; \sel:auxSaida[13] ; clk          ; clk         ; 0.000        ; 0.067      ; 0.710      ;
+; 0.499 ; \sel:auxSaida[10] ; \sel:auxSaida[10] ; clk          ; clk         ; 0.000        ; 0.067      ; 0.710      ;
+; 0.499 ; \sel:aux[24]      ; \sel:aux[24]      ; clk          ; clk         ; 0.000        ; 0.054      ; 0.697      ;
+; 0.500 ; \sel:auxSaida[27] ; \sel:auxSaida[27] ; clk          ; clk         ; 0.000        ; 0.068      ; 0.712      ;
+; 0.500 ; \sel:auxSaida[19] ; \sel:auxSaida[19] ; clk          ; clk         ; 0.000        ; 0.068      ; 0.712      ;
+; 0.500 ; \sel:auxSaida[16] ; \sel:auxSaida[16] ; clk          ; clk         ; 0.000        ; 0.068      ; 0.712      ;
+; 0.500 ; \sel:auxSaida[11] ; \sel:auxSaida[11] ; clk          ; clk         ; 0.000        ; 0.067      ; 0.711      ;
+; 0.500 ; \sel:auxSaida[1]  ; \sel:auxSaida[1]  ; clk          ; clk         ; 0.000        ; 0.067      ; 0.711      ;
+; 0.501 ; \sel:auxSaida[25] ; \sel:auxSaida[25] ; clk          ; clk         ; 0.000        ; 0.068      ; 0.713      ;
+; 0.501 ; \sel:auxSaida[23] ; \sel:auxSaida[23] ; clk          ; clk         ; 0.000        ; 0.068      ; 0.713      ;
+; 0.501 ; \sel:auxSaida[9]  ; \sel:auxSaida[9]  ; clk          ; clk         ; 0.000        ; 0.067      ; 0.712      ;
+; 0.501 ; \sel:auxSaida[7]  ; \sel:auxSaida[7]  ; clk          ; clk         ; 0.000        ; 0.067      ; 0.712      ;
+; 0.502 ; \sel:auxSaida[24] ; \sel:auxSaida[24] ; clk          ; clk         ; 0.000        ; 0.068      ; 0.714      ;
+; 0.503 ; \sel:auxSaida[22] ; \sel:auxSaida[22] ; clk          ; clk         ; 0.000        ; 0.068      ; 0.715      ;
+; 0.503 ; \sel:auxSaida[8]  ; \sel:auxSaida[8]  ; clk          ; clk         ; 0.000        ; 0.067      ; 0.714      ;
+; 0.503 ; \sel:auxSaida[6]  ; \sel:auxSaida[6]  ; clk          ; clk         ; 0.000        ; 0.067      ; 0.714      ;
+; 0.511 ; \sel:aux[0]       ; \sel:aux[0]       ; clk          ; clk         ; 0.000        ; 0.055      ; 0.710      ;
+; 0.517 ; \sel:auxSaida[0]  ; \sel:auxSaida[0]  ; clk          ; clk         ; 0.000        ; 0.067      ; 0.728      ;
+; 0.619 ; \sel:auxSaida[3]  ; \sel:auxSaida[3]  ; clk          ; clk         ; 0.000        ; 0.067      ; 0.830      ;
+; 0.620 ; \sel:aux[10]      ; \sel:aux[10]      ; clk          ; clk         ; 0.000        ; 0.055      ; 0.819      ;
+; 0.626 ; \sel:aux[11]      ; \sel:aux[11]      ; clk          ; clk         ; 0.000        ; 0.055      ; 0.825      ;
+; 0.626 ; \sel:aux[8]       ; \sel:aux[8]       ; clk          ; clk         ; 0.000        ; 0.055      ; 0.825      ;
+; 0.737 ; \sel:aux[5]       ; \sel:aux[6]       ; clk          ; clk         ; 0.000        ; 0.055      ; 0.936      ;
+; 0.739 ; \sel:aux[1]       ; \sel:aux[2]       ; clk          ; clk         ; 0.000        ; 0.055      ; 0.938      ;
+; 0.740 ; \sel:aux[29]      ; \sel:aux[30]      ; clk          ; clk         ; 0.000        ; 0.054      ; 0.938      ;
+; 0.740 ; \sel:aux[3]       ; \sel:aux[4]       ; clk          ; clk         ; 0.000        ; 0.055      ; 0.939      ;
+; 0.740 ; \sel:aux[9]       ; \sel:aux[10]      ; clk          ; clk         ; 0.000        ; 0.055      ; 0.939      ;
+; 0.741 ; \sel:aux[27]      ; \sel:aux[28]      ; clk          ; clk         ; 0.000        ; 0.054      ; 0.939      ;
+; 0.742 ; \sel:auxSaida[21] ; \sel:auxSaida[22] ; clk          ; clk         ; 0.000        ; 0.068      ; 0.954      ;
+; 0.742 ; \sel:auxSaida[5]  ; \sel:auxSaida[6]  ; clk          ; clk         ; 0.000        ; 0.067      ; 0.953      ;
+; 0.742 ; \sel:aux[2]       ; \sel:aux[3]       ; clk          ; clk         ; 0.000        ; 0.055      ; 0.941      ;
+; 0.743 ; \sel:auxSaida[15] ; \sel:auxSaida[16] ; clk          ; clk         ; 0.000        ; 0.068      ; 0.955      ;
+; 0.743 ; \sel:aux[4]       ; \sel:aux[5]       ; clk          ; clk         ; 0.000        ; 0.055      ; 0.942      ;
+; 0.743 ; \sel:aux[28]      ; \sel:aux[29]      ; clk          ; clk         ; 0.000        ; 0.054      ; 0.941      ;
+; 0.744 ; \sel:auxSaida[29] ; \sel:auxSaida[30] ; clk          ; clk         ; 0.000        ; 0.068      ; 0.956      ;
+; 0.744 ; \sel:auxSaida[17] ; \sel:auxSaida[18] ; clk          ; clk         ; 0.000        ; 0.068      ; 0.956      ;
+; 0.744 ; \sel:auxSaida[13] ; \sel:auxSaida[14] ; clk          ; clk         ; 0.000        ; 0.067      ; 0.955      ;
+; 0.744 ; \sel:aux[0]       ; \sel:aux[1]       ; clk          ; clk         ; 0.000        ; 0.055      ; 0.943      ;
+; 0.744 ; \sel:aux[26]      ; \sel:aux[27]      ; clk          ; clk         ; 0.000        ; 0.054      ; 0.942      ;
+; 0.745 ; \sel:auxSaida[27] ; \sel:auxSaida[28] ; clk          ; clk         ; 0.000        ; 0.068      ; 0.957      ;
+; 0.745 ; \sel:auxSaida[11] ; \sel:auxSaida[12] ; clk          ; clk         ; 0.000        ; 0.067      ; 0.956      ;
+; 0.745 ; \sel:auxSaida[19] ; \sel:auxSaida[20] ; clk          ; clk         ; 0.000        ; 0.068      ; 0.957      ;
+; 0.746 ; \sel:auxSaida[25] ; \sel:auxSaida[26] ; clk          ; clk         ; 0.000        ; 0.068      ; 0.958      ;
+; 0.746 ; \sel:auxSaida[9]  ; \sel:auxSaida[10] ; clk          ; clk         ; 0.000        ; 0.067      ; 0.957      ;
+; 0.746 ; \sel:auxSaida[23] ; \sel:auxSaida[24] ; clk          ; clk         ; 0.000        ; 0.068      ; 0.958      ;
+; 0.746 ; \sel:auxSaida[7]  ; \sel:auxSaida[8]  ; clk          ; clk         ; 0.000        ; 0.067      ; 0.957      ;
+; 0.747 ; \sel:auxSaida[28] ; \sel:auxSaida[29] ; clk          ; clk         ; 0.000        ; 0.068      ; 0.959      ;
+; 0.747 ; \sel:auxSaida[12] ; \sel:auxSaida[13] ; clk          ; clk         ; 0.000        ; 0.067      ; 0.958      ;
+; 0.747 ; \sel:auxSaida[18] ; \sel:auxSaida[19] ; clk          ; clk         ; 0.000        ; 0.068      ; 0.959      ;
+; 0.748 ; \sel:auxSaida[20] ; \sel:auxSaida[21] ; clk          ; clk         ; 0.000        ; 0.068      ; 0.960      ;
+; 0.748 ; \sel:auxSaida[14] ; \sel:auxSaida[15] ; clk          ; clk         ; 0.000        ; 0.066      ; 0.958      ;
+; 0.748 ; \sel:auxSaida[26] ; \sel:auxSaida[27] ; clk          ; clk         ; 0.000        ; 0.068      ; 0.960      ;
+; 0.748 ; \sel:auxSaida[10] ; \sel:auxSaida[11] ; clk          ; clk         ; 0.000        ; 0.067      ; 0.959      ;
+; 0.749 ; \sel:auxSaida[16] ; \sel:auxSaida[17] ; clk          ; clk         ; 0.000        ; 0.068      ; 0.961      ;
+; 0.749 ; \sel:aux[2]       ; \sel:aux[4]       ; clk          ; clk         ; 0.000        ; 0.055      ; 0.948      ;
+; 0.750 ; \sel:auxSaida[0]  ; \sel:auxSaida[1]  ; clk          ; clk         ; 0.000        ; 0.067      ; 0.961      ;
+; 0.750 ; \sel:aux[4]       ; \sel:aux[6]       ; clk          ; clk         ; 0.000        ; 0.055      ; 0.949      ;
+; 0.750 ; \sel:aux[28]      ; \sel:aux[30]      ; clk          ; clk         ; 0.000        ; 0.054      ; 0.948      ;
+; 0.751 ; \sel:auxSaida[24] ; \sel:auxSaida[25] ; clk          ; clk         ; 0.000        ; 0.068      ; 0.963      ;
+; 0.751 ; \sel:auxSaida[2]  ; \sel:auxSaida[3]  ; clk          ; clk         ; 0.000        ; 0.067      ; 0.962      ;
+; 0.751 ; \sel:aux[0]       ; \sel:aux[2]       ; clk          ; clk         ; 0.000        ; 0.055      ; 0.950      ;
+; 0.751 ; \sel:aux[26]      ; \sel:aux[28]      ; clk          ; clk         ; 0.000        ; 0.054      ; 0.949      ;
+; 0.752 ; \sel:auxSaida[22] ; \sel:auxSaida[23] ; clk          ; clk         ; 0.000        ; 0.068      ; 0.964      ;
+; 0.752 ; \sel:auxSaida[8]  ; \sel:auxSaida[9]  ; clk          ; clk         ; 0.000        ; 0.067      ; 0.963      ;
+; 0.752 ; \sel:auxSaida[6]  ; \sel:auxSaida[7]  ; clk          ; clk         ; 0.000        ; 0.067      ; 0.963      ;
+; 0.753 ; \sel:aux[16]      ; \sel:aux[18]      ; clk          ; clk         ; 0.000        ; 0.054      ; 0.951      ;
+; 0.754 ; \sel:aux[6]       ; \sel:aux[8]       ; clk          ; clk         ; 0.000        ; 0.055      ; 0.953      ;
+; 0.754 ; \sel:auxSaida[28] ; \sel:auxSaida[30] ; clk          ; clk         ; 0.000        ; 0.068      ; 0.966      ;
+; 0.754 ; \sel:auxSaida[12] ; \sel:auxSaida[14] ; clk          ; clk         ; 0.000        ; 0.067      ; 0.965      ;
+; 0.754 ; \sel:auxSaida[18] ; \sel:auxSaida[20] ; clk          ; clk         ; 0.000        ; 0.068      ; 0.966      ;
+; 0.755 ; \sel:aux[24]      ; \sel:aux[26]      ; clk          ; clk         ; 0.000        ; 0.054      ; 0.953      ;
+; 0.755 ; \sel:auxSaida[20] ; \sel:auxSaida[22] ; clk          ; clk         ; 0.000        ; 0.068      ; 0.967      ;
+; 0.755 ; \sel:auxSaida[14] ; \sel:auxSaida[16] ; clk          ; clk         ; 0.000        ; 0.066      ; 0.965      ;
+; 0.755 ; \sel:auxSaida[26] ; \sel:auxSaida[28] ; clk          ; clk         ; 0.000        ; 0.068      ; 0.967      ;
++-------+-------------------+-------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Minimum Pulse Width: 'clk'                                                   ;
++--------+--------------+----------------+-----------------+-------+------------+-------------------+
+; Slack  ; Actual Width ; Required Width ; Type            ; Clock ; Clock Edge ; Target            ;
++--------+--------------+----------------+-----------------+-------+------------+-------------------+
+; -3.000 ; 1.000        ; 4.000          ; Port Rate       ; clk   ; Rise       ; clk               ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:auxSaida[0]  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:auxSaida[10] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:auxSaida[11] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:auxSaida[12] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:auxSaida[13] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:auxSaida[14] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:auxSaida[15] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:auxSaida[16] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:auxSaida[17] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:auxSaida[18] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:auxSaida[19] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:auxSaida[1]  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:auxSaida[20] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:auxSaida[21] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:auxSaida[22] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:auxSaida[23] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:auxSaida[24] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:auxSaida[25] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:auxSaida[26] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:auxSaida[27] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:auxSaida[28] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:auxSaida[29] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:auxSaida[2]  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:auxSaida[30] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:auxSaida[3]  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:auxSaida[4]  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:auxSaida[5]  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:auxSaida[6]  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:auxSaida[7]  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:auxSaida[8]  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:auxSaida[9]  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:aux[0]       ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:aux[10]      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:aux[11]      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:aux[12]      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:aux[13]      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:aux[14]      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:aux[15]      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:aux[16]      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:aux[17]      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:aux[18]      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:aux[19]      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:aux[1]       ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:aux[20]      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:aux[21]      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:aux[22]      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:aux[23]      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:aux[24]      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:aux[25]      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:aux[26]      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:aux[27]      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:aux[28]      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:aux[29]      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:aux[2]       ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:aux[30]      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:aux[3]       ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:aux[4]       ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:aux[5]       ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:aux[6]       ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:aux[7]       ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:aux[8]       ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:aux[9]       ;
+; 0.174  ; 0.358        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; \sel:auxSaida[4]  ;
+; 0.174  ; 0.358        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; \sel:aux[15]      ;
+; 0.174  ; 0.358        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; \sel:aux[17]      ;
+; 0.174  ; 0.358        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; \sel:aux[25]      ;
+; 0.175  ; 0.359        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; \sel:auxSaida[0]  ;
+; 0.175  ; 0.359        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; \sel:auxSaida[10] ;
+; 0.175  ; 0.359        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; \sel:auxSaida[11] ;
+; 0.175  ; 0.359        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; \sel:auxSaida[12] ;
+; 0.175  ; 0.359        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; \sel:auxSaida[13] ;
+; 0.175  ; 0.359        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; \sel:auxSaida[14] ;
+; 0.175  ; 0.359        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; \sel:auxSaida[15] ;
+; 0.175  ; 0.359        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; \sel:auxSaida[16] ;
+; 0.175  ; 0.359        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; \sel:auxSaida[17] ;
+; 0.175  ; 0.359        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; \sel:auxSaida[18] ;
+; 0.175  ; 0.359        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; \sel:auxSaida[19] ;
+; 0.175  ; 0.359        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; \sel:auxSaida[1]  ;
+; 0.175  ; 0.359        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; \sel:auxSaida[20] ;
+; 0.175  ; 0.359        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; \sel:auxSaida[21] ;
+; 0.175  ; 0.359        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; \sel:auxSaida[22] ;
+; 0.175  ; 0.359        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; \sel:auxSaida[23] ;
+; 0.175  ; 0.359        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; \sel:auxSaida[24] ;
+; 0.175  ; 0.359        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; \sel:auxSaida[25] ;
+; 0.175  ; 0.359        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; \sel:auxSaida[26] ;
+; 0.175  ; 0.359        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; \sel:auxSaida[27] ;
+; 0.175  ; 0.359        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; \sel:auxSaida[28] ;
+; 0.175  ; 0.359        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; \sel:auxSaida[29] ;
+; 0.175  ; 0.359        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; \sel:auxSaida[2]  ;
+; 0.175  ; 0.359        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; \sel:auxSaida[30] ;
+; 0.175  ; 0.359        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; \sel:auxSaida[3]  ;
+; 0.175  ; 0.359        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; \sel:auxSaida[5]  ;
+; 0.175  ; 0.359        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; \sel:auxSaida[6]  ;
+; 0.175  ; 0.359        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; \sel:auxSaida[7]  ;
+; 0.175  ; 0.359        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; \sel:auxSaida[8]  ;
+; 0.175  ; 0.359        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; \sel:auxSaida[9]  ;
+; 0.175  ; 0.359        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; \sel:aux[12]      ;
+; 0.175  ; 0.359        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; \sel:aux[19]      ;
+; 0.175  ; 0.359        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; \sel:aux[20]      ;
++--------+--------------+----------------+-----------------+-------+------------+-------------------+
+
+
++--------------------------------------------------------------------------+
+; Clock to Output Times                                                    ;
++--------------+------------+-------+-------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++--------------+------------+-------+-------+------------+-----------------+
+; contador[*]  ; clk        ; 9.969 ; 9.894 ; Rise       ; clk             ;
+;  contador[1] ; clk        ; 8.518 ; 8.445 ; Rise       ; clk             ;
+;  contador[2] ; clk        ; 9.969 ; 9.894 ; Rise       ; clk             ;
+;  contador[3] ; clk        ; 9.562 ; 9.514 ; Rise       ; clk             ;
+;  contador[4] ; clk        ; 9.834 ; 9.750 ; Rise       ; clk             ;
+;  contador[5] ; clk        ; 9.967 ; 9.872 ; Rise       ; clk             ;
+;  contador[6] ; clk        ; 9.892 ; 9.807 ; Rise       ; clk             ;
+;  contador[7] ; clk        ; 9.879 ; 9.789 ; Rise       ; clk             ;
++--------------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                            ;
++--------------+------------+-------+-------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++--------------+------------+-------+-------+------------+-----------------+
+; contador[*]  ; clk        ; 6.194 ; 6.095 ; Rise       ; clk             ;
+;  contador[1] ; clk        ; 6.209 ; 6.124 ; Rise       ; clk             ;
+;  contador[2] ; clk        ; 6.635 ; 6.525 ; Rise       ; clk             ;
+;  contador[3] ; clk        ; 6.534 ; 6.517 ; Rise       ; clk             ;
+;  contador[4] ; clk        ; 6.194 ; 6.095 ; Rise       ; clk             ;
+;  contador[5] ; clk        ; 6.684 ; 6.535 ; Rise       ; clk             ;
+;  contador[6] ; clk        ; 6.603 ; 6.429 ; Rise       ; clk             ;
+;  contador[7] ; clk        ; 6.728 ; 6.611 ; Rise       ; clk             ;
++--------------+------------+-------+-------+------------+-----------------+
+
+
+---------------------------------------------
+; Slow 1200mV 0C Model Metastability Report ;
+---------------------------------------------
+No synchronizer chains to report.
+
+
++------------------------------------+
+; Fast 1200mV 0C Model Setup Summary ;
++-------+--------+-------------------+
+; Clock ; Slack  ; End Point TNS     ;
++-------+--------+-------------------+
+; clk   ; -2.102 ; -89.393           ;
++-------+--------+-------------------+
+
+
++-----------------------------------+
+; Fast 1200mV 0C Model Hold Summary ;
++-------+-------+-------------------+
+; Clock ; Slack ; End Point TNS     ;
++-------+-------+-------------------+
+; clk   ; 0.293 ; 0.000             ;
++-------+-------+-------------------+
+
+
+-----------------------------------------
+; Fast 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Fast 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++--------------------------------------------------+
+; Fast 1200mV 0C Model Minimum Pulse Width Summary ;
++-------+--------+---------------------------------+
+; Clock ; Slack  ; End Point TNS                   ;
++-------+--------+---------------------------------+
+; clk   ; -3.000 ; -69.632                         ;
++-------+--------+---------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Setup: 'clk'                                                                              ;
++--------+-------------+-------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node   ; To Node           ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------+-------------------+--------------+-------------+--------------+------------+------------+
+; -2.102 ; \sel:aux[7] ; \sel:auxSaida[14] ; clk          ; clk         ; 1.000        ; 0.155      ; 3.244      ;
+; -2.102 ; \sel:aux[7] ; \sel:auxSaida[13] ; clk          ; clk         ; 1.000        ; 0.155      ; 3.244      ;
+; -2.102 ; \sel:aux[7] ; \sel:auxSaida[12] ; clk          ; clk         ; 1.000        ; 0.155      ; 3.244      ;
+; -2.102 ; \sel:aux[7] ; \sel:auxSaida[11] ; clk          ; clk         ; 1.000        ; 0.155      ; 3.244      ;
+; -2.102 ; \sel:aux[7] ; \sel:auxSaida[10] ; clk          ; clk         ; 1.000        ; 0.155      ; 3.244      ;
+; -2.102 ; \sel:aux[7] ; \sel:auxSaida[9]  ; clk          ; clk         ; 1.000        ; 0.155      ; 3.244      ;
+; -2.102 ; \sel:aux[7] ; \sel:auxSaida[8]  ; clk          ; clk         ; 1.000        ; 0.155      ; 3.244      ;
+; -2.102 ; \sel:aux[7] ; \sel:auxSaida[7]  ; clk          ; clk         ; 1.000        ; 0.155      ; 3.244      ;
+; -2.102 ; \sel:aux[7] ; \sel:auxSaida[6]  ; clk          ; clk         ; 1.000        ; 0.155      ; 3.244      ;
+; -2.102 ; \sel:aux[7] ; \sel:auxSaida[5]  ; clk          ; clk         ; 1.000        ; 0.155      ; 3.244      ;
+; -2.102 ; \sel:aux[7] ; \sel:auxSaida[3]  ; clk          ; clk         ; 1.000        ; 0.155      ; 3.244      ;
+; -2.102 ; \sel:aux[7] ; \sel:auxSaida[2]  ; clk          ; clk         ; 1.000        ; 0.155      ; 3.244      ;
+; -2.102 ; \sel:aux[7] ; \sel:auxSaida[1]  ; clk          ; clk         ; 1.000        ; 0.155      ; 3.244      ;
+; -2.102 ; \sel:aux[7] ; \sel:auxSaida[0]  ; clk          ; clk         ; 1.000        ; 0.155      ; 3.244      ;
+; -2.083 ; \sel:aux[7] ; \sel:auxSaida[4]  ; clk          ; clk         ; 1.000        ; 0.150      ; 3.220      ;
+; -2.070 ; \sel:aux[1] ; \sel:auxSaida[14] ; clk          ; clk         ; 1.000        ; 0.154      ; 3.211      ;
+; -2.070 ; \sel:aux[1] ; \sel:auxSaida[13] ; clk          ; clk         ; 1.000        ; 0.154      ; 3.211      ;
+; -2.070 ; \sel:aux[1] ; \sel:auxSaida[12] ; clk          ; clk         ; 1.000        ; 0.154      ; 3.211      ;
+; -2.070 ; \sel:aux[1] ; \sel:auxSaida[11] ; clk          ; clk         ; 1.000        ; 0.154      ; 3.211      ;
+; -2.070 ; \sel:aux[1] ; \sel:auxSaida[10] ; clk          ; clk         ; 1.000        ; 0.154      ; 3.211      ;
+; -2.070 ; \sel:aux[1] ; \sel:auxSaida[9]  ; clk          ; clk         ; 1.000        ; 0.154      ; 3.211      ;
+; -2.070 ; \sel:aux[1] ; \sel:auxSaida[8]  ; clk          ; clk         ; 1.000        ; 0.154      ; 3.211      ;
+; -2.070 ; \sel:aux[1] ; \sel:auxSaida[7]  ; clk          ; clk         ; 1.000        ; 0.154      ; 3.211      ;
+; -2.070 ; \sel:aux[1] ; \sel:auxSaida[6]  ; clk          ; clk         ; 1.000        ; 0.154      ; 3.211      ;
+; -2.070 ; \sel:aux[1] ; \sel:auxSaida[5]  ; clk          ; clk         ; 1.000        ; 0.154      ; 3.211      ;
+; -2.070 ; \sel:aux[1] ; \sel:auxSaida[3]  ; clk          ; clk         ; 1.000        ; 0.154      ; 3.211      ;
+; -2.070 ; \sel:aux[1] ; \sel:auxSaida[2]  ; clk          ; clk         ; 1.000        ; 0.154      ; 3.211      ;
+; -2.070 ; \sel:aux[1] ; \sel:auxSaida[1]  ; clk          ; clk         ; 1.000        ; 0.154      ; 3.211      ;
+; -2.070 ; \sel:aux[1] ; \sel:auxSaida[0]  ; clk          ; clk         ; 1.000        ; 0.154      ; 3.211      ;
+; -2.051 ; \sel:aux[1] ; \sel:auxSaida[4]  ; clk          ; clk         ; 1.000        ; 0.149      ; 3.187      ;
+; -2.021 ; \sel:aux[0] ; \sel:auxSaida[14] ; clk          ; clk         ; 1.000        ; 0.154      ; 3.162      ;
+; -2.021 ; \sel:aux[0] ; \sel:auxSaida[13] ; clk          ; clk         ; 1.000        ; 0.154      ; 3.162      ;
+; -2.021 ; \sel:aux[0] ; \sel:auxSaida[12] ; clk          ; clk         ; 1.000        ; 0.154      ; 3.162      ;
+; -2.021 ; \sel:aux[0] ; \sel:auxSaida[11] ; clk          ; clk         ; 1.000        ; 0.154      ; 3.162      ;
+; -2.021 ; \sel:aux[0] ; \sel:auxSaida[10] ; clk          ; clk         ; 1.000        ; 0.154      ; 3.162      ;
+; -2.021 ; \sel:aux[0] ; \sel:auxSaida[9]  ; clk          ; clk         ; 1.000        ; 0.154      ; 3.162      ;
+; -2.021 ; \sel:aux[0] ; \sel:auxSaida[8]  ; clk          ; clk         ; 1.000        ; 0.154      ; 3.162      ;
+; -2.021 ; \sel:aux[0] ; \sel:auxSaida[7]  ; clk          ; clk         ; 1.000        ; 0.154      ; 3.162      ;
+; -2.021 ; \sel:aux[0] ; \sel:auxSaida[6]  ; clk          ; clk         ; 1.000        ; 0.154      ; 3.162      ;
+; -2.021 ; \sel:aux[0] ; \sel:auxSaida[5]  ; clk          ; clk         ; 1.000        ; 0.154      ; 3.162      ;
+; -2.021 ; \sel:aux[0] ; \sel:auxSaida[3]  ; clk          ; clk         ; 1.000        ; 0.154      ; 3.162      ;
+; -2.021 ; \sel:aux[0] ; \sel:auxSaida[2]  ; clk          ; clk         ; 1.000        ; 0.154      ; 3.162      ;
+; -2.021 ; \sel:aux[0] ; \sel:auxSaida[1]  ; clk          ; clk         ; 1.000        ; 0.154      ; 3.162      ;
+; -2.021 ; \sel:aux[0] ; \sel:auxSaida[0]  ; clk          ; clk         ; 1.000        ; 0.154      ; 3.162      ;
+; -2.002 ; \sel:aux[0] ; \sel:auxSaida[4]  ; clk          ; clk         ; 1.000        ; 0.149      ; 3.138      ;
+; -2.001 ; \sel:aux[3] ; \sel:auxSaida[14] ; clk          ; clk         ; 1.000        ; 0.154      ; 3.142      ;
+; -2.001 ; \sel:aux[3] ; \sel:auxSaida[13] ; clk          ; clk         ; 1.000        ; 0.154      ; 3.142      ;
+; -2.001 ; \sel:aux[3] ; \sel:auxSaida[12] ; clk          ; clk         ; 1.000        ; 0.154      ; 3.142      ;
+; -2.001 ; \sel:aux[3] ; \sel:auxSaida[11] ; clk          ; clk         ; 1.000        ; 0.154      ; 3.142      ;
+; -2.001 ; \sel:aux[3] ; \sel:auxSaida[10] ; clk          ; clk         ; 1.000        ; 0.154      ; 3.142      ;
+; -2.001 ; \sel:aux[3] ; \sel:auxSaida[9]  ; clk          ; clk         ; 1.000        ; 0.154      ; 3.142      ;
+; -2.001 ; \sel:aux[3] ; \sel:auxSaida[8]  ; clk          ; clk         ; 1.000        ; 0.154      ; 3.142      ;
+; -2.001 ; \sel:aux[3] ; \sel:auxSaida[7]  ; clk          ; clk         ; 1.000        ; 0.154      ; 3.142      ;
+; -2.001 ; \sel:aux[3] ; \sel:auxSaida[6]  ; clk          ; clk         ; 1.000        ; 0.154      ; 3.142      ;
+; -2.001 ; \sel:aux[3] ; \sel:auxSaida[5]  ; clk          ; clk         ; 1.000        ; 0.154      ; 3.142      ;
+; -2.001 ; \sel:aux[3] ; \sel:auxSaida[3]  ; clk          ; clk         ; 1.000        ; 0.154      ; 3.142      ;
+; -2.001 ; \sel:aux[3] ; \sel:auxSaida[2]  ; clk          ; clk         ; 1.000        ; 0.154      ; 3.142      ;
+; -2.001 ; \sel:aux[3] ; \sel:auxSaida[1]  ; clk          ; clk         ; 1.000        ; 0.154      ; 3.142      ;
+; -2.001 ; \sel:aux[3] ; \sel:auxSaida[0]  ; clk          ; clk         ; 1.000        ; 0.154      ; 3.142      ;
+; -1.982 ; \sel:aux[3] ; \sel:auxSaida[4]  ; clk          ; clk         ; 1.000        ; 0.149      ; 3.118      ;
+; -1.953 ; \sel:aux[2] ; \sel:auxSaida[14] ; clk          ; clk         ; 1.000        ; 0.154      ; 3.094      ;
+; -1.953 ; \sel:aux[2] ; \sel:auxSaida[13] ; clk          ; clk         ; 1.000        ; 0.154      ; 3.094      ;
+; -1.953 ; \sel:aux[2] ; \sel:auxSaida[12] ; clk          ; clk         ; 1.000        ; 0.154      ; 3.094      ;
+; -1.953 ; \sel:aux[2] ; \sel:auxSaida[11] ; clk          ; clk         ; 1.000        ; 0.154      ; 3.094      ;
+; -1.953 ; \sel:aux[2] ; \sel:auxSaida[10] ; clk          ; clk         ; 1.000        ; 0.154      ; 3.094      ;
+; -1.953 ; \sel:aux[2] ; \sel:auxSaida[9]  ; clk          ; clk         ; 1.000        ; 0.154      ; 3.094      ;
+; -1.953 ; \sel:aux[2] ; \sel:auxSaida[8]  ; clk          ; clk         ; 1.000        ; 0.154      ; 3.094      ;
+; -1.953 ; \sel:aux[2] ; \sel:auxSaida[7]  ; clk          ; clk         ; 1.000        ; 0.154      ; 3.094      ;
+; -1.953 ; \sel:aux[2] ; \sel:auxSaida[6]  ; clk          ; clk         ; 1.000        ; 0.154      ; 3.094      ;
+; -1.953 ; \sel:aux[2] ; \sel:auxSaida[5]  ; clk          ; clk         ; 1.000        ; 0.154      ; 3.094      ;
+; -1.953 ; \sel:aux[2] ; \sel:auxSaida[3]  ; clk          ; clk         ; 1.000        ; 0.154      ; 3.094      ;
+; -1.953 ; \sel:aux[2] ; \sel:auxSaida[2]  ; clk          ; clk         ; 1.000        ; 0.154      ; 3.094      ;
+; -1.953 ; \sel:aux[2] ; \sel:auxSaida[1]  ; clk          ; clk         ; 1.000        ; 0.154      ; 3.094      ;
+; -1.953 ; \sel:aux[2] ; \sel:auxSaida[0]  ; clk          ; clk         ; 1.000        ; 0.154      ; 3.094      ;
+; -1.934 ; \sel:aux[2] ; \sel:auxSaida[4]  ; clk          ; clk         ; 1.000        ; 0.149      ; 3.070      ;
+; -1.931 ; \sel:aux[5] ; \sel:auxSaida[14] ; clk          ; clk         ; 1.000        ; 0.154      ; 3.072      ;
+; -1.931 ; \sel:aux[5] ; \sel:auxSaida[13] ; clk          ; clk         ; 1.000        ; 0.154      ; 3.072      ;
+; -1.931 ; \sel:aux[5] ; \sel:auxSaida[12] ; clk          ; clk         ; 1.000        ; 0.154      ; 3.072      ;
+; -1.931 ; \sel:aux[5] ; \sel:auxSaida[11] ; clk          ; clk         ; 1.000        ; 0.154      ; 3.072      ;
+; -1.931 ; \sel:aux[5] ; \sel:auxSaida[10] ; clk          ; clk         ; 1.000        ; 0.154      ; 3.072      ;
+; -1.931 ; \sel:aux[5] ; \sel:auxSaida[9]  ; clk          ; clk         ; 1.000        ; 0.154      ; 3.072      ;
+; -1.931 ; \sel:aux[5] ; \sel:auxSaida[8]  ; clk          ; clk         ; 1.000        ; 0.154      ; 3.072      ;
+; -1.931 ; \sel:aux[5] ; \sel:auxSaida[7]  ; clk          ; clk         ; 1.000        ; 0.154      ; 3.072      ;
+; -1.931 ; \sel:aux[5] ; \sel:auxSaida[6]  ; clk          ; clk         ; 1.000        ; 0.154      ; 3.072      ;
+; -1.931 ; \sel:aux[5] ; \sel:auxSaida[5]  ; clk          ; clk         ; 1.000        ; 0.154      ; 3.072      ;
+; -1.931 ; \sel:aux[5] ; \sel:auxSaida[3]  ; clk          ; clk         ; 1.000        ; 0.154      ; 3.072      ;
+; -1.931 ; \sel:aux[5] ; \sel:auxSaida[2]  ; clk          ; clk         ; 1.000        ; 0.154      ; 3.072      ;
+; -1.931 ; \sel:aux[5] ; \sel:auxSaida[1]  ; clk          ; clk         ; 1.000        ; 0.154      ; 3.072      ;
+; -1.931 ; \sel:aux[5] ; \sel:auxSaida[0]  ; clk          ; clk         ; 1.000        ; 0.154      ; 3.072      ;
+; -1.915 ; \sel:aux[7] ; \sel:auxSaida[30] ; clk          ; clk         ; 1.000        ; 0.154      ; 3.056      ;
+; -1.915 ; \sel:aux[7] ; \sel:auxSaida[29] ; clk          ; clk         ; 1.000        ; 0.154      ; 3.056      ;
+; -1.915 ; \sel:aux[7] ; \sel:auxSaida[28] ; clk          ; clk         ; 1.000        ; 0.154      ; 3.056      ;
+; -1.915 ; \sel:aux[7] ; \sel:auxSaida[27] ; clk          ; clk         ; 1.000        ; 0.154      ; 3.056      ;
+; -1.915 ; \sel:aux[7] ; \sel:auxSaida[26] ; clk          ; clk         ; 1.000        ; 0.154      ; 3.056      ;
+; -1.915 ; \sel:aux[7] ; \sel:auxSaida[25] ; clk          ; clk         ; 1.000        ; 0.154      ; 3.056      ;
+; -1.915 ; \sel:aux[7] ; \sel:auxSaida[24] ; clk          ; clk         ; 1.000        ; 0.154      ; 3.056      ;
+; -1.915 ; \sel:aux[7] ; \sel:auxSaida[23] ; clk          ; clk         ; 1.000        ; 0.154      ; 3.056      ;
+; -1.915 ; \sel:aux[7] ; \sel:auxSaida[22] ; clk          ; clk         ; 1.000        ; 0.154      ; 3.056      ;
+; -1.915 ; \sel:aux[7] ; \sel:auxSaida[21] ; clk          ; clk         ; 1.000        ; 0.154      ; 3.056      ;
+; -1.915 ; \sel:aux[7] ; \sel:auxSaida[20] ; clk          ; clk         ; 1.000        ; 0.154      ; 3.056      ;
++--------+-------------+-------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Hold: 'clk'                                                                                    ;
++-------+-------------------+-------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node         ; To Node           ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------+-------------------+--------------+-------------+--------------+------------+------------+
+; 0.293 ; \sel:aux[5]       ; \sel:aux[5]       ; clk          ; clk         ; 0.000        ; 0.035      ; 0.412      ;
+; 0.294 ; \sel:aux[30]      ; \sel:aux[30]      ; clk          ; clk         ; 0.000        ; 0.035      ; 0.413      ;
+; 0.294 ; \sel:aux[29]      ; \sel:aux[29]      ; clk          ; clk         ; 0.000        ; 0.035      ; 0.413      ;
+; 0.294 ; \sel:aux[28]      ; \sel:aux[28]      ; clk          ; clk         ; 0.000        ; 0.035      ; 0.413      ;
+; 0.294 ; \sel:aux[18]      ; \sel:aux[18]      ; clk          ; clk         ; 0.000        ; 0.035      ; 0.413      ;
+; 0.294 ; \sel:aux[4]       ; \sel:aux[4]       ; clk          ; clk         ; 0.000        ; 0.035      ; 0.413      ;
+; 0.294 ; \sel:aux[2]       ; \sel:aux[2]       ; clk          ; clk         ; 0.000        ; 0.035      ; 0.413      ;
+; 0.294 ; \sel:aux[1]       ; \sel:aux[1]       ; clk          ; clk         ; 0.000        ; 0.035      ; 0.413      ;
+; 0.295 ; \sel:aux[27]      ; \sel:aux[27]      ; clk          ; clk         ; 0.000        ; 0.035      ; 0.414      ;
+; 0.295 ; \sel:aux[26]      ; \sel:aux[26]      ; clk          ; clk         ; 0.000        ; 0.035      ; 0.414      ;
+; 0.295 ; \sel:aux[16]      ; \sel:aux[16]      ; clk          ; clk         ; 0.000        ; 0.035      ; 0.414      ;
+; 0.295 ; \sel:aux[9]       ; \sel:aux[9]       ; clk          ; clk         ; 0.000        ; 0.035      ; 0.414      ;
+; 0.295 ; \sel:aux[6]       ; \sel:aux[6]       ; clk          ; clk         ; 0.000        ; 0.035      ; 0.414      ;
+; 0.295 ; \sel:aux[3]       ; \sel:aux[3]       ; clk          ; clk         ; 0.000        ; 0.035      ; 0.414      ;
+; 0.296 ; \sel:aux[24]      ; \sel:aux[24]      ; clk          ; clk         ; 0.000        ; 0.035      ; 0.415      ;
+; 0.297 ; \sel:auxSaida[21] ; \sel:auxSaida[21] ; clk          ; clk         ; 0.000        ; 0.043      ; 0.424      ;
+; 0.297 ; \sel:auxSaida[15] ; \sel:auxSaida[15] ; clk          ; clk         ; 0.000        ; 0.043      ; 0.424      ;
+; 0.297 ; \sel:auxSaida[14] ; \sel:auxSaida[14] ; clk          ; clk         ; 0.000        ; 0.043      ; 0.424      ;
+; 0.297 ; \sel:auxSaida[13] ; \sel:auxSaida[13] ; clk          ; clk         ; 0.000        ; 0.043      ; 0.424      ;
+; 0.297 ; \sel:auxSaida[12] ; \sel:auxSaida[12] ; clk          ; clk         ; 0.000        ; 0.043      ; 0.424      ;
+; 0.297 ; \sel:auxSaida[5]  ; \sel:auxSaida[5]  ; clk          ; clk         ; 0.000        ; 0.043      ; 0.424      ;
+; 0.297 ; \sel:auxSaida[1]  ; \sel:auxSaida[1]  ; clk          ; clk         ; 0.000        ; 0.043      ; 0.424      ;
+; 0.298 ; \sel:auxSaida[30] ; \sel:auxSaida[30] ; clk          ; clk         ; 0.000        ; 0.043      ; 0.425      ;
+; 0.298 ; \sel:auxSaida[29] ; \sel:auxSaida[29] ; clk          ; clk         ; 0.000        ; 0.043      ; 0.425      ;
+; 0.298 ; \sel:auxSaida[28] ; \sel:auxSaida[28] ; clk          ; clk         ; 0.000        ; 0.043      ; 0.425      ;
+; 0.298 ; \sel:auxSaida[26] ; \sel:auxSaida[26] ; clk          ; clk         ; 0.000        ; 0.043      ; 0.425      ;
+; 0.298 ; \sel:auxSaida[23] ; \sel:auxSaida[23] ; clk          ; clk         ; 0.000        ; 0.043      ; 0.425      ;
+; 0.298 ; \sel:auxSaida[20] ; \sel:auxSaida[20] ; clk          ; clk         ; 0.000        ; 0.043      ; 0.425      ;
+; 0.298 ; \sel:auxSaida[18] ; \sel:auxSaida[18] ; clk          ; clk         ; 0.000        ; 0.043      ; 0.425      ;
+; 0.298 ; \sel:auxSaida[17] ; \sel:auxSaida[17] ; clk          ; clk         ; 0.000        ; 0.043      ; 0.425      ;
+; 0.298 ; \sel:auxSaida[16] ; \sel:auxSaida[16] ; clk          ; clk         ; 0.000        ; 0.043      ; 0.425      ;
+; 0.298 ; \sel:auxSaida[11] ; \sel:auxSaida[11] ; clk          ; clk         ; 0.000        ; 0.043      ; 0.425      ;
+; 0.298 ; \sel:auxSaida[10] ; \sel:auxSaida[10] ; clk          ; clk         ; 0.000        ; 0.043      ; 0.425      ;
+; 0.298 ; \sel:auxSaida[9]  ; \sel:auxSaida[9]  ; clk          ; clk         ; 0.000        ; 0.043      ; 0.425      ;
+; 0.298 ; \sel:auxSaida[7]  ; \sel:auxSaida[7]  ; clk          ; clk         ; 0.000        ; 0.043      ; 0.425      ;
+; 0.299 ; \sel:auxSaida[27] ; \sel:auxSaida[27] ; clk          ; clk         ; 0.000        ; 0.043      ; 0.426      ;
+; 0.299 ; \sel:auxSaida[25] ; \sel:auxSaida[25] ; clk          ; clk         ; 0.000        ; 0.043      ; 0.426      ;
+; 0.299 ; \sel:auxSaida[24] ; \sel:auxSaida[24] ; clk          ; clk         ; 0.000        ; 0.043      ; 0.426      ;
+; 0.299 ; \sel:auxSaida[22] ; \sel:auxSaida[22] ; clk          ; clk         ; 0.000        ; 0.043      ; 0.426      ;
+; 0.299 ; \sel:auxSaida[19] ; \sel:auxSaida[19] ; clk          ; clk         ; 0.000        ; 0.043      ; 0.426      ;
+; 0.299 ; \sel:auxSaida[8]  ; \sel:auxSaida[8]  ; clk          ; clk         ; 0.000        ; 0.043      ; 0.426      ;
+; 0.299 ; \sel:auxSaida[6]  ; \sel:auxSaida[6]  ; clk          ; clk         ; 0.000        ; 0.043      ; 0.426      ;
+; 0.305 ; \sel:aux[0]       ; \sel:aux[0]       ; clk          ; clk         ; 0.000        ; 0.035      ; 0.424      ;
+; 0.309 ; \sel:auxSaida[0]  ; \sel:auxSaida[0]  ; clk          ; clk         ; 0.000        ; 0.043      ; 0.436      ;
+; 0.357 ; \sel:auxSaida[3]  ; \sel:auxSaida[3]  ; clk          ; clk         ; 0.000        ; 0.043      ; 0.484      ;
+; 0.360 ; \sel:aux[8]       ; \sel:aux[8]       ; clk          ; clk         ; 0.000        ; 0.035      ; 0.479      ;
+; 0.362 ; \sel:aux[11]      ; \sel:aux[11]      ; clk          ; clk         ; 0.000        ; 0.035      ; 0.481      ;
+; 0.362 ; \sel:aux[10]      ; \sel:aux[10]      ; clk          ; clk         ; 0.000        ; 0.035      ; 0.481      ;
+; 0.442 ; \sel:aux[5]       ; \sel:aux[6]       ; clk          ; clk         ; 0.000        ; 0.035      ; 0.561      ;
+; 0.443 ; \sel:aux[29]      ; \sel:aux[30]      ; clk          ; clk         ; 0.000        ; 0.035      ; 0.562      ;
+; 0.443 ; \sel:aux[1]       ; \sel:aux[2]       ; clk          ; clk         ; 0.000        ; 0.035      ; 0.562      ;
+; 0.444 ; \sel:aux[27]      ; \sel:aux[28]      ; clk          ; clk         ; 0.000        ; 0.035      ; 0.563      ;
+; 0.444 ; \sel:aux[3]       ; \sel:aux[4]       ; clk          ; clk         ; 0.000        ; 0.035      ; 0.563      ;
+; 0.444 ; \sel:aux[9]       ; \sel:aux[10]      ; clk          ; clk         ; 0.000        ; 0.035      ; 0.563      ;
+; 0.446 ; \sel:auxSaida[13] ; \sel:auxSaida[14] ; clk          ; clk         ; 0.000        ; 0.043      ; 0.573      ;
+; 0.446 ; \sel:auxSaida[15] ; \sel:auxSaida[16] ; clk          ; clk         ; 0.000        ; 0.043      ; 0.573      ;
+; 0.446 ; \sel:auxSaida[21] ; \sel:auxSaida[22] ; clk          ; clk         ; 0.000        ; 0.043      ; 0.573      ;
+; 0.446 ; \sel:auxSaida[5]  ; \sel:auxSaida[6]  ; clk          ; clk         ; 0.000        ; 0.043      ; 0.573      ;
+; 0.447 ; \sel:auxSaida[11] ; \sel:auxSaida[12] ; clk          ; clk         ; 0.000        ; 0.043      ; 0.574      ;
+; 0.447 ; \sel:auxSaida[29] ; \sel:auxSaida[30] ; clk          ; clk         ; 0.000        ; 0.043      ; 0.574      ;
+; 0.447 ; \sel:auxSaida[17] ; \sel:auxSaida[18] ; clk          ; clk         ; 0.000        ; 0.043      ; 0.574      ;
+; 0.447 ; \sel:auxSaida[9]  ; \sel:auxSaida[10] ; clk          ; clk         ; 0.000        ; 0.043      ; 0.574      ;
+; 0.447 ; \sel:auxSaida[23] ; \sel:auxSaida[24] ; clk          ; clk         ; 0.000        ; 0.043      ; 0.574      ;
+; 0.447 ; \sel:auxSaida[7]  ; \sel:auxSaida[8]  ; clk          ; clk         ; 0.000        ; 0.043      ; 0.574      ;
+; 0.448 ; \sel:auxSaida[27] ; \sel:auxSaida[28] ; clk          ; clk         ; 0.000        ; 0.043      ; 0.575      ;
+; 0.448 ; \sel:auxSaida[25] ; \sel:auxSaida[26] ; clk          ; clk         ; 0.000        ; 0.043      ; 0.575      ;
+; 0.448 ; \sel:auxSaida[19] ; \sel:auxSaida[20] ; clk          ; clk         ; 0.000        ; 0.043      ; 0.575      ;
+; 0.452 ; \sel:aux[4]       ; \sel:aux[5]       ; clk          ; clk         ; 0.000        ; 0.035      ; 0.571      ;
+; 0.452 ; \sel:aux[28]      ; \sel:aux[29]      ; clk          ; clk         ; 0.000        ; 0.035      ; 0.571      ;
+; 0.452 ; \sel:aux[0]       ; \sel:aux[1]       ; clk          ; clk         ; 0.000        ; 0.035      ; 0.571      ;
+; 0.452 ; \sel:aux[2]       ; \sel:aux[3]       ; clk          ; clk         ; 0.000        ; 0.035      ; 0.571      ;
+; 0.453 ; \sel:aux[26]      ; \sel:aux[27]      ; clk          ; clk         ; 0.000        ; 0.035      ; 0.572      ;
+; 0.455 ; \sel:auxSaida[12] ; \sel:auxSaida[13] ; clk          ; clk         ; 0.000        ; 0.043      ; 0.582      ;
+; 0.455 ; \sel:aux[4]       ; \sel:aux[6]       ; clk          ; clk         ; 0.000        ; 0.035      ; 0.574      ;
+; 0.455 ; \sel:aux[28]      ; \sel:aux[30]      ; clk          ; clk         ; 0.000        ; 0.035      ; 0.574      ;
+; 0.455 ; \sel:aux[0]       ; \sel:aux[2]       ; clk          ; clk         ; 0.000        ; 0.035      ; 0.574      ;
+; 0.455 ; \sel:aux[2]       ; \sel:aux[4]       ; clk          ; clk         ; 0.000        ; 0.035      ; 0.574      ;
+; 0.456 ; \sel:aux[16]      ; \sel:aux[18]      ; clk          ; clk         ; 0.000        ; 0.035      ; 0.575      ;
+; 0.456 ; \sel:auxSaida[20] ; \sel:auxSaida[21] ; clk          ; clk         ; 0.000        ; 0.043      ; 0.583      ;
+; 0.456 ; \sel:auxSaida[14] ; \sel:auxSaida[15] ; clk          ; clk         ; 0.000        ; 0.042      ; 0.582      ;
+; 0.456 ; \sel:auxSaida[0]  ; \sel:auxSaida[1]  ; clk          ; clk         ; 0.000        ; 0.043      ; 0.583      ;
+; 0.456 ; \sel:auxSaida[28] ; \sel:auxSaida[29] ; clk          ; clk         ; 0.000        ; 0.043      ; 0.583      ;
+; 0.456 ; \sel:auxSaida[16] ; \sel:auxSaida[17] ; clk          ; clk         ; 0.000        ; 0.043      ; 0.583      ;
+; 0.456 ; \sel:auxSaida[10] ; \sel:auxSaida[11] ; clk          ; clk         ; 0.000        ; 0.043      ; 0.583      ;
+; 0.456 ; \sel:auxSaida[26] ; \sel:auxSaida[27] ; clk          ; clk         ; 0.000        ; 0.043      ; 0.583      ;
+; 0.456 ; \sel:auxSaida[18] ; \sel:auxSaida[19] ; clk          ; clk         ; 0.000        ; 0.043      ; 0.583      ;
+; 0.456 ; \sel:aux[6]       ; \sel:aux[8]       ; clk          ; clk         ; 0.000        ; 0.035      ; 0.575      ;
+; 0.456 ; \sel:aux[26]      ; \sel:aux[28]      ; clk          ; clk         ; 0.000        ; 0.035      ; 0.575      ;
+; 0.457 ; \sel:aux[24]      ; \sel:aux[26]      ; clk          ; clk         ; 0.000        ; 0.035      ; 0.576      ;
+; 0.457 ; \sel:auxSaida[22] ; \sel:auxSaida[23] ; clk          ; clk         ; 0.000        ; 0.043      ; 0.584      ;
+; 0.457 ; \sel:auxSaida[8]  ; \sel:auxSaida[9]  ; clk          ; clk         ; 0.000        ; 0.043      ; 0.584      ;
+; 0.457 ; \sel:auxSaida[6]  ; \sel:auxSaida[7]  ; clk          ; clk         ; 0.000        ; 0.043      ; 0.584      ;
+; 0.457 ; \sel:auxSaida[24] ; \sel:auxSaida[25] ; clk          ; clk         ; 0.000        ; 0.043      ; 0.584      ;
+; 0.457 ; \sel:auxSaida[2]  ; \sel:auxSaida[3]  ; clk          ; clk         ; 0.000        ; 0.043      ; 0.584      ;
+; 0.458 ; \sel:auxSaida[12] ; \sel:auxSaida[14] ; clk          ; clk         ; 0.000        ; 0.043      ; 0.585      ;
+; 0.459 ; \sel:auxSaida[14] ; \sel:auxSaida[16] ; clk          ; clk         ; 0.000        ; 0.042      ; 0.585      ;
+; 0.459 ; \sel:auxSaida[20] ; \sel:auxSaida[22] ; clk          ; clk         ; 0.000        ; 0.043      ; 0.586      ;
+; 0.459 ; \sel:auxSaida[10] ; \sel:auxSaida[12] ; clk          ; clk         ; 0.000        ; 0.043      ; 0.586      ;
+; 0.459 ; \sel:auxSaida[28] ; \sel:auxSaida[30] ; clk          ; clk         ; 0.000        ; 0.043      ; 0.586      ;
+; 0.459 ; \sel:auxSaida[16] ; \sel:auxSaida[18] ; clk          ; clk         ; 0.000        ; 0.043      ; 0.586      ;
++-------+-------------------+-------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Minimum Pulse Width: 'clk'                                                   ;
++--------+--------------+----------------+-----------------+-------+------------+-------------------+
+; Slack  ; Actual Width ; Required Width ; Type            ; Clock ; Clock Edge ; Target            ;
++--------+--------------+----------------+-----------------+-------+------------+-------------------+
+; -3.000 ; 1.000        ; 4.000          ; Port Rate       ; clk   ; Rise       ; clk               ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:auxSaida[0]  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:auxSaida[10] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:auxSaida[11] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:auxSaida[12] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:auxSaida[13] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:auxSaida[14] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:auxSaida[15] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:auxSaida[16] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:auxSaida[17] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:auxSaida[18] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:auxSaida[19] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:auxSaida[1]  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:auxSaida[20] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:auxSaida[21] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:auxSaida[22] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:auxSaida[23] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:auxSaida[24] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:auxSaida[25] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:auxSaida[26] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:auxSaida[27] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:auxSaida[28] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:auxSaida[29] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:auxSaida[2]  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:auxSaida[30] ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:auxSaida[3]  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:auxSaida[4]  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:auxSaida[5]  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:auxSaida[6]  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:auxSaida[7]  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:auxSaida[8]  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:auxSaida[9]  ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:aux[0]       ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:aux[10]      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:aux[11]      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:aux[12]      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:aux[13]      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:aux[14]      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:aux[15]      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:aux[16]      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:aux[17]      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:aux[18]      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:aux[19]      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:aux[1]       ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:aux[20]      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:aux[21]      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:aux[22]      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:aux[23]      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:aux[24]      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:aux[25]      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:aux[26]      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:aux[27]      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:aux[28]      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:aux[29]      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:aux[2]       ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:aux[30]      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:aux[3]       ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:aux[4]       ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:aux[5]       ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:aux[6]       ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:aux[7]       ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:aux[8]       ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period      ; clk   ; Rise       ; \sel:aux[9]       ;
+; -0.085 ; 0.099        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; \sel:auxSaida[0]  ;
+; -0.085 ; 0.099        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; \sel:auxSaida[10] ;
+; -0.085 ; 0.099        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; \sel:auxSaida[11] ;
+; -0.085 ; 0.099        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; \sel:auxSaida[12] ;
+; -0.085 ; 0.099        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; \sel:auxSaida[13] ;
+; -0.085 ; 0.099        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; \sel:auxSaida[14] ;
+; -0.085 ; 0.099        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; \sel:auxSaida[15] ;
+; -0.085 ; 0.099        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; \sel:auxSaida[16] ;
+; -0.085 ; 0.099        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; \sel:auxSaida[17] ;
+; -0.085 ; 0.099        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; \sel:auxSaida[18] ;
+; -0.085 ; 0.099        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; \sel:auxSaida[19] ;
+; -0.085 ; 0.099        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; \sel:auxSaida[1]  ;
+; -0.085 ; 0.099        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; \sel:auxSaida[20] ;
+; -0.085 ; 0.099        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; \sel:auxSaida[21] ;
+; -0.085 ; 0.099        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; \sel:auxSaida[22] ;
+; -0.085 ; 0.099        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; \sel:auxSaida[23] ;
+; -0.085 ; 0.099        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; \sel:auxSaida[24] ;
+; -0.085 ; 0.099        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; \sel:auxSaida[25] ;
+; -0.085 ; 0.099        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; \sel:auxSaida[26] ;
+; -0.085 ; 0.099        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; \sel:auxSaida[27] ;
+; -0.085 ; 0.099        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; \sel:auxSaida[28] ;
+; -0.085 ; 0.099        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; \sel:auxSaida[29] ;
+; -0.085 ; 0.099        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; \sel:auxSaida[2]  ;
+; -0.085 ; 0.099        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; \sel:auxSaida[30] ;
+; -0.085 ; 0.099        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; \sel:auxSaida[3]  ;
+; -0.085 ; 0.099        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; \sel:auxSaida[4]  ;
+; -0.085 ; 0.099        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; \sel:auxSaida[5]  ;
+; -0.085 ; 0.099        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; \sel:auxSaida[6]  ;
+; -0.085 ; 0.099        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; \sel:auxSaida[7]  ;
+; -0.085 ; 0.099        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; \sel:auxSaida[8]  ;
+; -0.085 ; 0.099        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; \sel:auxSaida[9]  ;
+; -0.085 ; 0.099        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; \sel:aux[12]      ;
+; -0.085 ; 0.099        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; \sel:aux[15]      ;
+; -0.085 ; 0.099        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; \sel:aux[17]      ;
+; -0.085 ; 0.099        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; \sel:aux[19]      ;
+; -0.085 ; 0.099        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; \sel:aux[20]      ;
+; -0.085 ; 0.099        ; 0.184          ; Low Pulse Width ; clk   ; Rise       ; \sel:aux[21]      ;
++--------+--------------+----------------+-----------------+-------+------------+-------------------+
+
+
++--------------------------------------------------------------------------+
+; Clock to Output Times                                                    ;
++--------------+------------+-------+-------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++--------------+------------+-------+-------+------------+-----------------+
+; contador[*]  ; clk        ; 6.177 ; 6.215 ; Rise       ; clk             ;
+;  contador[1] ; clk        ; 5.262 ; 5.340 ; Rise       ; clk             ;
+;  contador[2] ; clk        ; 6.175 ; 6.215 ; Rise       ; clk             ;
+;  contador[3] ; clk        ; 5.964 ; 5.948 ; Rise       ; clk             ;
+;  contador[4] ; clk        ; 6.115 ; 6.174 ; Rise       ; clk             ;
+;  contador[5] ; clk        ; 6.177 ; 6.181 ; Rise       ; clk             ;
+;  contador[6] ; clk        ; 6.119 ; 6.156 ; Rise       ; clk             ;
+;  contador[7] ; clk        ; 6.110 ; 6.146 ; Rise       ; clk             ;
++--------------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                            ;
++--------------+------------+-------+-------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++--------------+------------+-------+-------+------------+-----------------+
+; contador[*]  ; clk        ; 3.826 ; 3.867 ; Rise       ; clk             ;
+;  contador[1] ; clk        ; 3.845 ; 3.867 ; Rise       ; clk             ;
+;  contador[2] ; clk        ; 4.114 ; 4.118 ; Rise       ; clk             ;
+;  contador[3] ; clk        ; 4.035 ; 4.168 ; Rise       ; clk             ;
+;  contador[4] ; clk        ; 3.826 ; 3.869 ; Rise       ; clk             ;
+;  contador[5] ; clk        ; 4.166 ; 4.114 ; Rise       ; clk             ;
+;  contador[6] ; clk        ; 4.110 ; 4.049 ; Rise       ; clk             ;
+;  contador[7] ; clk        ; 4.149 ; 4.166 ; Rise       ; clk             ;
++--------------+------------+-------+-------+------------+-----------------+
+
+
+---------------------------------------------
+; Fast 1200mV 0C Model Metastability Report ;
+---------------------------------------------
+No synchronizer chains to report.
+
+
++--------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                            ;
++------------------+----------+-------+----------+---------+---------------------+
+; Clock            ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+----------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -4.435   ; 0.293 ; N/A      ; N/A     ; -3.000              ;
+;  clk             ; -4.435   ; 0.293 ; N/A      ; N/A     ; -3.000              ;
+; Design-wide TNS  ; -202.443 ; 0.0   ; 0.0      ; 0.0     ; -69.632             ;
+;  clk             ; -202.443 ; 0.000 ; N/A      ; N/A     ; -69.632             ;
++------------------+----------+-------+----------+---------+---------------------+
+
+
++----------------------------------------------------------------------------+
+; Clock to Output Times                                                      ;
++--------------+------------+--------+--------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++--------------+------------+--------+--------+------------+-----------------+
+; contador[*]  ; clk        ; 10.738 ; 10.694 ; Rise       ; clk             ;
+;  contador[1] ; clk        ; 9.122  ; 9.085  ; Rise       ; clk             ;
+;  contador[2] ; clk        ; 10.728 ; 10.694 ; Rise       ; clk             ;
+;  contador[3] ; clk        ; 10.295 ; 10.268 ; Rise       ; clk             ;
+;  contador[4] ; clk        ; 10.595 ; 10.559 ; Rise       ; clk             ;
+;  contador[5] ; clk        ; 10.738 ; 10.637 ; Rise       ; clk             ;
+;  contador[6] ; clk        ; 10.642 ; 10.598 ; Rise       ; clk             ;
+;  contador[7] ; clk        ; 10.628 ; 10.576 ; Rise       ; clk             ;
++--------------+------------+--------+--------+------------+-----------------+
+
+
++--------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                            ;
++--------------+------------+-------+-------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++--------------+------------+-------+-------+------------+-----------------+
+; contador[*]  ; clk        ; 3.826 ; 3.867 ; Rise       ; clk             ;
+;  contador[1] ; clk        ; 3.845 ; 3.867 ; Rise       ; clk             ;
+;  contador[2] ; clk        ; 4.114 ; 4.118 ; Rise       ; clk             ;
+;  contador[3] ; clk        ; 4.035 ; 4.168 ; Rise       ; clk             ;
+;  contador[4] ; clk        ; 3.826 ; 3.869 ; Rise       ; clk             ;
+;  contador[5] ; clk        ; 4.166 ; 4.114 ; Rise       ; clk             ;
+;  contador[6] ; clk        ; 4.110 ; 4.049 ; Rise       ; clk             ;
+;  contador[7] ; clk        ; 4.149 ; 4.166 ; Rise       ; clk             ;
++--------------+------------+-------+-------+------------+-----------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Board Trace Model Assignments                                                                                                                                                                                                                                                                                                                                                                                    ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; Pin           ; I/O Standard ; Near Tline Length ; Near Tline L per Length ; Near Tline C per Length ; Near Series R ; Near Differential R ; Near Pull-up R ; Near Pull-down R ; Near C ; Far Tline Length ; Far Tline L per Length ; Far Tline C per Length ; Far Series R ; Far Pull-up R ; Far Pull-down R ; Far C ; Termination Voltage ; Far Differential R ; EBD File Name ; EBD Signal Name ; EBD Far-end ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; contador[0]   ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; contador[1]   ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; contador[2]   ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; contador[3]   ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; contador[4]   ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; contador[5]   ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; contador[6]   ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; contador[7]   ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+
+
++----------------------------------------------------------------------------+
+; Input Transition Times                                                     ;
++-------------------------+--------------+-----------------+-----------------+
+; Pin                     ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
++-------------------------+--------------+-----------------+-----------------+
+; clk                     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; reset                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_ASDO_DATA1~     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_FLASH_nCE_nCSO~ ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_DATA0~          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
++-------------------------+--------------+-----------------+-----------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Corner Signal Integrity Metrics                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; contador[0]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.08e-06 V                   ; 2.36 V              ; -0.0113 V           ; 0.122 V                              ; 0.022 V                              ; 4.5e-10 s                   ; 4.45e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.08e-06 V                  ; 2.36 V             ; -0.0113 V          ; 0.122 V                             ; 0.022 V                             ; 4.5e-10 s                  ; 4.45e-10 s                 ; Yes                       ; Yes                       ;
+; contador[1]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.08e-06 V                   ; 2.36 V              ; -0.0113 V           ; 0.122 V                              ; 0.022 V                              ; 4.5e-10 s                   ; 4.45e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.08e-06 V                  ; 2.36 V             ; -0.0113 V          ; 0.122 V                             ; 0.022 V                             ; 4.5e-10 s                  ; 4.45e-10 s                 ; Yes                       ; Yes                       ;
+; contador[2]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.08e-06 V                   ; 2.36 V              ; -0.0113 V           ; 0.122 V                              ; 0.022 V                              ; 4.5e-10 s                   ; 4.45e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.08e-06 V                  ; 2.36 V             ; -0.0113 V          ; 0.122 V                             ; 0.022 V                             ; 4.5e-10 s                  ; 4.45e-10 s                 ; Yes                       ; Yes                       ;
+; contador[3]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.08e-06 V                   ; 2.36 V              ; -0.0113 V           ; 0.122 V                              ; 0.022 V                              ; 4.5e-10 s                   ; 4.45e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.08e-06 V                  ; 2.36 V             ; -0.0113 V          ; 0.122 V                             ; 0.022 V                             ; 4.5e-10 s                  ; 4.45e-10 s                 ; Yes                       ; Yes                       ;
+; contador[4]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.08e-06 V                   ; 2.36 V              ; -0.0113 V           ; 0.122 V                              ; 0.022 V                              ; 4.5e-10 s                   ; 4.45e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.08e-06 V                  ; 2.36 V             ; -0.0113 V          ; 0.122 V                             ; 0.022 V                             ; 4.5e-10 s                  ; 4.45e-10 s                 ; Yes                       ; Yes                       ;
+; contador[5]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.08e-06 V                   ; 2.36 V              ; -0.0113 V           ; 0.122 V                              ; 0.022 V                              ; 4.5e-10 s                   ; 4.45e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.08e-06 V                  ; 2.36 V             ; -0.0113 V          ; 0.122 V                             ; 0.022 V                             ; 4.5e-10 s                  ; 4.45e-10 s                 ; Yes                       ; Yes                       ;
+; contador[6]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.08e-06 V                   ; 2.36 V              ; -0.0113 V           ; 0.122 V                              ; 0.022 V                              ; 4.5e-10 s                   ; 4.45e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.08e-06 V                  ; 2.36 V             ; -0.0113 V          ; 0.122 V                             ; 0.022 V                             ; 4.5e-10 s                  ; 4.45e-10 s                 ; Yes                       ; Yes                       ;
+; contador[7]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.08e-06 V                   ; 2.36 V              ; -0.0113 V           ; 0.122 V                              ; 0.022 V                              ; 4.5e-10 s                   ; 4.45e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.08e-06 V                  ; 2.36 V             ; -0.0113 V          ; 0.122 V                             ; 0.022 V                             ; 4.5e-10 s                  ; 4.45e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 5.68e-07 V                   ; 2.35 V              ; -0.0132 V           ; 0.2 V                                ; 0.027 V                              ; 5.26e-10 s                  ; 4.81e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 5.68e-07 V                  ; 2.35 V             ; -0.0132 V          ; 0.2 V                               ; 0.027 V                             ; 5.26e-10 s                 ; 4.81e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 9.36e-07 V                   ; 2.35 V              ; -0.00444 V          ; 0.18 V                               ; 0.019 V                              ; 7.23e-10 s                  ; 9.82e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 9.36e-07 V                  ; 2.35 V             ; -0.00444 V         ; 0.18 V                              ; 0.019 V                             ; 7.23e-10 s                 ; 9.82e-10 s                 ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Corner Signal Integrity Metrics                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; contador[0]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.11e-08 V                   ; 2.73 V              ; -0.0566 V           ; 0.191 V                              ; 0.12 V                               ; 2.69e-10 s                  ; 2.76e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.11e-08 V                  ; 2.73 V             ; -0.0566 V          ; 0.191 V                             ; 0.12 V                              ; 2.69e-10 s                 ; 2.76e-10 s                 ; Yes                       ; Yes                       ;
+; contador[1]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.11e-08 V                   ; 2.73 V              ; -0.0566 V           ; 0.191 V                              ; 0.12 V                               ; 2.69e-10 s                  ; 2.76e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.11e-08 V                  ; 2.73 V             ; -0.0566 V          ; 0.191 V                             ; 0.12 V                              ; 2.69e-10 s                 ; 2.76e-10 s                 ; Yes                       ; Yes                       ;
+; contador[2]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.11e-08 V                   ; 2.73 V              ; -0.0566 V           ; 0.191 V                              ; 0.12 V                               ; 2.69e-10 s                  ; 2.76e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.11e-08 V                  ; 2.73 V             ; -0.0566 V          ; 0.191 V                             ; 0.12 V                              ; 2.69e-10 s                 ; 2.76e-10 s                 ; Yes                       ; Yes                       ;
+; contador[3]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.11e-08 V                   ; 2.73 V              ; -0.0566 V           ; 0.191 V                              ; 0.12 V                               ; 2.69e-10 s                  ; 2.76e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.11e-08 V                  ; 2.73 V             ; -0.0566 V          ; 0.191 V                             ; 0.12 V                              ; 2.69e-10 s                 ; 2.76e-10 s                 ; Yes                       ; Yes                       ;
+; contador[4]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.11e-08 V                   ; 2.73 V              ; -0.0566 V           ; 0.191 V                              ; 0.12 V                               ; 2.69e-10 s                  ; 2.76e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.11e-08 V                  ; 2.73 V             ; -0.0566 V          ; 0.191 V                             ; 0.12 V                              ; 2.69e-10 s                 ; 2.76e-10 s                 ; Yes                       ; Yes                       ;
+; contador[5]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.11e-08 V                   ; 2.73 V              ; -0.0566 V           ; 0.191 V                              ; 0.12 V                               ; 2.69e-10 s                  ; 2.76e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.11e-08 V                  ; 2.73 V             ; -0.0566 V          ; 0.191 V                             ; 0.12 V                              ; 2.69e-10 s                 ; 2.76e-10 s                 ; Yes                       ; Yes                       ;
+; contador[6]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.11e-08 V                   ; 2.73 V              ; -0.0566 V           ; 0.191 V                              ; 0.12 V                               ; 2.69e-10 s                  ; 2.76e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.11e-08 V                  ; 2.73 V             ; -0.0566 V          ; 0.191 V                             ; 0.12 V                              ; 2.69e-10 s                 ; 2.76e-10 s                 ; Yes                       ; Yes                       ;
+; contador[7]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.11e-08 V                   ; 2.73 V              ; -0.0566 V           ; 0.191 V                              ; 0.12 V                               ; 2.69e-10 s                  ; 2.76e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.11e-08 V                  ; 2.73 V             ; -0.0566 V          ; 0.191 V                             ; 0.12 V                              ; 2.69e-10 s                 ; 2.76e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.22e-08 V                   ; 2.72 V              ; -0.0747 V           ; 0.28 V                               ; 0.169 V                              ; 3.1e-10 s                   ; 3.01e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.22e-08 V                  ; 2.72 V             ; -0.0747 V          ; 0.28 V                              ; 0.169 V                             ; 3.1e-10 s                  ; 3.01e-10 s                 ; No                        ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 3.53e-08 V                   ; 2.7 V               ; -0.0212 V           ; 0.204 V                              ; 0.049 V                              ; 4.85e-10 s                  ; 6.73e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 3.53e-08 V                  ; 2.7 V              ; -0.0212 V          ; 0.204 V                             ; 0.049 V                             ; 4.85e-10 s                 ; 6.73e-10 s                 ; No                        ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 22811    ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 22811    ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No non-DPA dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 1     ; 1    ;
+; Unconstrained Input Port Paths  ; 62    ; 62   ;
+; Unconstrained Output Ports      ; 7     ; 7    ;
+; Unconstrained Output Port Paths ; 217   ; 217  ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+    Info: Processing started: Wed Sep 26 14:42:59 2018
+Info: Command: quartus_sta contadorHexa -c contadorHexa
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Core supply voltage is 1.2V
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'contadorHexa.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name clk clk
+Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow 1200mV 85C Model
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -4.435
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -4.435            -202.443 clk 
+Info (332146): Worst-case hold slack is 0.548
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.548               0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000             -65.000 clk 
+Info: Analyzing Slow 1200mV 0C Model
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -3.873
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.873            -174.389 clk 
+Info (332146): Worst-case hold slack is 0.493
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.493               0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000             -65.000 clk 
+Info: Analyzing Fast 1200mV 0C Model
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -2.102
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -2.102             -89.393 clk 
+Info (332146): Worst-case hold slack is 0.293
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.293               0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000             -69.632 clk 
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 474 megabytes
+    Info: Processing ended: Wed Sep 26 14:43:04 2018
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:03
+
+

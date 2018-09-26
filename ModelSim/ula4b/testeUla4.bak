@@ -1,0 +1,20 @@
+vcom ula1b.vhd
+vcom ula4b.vhd
+vsim ula4b
+
+add wave a
+add wave b
+add wave i
+add wave s
+add wave sel
+add wave cin
+add wave cout
+
+force a "1001" 0, "1010" 100 -r 200 -cancel 1000
+force a "0010" 0, "0100" 50 -r 100 -cancel 1000
+force sel "000" 0, "001" 100, "010" 200, "011" 300, "100" 400, "101" 500 -cancel 1000
+force cin 0 0, 1 25, 0 50 -cancel 1000
+
+run -all
+
+

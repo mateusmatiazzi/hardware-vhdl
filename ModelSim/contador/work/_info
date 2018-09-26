@@ -1,0 +1,36 @@
+m255
+K3
+13
+cModel Technology
+dZ:\LH\ModelSim\ula4b
+Econtador
+Z0 w1537814107
+Z1 dZ:\LH\ModelSim\contador
+Z2 8contador.vhd
+Z3 Fcontador.vhd
+l0
+L2
+VM;MilEU<`BMVn>ba^zciL0
+!s100 zR9z=@H3^4_DlSSZ6Q1X`2
+Z4 OV;C;10.1d;51
+32
+!i10b 1
+Z5 !s108 1537814148.177000
+Z6 !s90 -reportprogress|300|contador.vhd|
+Z7 !s107 contador.vhd|
+o-O0
+Z8 tExplicit 1
+Adataflow
+Z9 DEx4 work 8 contador 0 22 M;MilEU<`BMVn>ba^zciL0
+l10
+L9
+V=jS7:??eo^nYLi;We9b[03
+!s100 57XW^ST23KLDEkfHjV4LV3
+R4
+32
+!i10b 1
+R5
+R6
+R7
+o-O0
+R8

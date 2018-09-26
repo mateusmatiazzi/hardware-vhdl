@@ -1,0 +1,68 @@
+m255
+K3
+13
+cModel Technology
+dZ:\LH\ModelSim\ula1b
+Eula1b
+Z0 w1536777119
+Z1 dZ:\LH\ModelSim\ula4b
+Z2 8ula1b.vhd
+Z3 Fula1b.vhd
+l0
+L2
+VIC5ZFz]>a@VnIUa]ZR9=91
+Z4 OV;C;10.1d;51
+32
+Z5 !s108 1536777330.209000
+Z6 !s90 -reportprogress|300|ula1b.vhd|
+Z7 !s107 ula1b.vhd|
+o-O0
+Z8 tExplicit 1
+!s100 KF7Ig1:GA^eA8ViRDUni42
+!i10b 1
+Acomportamental
+Z9 DEx4 work 5 ula1b 0 22 IC5ZFz]>a@VnIUa]ZR9=91
+l12
+L11
+Vh`MVH@4fkcKCiBZ@5KSol2
+R4
+32
+R5
+R6
+R7
+o-O0
+R8
+!s100 M8lDEe@BHXR[G5nhY[DY>3
+!i10b 1
+Eula4b
+Z10 w1536777254
+R1
+Z11 8ula4b.vhd
+Z12 Fula4b.vhd
+l0
+L2
+VR6L_a[Fi<6i51I_061[AY0
+!s100 Uc1c<aBhL[NhbGM4VT[eO2
+R4
+32
+!i10b 1
+Z13 !s108 1536777330.600000
+Z14 !s90 -reportprogress|300|ula4b.vhd|
+Z15 !s107 ula4b.vhd|
+o-O0
+R8
+Aestrutural
+R9
+Z16 DEx4 work 5 ula4b 0 22 R6L_a[Fi<6i51I_061[AY0
+l16
+L12
+Vni<of@NDK9W`d?oMFP?lF0
+!s100 m5>ka<KLV;XOMh:3dJhH^2
+R4
+32
+!i10b 1
+R13
+R14
+R15
+o-O0
+R8

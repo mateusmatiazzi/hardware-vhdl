@@ -1,0 +1,36 @@
+m255
+K3
+13
+cModel Technology
+dZ:\LH\ModelSim\contador
+Econtadorhexa
+Z0 w1537986985
+Z1 dZ:\LH\ModelSim\contadorHexa
+Z2 8contadorHexa.vhd
+Z3 FcontadorHexa.vhd
+l0
+L2
+Vg;To9BXlNcATkmVO]_I=`3
+!s100 I74PQja;AF8]PcakkV;nN1
+Z4 OV;C;10.1d;51
+32
+!i10b 1
+Z5 !s108 1537987011.033000
+Z6 !s90 -reportprogress|300|contadorHexa.vhd|
+Z7 !s107 contadorHexa.vhd|
+o-O0
+Z8 tExplicit 1
+Adataflow
+Z9 DEx4 work 12 contadorhexa 0 22 g;To9BXlNcATkmVO]_I=`3
+l12
+L10
+VlUf]13e:6SWDz1XFG@kmN0
+!s100 65jn4I4]37OAXX:oJLGW^3
+R4
+32
+!i10b 1
+R5
+R6
+R7
+o-O0
+R8

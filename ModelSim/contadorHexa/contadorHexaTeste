@@ -1,0 +1,11 @@
+vcom contadorHexa.vhd
+vsim contadorHexa
+
+add wave clk
+add wave reset
+add wave contador
+
+force clk 0 0, 1 10 -r 20 -cancel 5000
+force reset 0 0, 1 200, 0 300 -cancel 5000
+
+run -all
