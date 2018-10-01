@@ -1,0 +1,29 @@
+entity debounce is
+port(
+	input: in bit;
+	output: out bit;
+	clock: in bit;
+	resetn in bit 
+);
+end entity;
+architecture algoritmico of debounce is
+begin
+	p0: process(clock) is
+	variable count: natural;
+	variable aux: bit;
+	variable saidaAux: bit;
+	begin
+		if clock'event and clock = '1' then
+			if aux == entrada then
+				count := coutn + 1;
+				if count == 3 then 
+					saidaAux := aux;
+					count := 0;
+				end if;
+			else
+				aux := entrada;
+			end if;
+		end if;
+		saida <= saidaAux;
+	end process;
+end architecture;

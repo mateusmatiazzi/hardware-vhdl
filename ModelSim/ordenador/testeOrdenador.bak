@@ -1,0 +1,10 @@
+vcom ordenador.vhd
+vsim ordenador
+
+add wave entrada
+add wave saida
+add wave aux
+
+force entrada "00110001" 0, "00001111" 100, "00010000" 200, "00000000" 300, "11101011" 400 -cancel 500
+
+run -all

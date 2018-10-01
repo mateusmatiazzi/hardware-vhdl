@@ -1,0 +1,41 @@
+|debounce
+input => p0.IN1
+input => saidaAux.DATAB
+input => \p0:aux.DATAIN
+output <= \p0:saidaAux.DB_MAX_OUTPUT_PORT_TYPE
+clock => \p0:aux.CLK
+clock => \p0:saidaAux.CLK
+clock => \p0:count[0].CLK
+clock => \p0:count[1].CLK
+clock => \p0:count[2].CLK
+clock => \p0:count[3].CLK
+clock => \p0:count[4].CLK
+clock => \p0:count[5].CLK
+clock => \p0:count[6].CLK
+clock => \p0:count[7].CLK
+clock => \p0:count[8].CLK
+clock => \p0:count[9].CLK
+clock => \p0:count[10].CLK
+clock => \p0:count[11].CLK
+clock => \p0:count[12].CLK
+clock => \p0:count[13].CLK
+clock => \p0:count[14].CLK
+clock => \p0:count[15].CLK
+clock => \p0:count[16].CLK
+clock => \p0:count[17].CLK
+clock => \p0:count[18].CLK
+clock => \p0:count[19].CLK
+clock => \p0:count[20].CLK
+clock => \p0:count[21].CLK
+clock => \p0:count[22].CLK
+clock => \p0:count[23].CLK
+clock => \p0:count[24].CLK
+clock => \p0:count[25].CLK
+clock => \p0:count[26].CLK
+clock => \p0:count[27].CLK
+clock => \p0:count[28].CLK
+clock => \p0:count[29].CLK
+clock => \p0:count[30].CLK
+resetn => ~NO_FANOUT~
+
+

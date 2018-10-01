@@ -1,0 +1,13 @@
+vcom debounce.vhd
+vsim debounce
+
+add wave clock
+add wave input
+add wave output
+add wave resetn
+
+force clock 0 0, 1 24 -r 50 -cancel 1000
+force input 0 0, 1 25, 0 150, 1 200, 0 500 -cancel 1000
+force resetn 1 0, 0 600 -cancel 1000
+
+run -all 

@@ -1,0 +1,36 @@
+m255
+K3
+13
+cModel Technology
+dC:\Users\Mateus\Documents\LH\Model\debounce
+Epwm
+Z0 w1538332338
+Z1 dC:\Users\Mateus\Documents\LH\Model\pwm
+Z2 8pwm.vhd
+Z3 Fpwm.vhd
+l0
+L1
+VAoZ>A[jaL973d6CG5SDYE0
+!s100 OHCcUXhOc`UJi48e_ie<m3
+Z4 OV;C;10.1d;51
+32
+!i10b 1
+Z5 !s108 1538332526.597000
+Z6 !s90 -reportprogress|300|pwm.vhd|
+Z7 !s107 pwm.vhd|
+o-O0
+Z8 tExplicit 1
+Aalgoritmico
+DEx4 work 3 pwm 0 22 AoZ>A[jaL973d6CG5SDYE0
+l9
+L8
+V0Cc0P^Ia<f4BEfY_HiC]=0
+!s100 Xjn_g@C`nKF?2P`mJezUV2
+R4
+32
+!i10b 1
+R5
+R6
+R7
+o-O0
+R8

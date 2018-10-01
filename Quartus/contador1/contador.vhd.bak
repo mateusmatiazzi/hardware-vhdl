@@ -1,0 +1,18 @@
+--Autor: Mateus Paiva Matiazzi
+entity contador is
+port
+(
+	clk: in bit;
+	saida: out natural range 0 to 15
+);
+end contador;
+architecture dataflow of contador is
+begin
+	sel: process(clk) is
+	variable aux: natural range 0 to 15;
+	begin
+		saida <=  aux;
+		if clk'event and clk = '1':
+			aux:= aux+1;
+	end process sel;
+end dataflow;

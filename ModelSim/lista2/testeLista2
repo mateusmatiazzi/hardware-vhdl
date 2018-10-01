@@ -1,0 +1,10 @@
+vcom lista2.vhd
+vsim lista2
+
+add wave entrada
+add wave saida
+add wave valido
+
+force entrada "00000000" 0, "00000001" 50, "00000010" 100, "00000100" 150, "00001000" 200, "00100000" 250, "01000000" 300, "10000000" 350 -cancel 1000
+
+run -all

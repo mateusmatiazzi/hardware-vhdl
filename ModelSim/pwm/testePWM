@@ -1,0 +1,11 @@
+vcom pwm.vhd
+vsim pwm
+
+add wave clk
+add wave controle
+add wave y
+
+force clk 0 0, 1 25 -r 50 -cancel 1000
+force controle "101" 0, "001" 350, "011" 700 -cancel 1000
+
+run -all

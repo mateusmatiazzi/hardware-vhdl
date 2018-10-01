@@ -1,0 +1,15 @@
+entity ordenador is
+port(
+	entrada: in bit_vector(7 downto 0);
+	saida: out bit_vector(7 downto 0);
+);
+end entity;
+architecture algoritmico of ordenador is
+begin
+	p0: process(entrada) is
+	variable count: natural;
+	begin
+		if entrada(count) = '1' then 
+			saida(7-count) 
+	end process;
+end architecture;

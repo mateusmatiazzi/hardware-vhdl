@@ -1,27 +1,26 @@
---Autor: Mateus Paiva Matiazzi
-entity contador is
-port
-(
-	clk: in bit;
-	saida: out natural range 0 to 15
+entity contador is 
+port(
+	clk : in bit;
+	ctrl : out bit
 );
 end contador;
-architecture dataflow of contador is
+
+architecture alg of contador is
 begin
-	sel: process(clk) is
-	variable aux: natural range 0 to 16;
-	variable auxSaida: natural range 0 to 16;
+	counter : process(clk) is
+		variable aux : natural range 0 to 16;
 	begin
-		saida<= auxSaida;
+	-- posso somar com bit pq sim std logic
 		if clk'event and clk = '1' then
-			aux:= aux+1;
-			if aux = 10 then
-				aux:=0;
-				auxSaida:=auxSaida+1;
-				if auxSaida = 16 then
-					auxSaida := 0;
-				end if;
+			if aux = 7 or aux = 11 then
+				ctrl <= '1';
+			else 
+				ctrl <= '0';
 			end if;
 		end if;
-	end process sel;
-end dataflow;
+		aux :=  aux + 1;
+		if aux > 15 then
+			aux := 0;
+		end if;
+	end process;
+end architecture;

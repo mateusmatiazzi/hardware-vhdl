@@ -1,0 +1,9 @@
+vcom codificador.vhd
+vsim codificador
+
+add wave entrada
+add wave saida
+
+force entrada "1000000" 0, "1000010" 50, "0100000" 100, "0010000" 150, "0001000" 200, "0000100" 250, "0000010" 300, "0000001" 350, "0000000" 400 -cancel 500
+
+run -all      

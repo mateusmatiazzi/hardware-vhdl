@@ -1,0 +1,38 @@
+|ordenador
+entrada[0] => Add0.IN2
+entrada[0] => conta_um.DATAA
+entrada[1] => conta_um.OUTPUTSELECT
+entrada[1] => conta_um.OUTPUTSELECT
+entrada[2] => conta_um.OUTPUTSELECT
+entrada[2] => conta_um.OUTPUTSELECT
+entrada[2] => conta_um.OUTPUTSELECT
+entrada[3] => conta_um.OUTPUTSELECT
+entrada[3] => conta_um.OUTPUTSELECT
+entrada[3] => conta_um.OUTPUTSELECT
+entrada[3] => conta_um.OUTPUTSELECT
+entrada[4] => conta_um.OUTPUTSELECT
+entrada[4] => conta_um.OUTPUTSELECT
+entrada[4] => conta_um.OUTPUTSELECT
+entrada[4] => conta_um.OUTPUTSELECT
+entrada[5] => conta_um.OUTPUTSELECT
+entrada[5] => conta_um.OUTPUTSELECT
+entrada[5] => conta_um.OUTPUTSELECT
+entrada[5] => conta_um.OUTPUTSELECT
+entrada[6] => conta_um.OUTPUTSELECT
+entrada[6] => conta_um.OUTPUTSELECT
+entrada[6] => conta_um.OUTPUTSELECT
+entrada[6] => conta_um.OUTPUTSELECT
+entrada[7] => \p0:conta_um[3].OUTPUTSELECT
+entrada[7] => \p0:conta_um[2].OUTPUTSELECT
+entrada[7] => \p0:conta_um[1].OUTPUTSELECT
+entrada[7] => \p0:conta_um[0].OUTPUTSELECT
+saida[0] <= saida.DB_MAX_OUTPUT_PORT_TYPE
+saida[1] <= saida.DB_MAX_OUTPUT_PORT_TYPE
+saida[2] <= saida.DB_MAX_OUTPUT_PORT_TYPE
+saida[3] <= saida.DB_MAX_OUTPUT_PORT_TYPE
+saida[4] <= saida.DB_MAX_OUTPUT_PORT_TYPE
+saida[5] <= saida.DB_MAX_OUTPUT_PORT_TYPE
+saida[6] <= saida.DB_MAX_OUTPUT_PORT_TYPE
+saida[7] <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+
+

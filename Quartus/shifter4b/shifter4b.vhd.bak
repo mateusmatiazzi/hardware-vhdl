@@ -1,0 +1,11 @@
+entity shifter4b is
+port(
+	entrada: in bit_vector(3 downto 0);
+	sel: in natural range 0 to 4;
+	saida:out bit_vector(7 downto 0)
+);
+end entity;
+architecture dataflow of shifter4b is
+begin
+	saida <= (entrada << 0) when sel="000";
+end dataflow;

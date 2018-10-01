@@ -1,0 +1,23 @@
+|codificador
+entrada[0] => saida.DATAA
+entrada[1] => saida.OUTPUTSELECT
+entrada[1] => saida.DATAA
+entrada[2] => saida.OUTPUTSELECT
+entrada[2] => saida.OUTPUTSELECT
+entrada[3] => saida.OUTPUTSELECT
+entrada[3] => saida.OUTPUTSELECT
+entrada[3] => saida.DATAA
+entrada[4] => saida.OUTPUTSELECT
+entrada[4] => saida.OUTPUTSELECT
+entrada[4] => saida.OUTPUTSELECT
+entrada[5] => saida.OUTPUTSELECT
+entrada[5] => saida.OUTPUTSELECT
+entrada[5] => saida.OUTPUTSELECT
+entrada[6] => saida.OUTPUTSELECT
+entrada[6] => saida.OUTPUTSELECT
+entrada[6] => saida.OUTPUTSELECT
+saida[0] <= saida.DB_MAX_OUTPUT_PORT_TYPE
+saida[1] <= saida.DB_MAX_OUTPUT_PORT_TYPE
+saida[2] <= saida.DB_MAX_OUTPUT_PORT_TYPE
+
+

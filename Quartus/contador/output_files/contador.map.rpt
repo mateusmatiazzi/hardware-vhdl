@@ -1,5 +1,5 @@
 Analysis & Synthesis report for contador
-Mon Sep 24 14:35:32 2018
+Sun Sep 30 18:04:01 2018
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -13,7 +13,7 @@ Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. Registers Removed During Synthesis
+  8. Logic Cells Representing Combinational Loops
   9. General Register Statistics
  10. Elapsed Time Per Partition
  11. Analysis & Synthesis Messages
@@ -42,16 +42,16 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Sep 24 14:35:32 2018      ;
+; Analysis & Synthesis Status        ; Successful - Sun Sep 30 18:04:00 2018      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; contador                                   ;
 ; Top-level Entity Name              ; contador                                   ;
 ; Family                             ; Cyclone III                                ;
-; Total logic elements               ; 13                                         ;
-;     Total combinational functions  ; 13                                         ;
-;     Dedicated logic registers      ; 9                                          ;
-; Total registers                    ; 9                                          ;
-; Total pins                         ; 5                                          ;
+; Total logic elements               ; 7                                          ;
+;     Total combinational functions  ; 7                                          ;
+;     Dedicated logic registers      ; 1                                          ;
+; Total registers                    ; 1                                          ;
+; Total pins                         ; 2                                          ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 0                                          ;
 ; Embedded Multiplier 9-bit elements ; 0                                          ;
@@ -146,54 +146,60 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+--------------------+--------------------+
 
 
-Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
-+-------------------------------------+
-; Parallel Compilation                ;
-+----------------------------+--------+
-; Processors                 ; Number ;
-+----------------------------+--------+
-; Number detected on machine ; 2      ;
-; Maximum allowed            ; 1      ;
-+----------------------------+--------+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.0%      ;
++----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                               ;
-+----------------------------------+-----------------+-----------------+-------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path        ; Library ;
-+----------------------------------+-----------------+-----------------+-------------------------------------+---------+
-; contador.vhd                     ; yes             ; User VHDL File  ; Z:/LH/Quartus/contador/contador.vhd ;         ;
-+----------------------------------+-----------------+-----------------+-------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                      ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                               ; Library ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------------+---------+
+; contador.vhd                     ; yes             ; User VHDL File  ; C:/Users/Mateus/Documents/LH/Quartus/contador/contador.vhd ;         ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------------+---------+
 
 
-+---------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary             ;
-+---------------------------------------------+-----------+
-; Resource                                    ; Usage     ;
-+---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 13        ;
-;                                             ;           ;
-; Total combinational functions               ; 13        ;
-; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 6         ;
-;     -- 3 input functions                    ; 5         ;
-;     -- <=2 input functions                  ; 2         ;
-;                                             ;           ;
-; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 13        ;
-;     -- arithmetic mode                      ; 0         ;
-;                                             ;           ;
-; Total registers                             ; 9         ;
-;     -- Dedicated logic registers            ; 9         ;
-;     -- I/O registers                        ; 0         ;
-;                                             ;           ;
-; I/O pins                                    ; 5         ;
-; Embedded Multiplier 9-bit elements          ; 0         ;
-; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 9         ;
-; Total fan-out                               ; 69        ;
-; Average fan-out                             ; 2.16      ;
-+---------------------------------------------+-----------+
++------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary          ;
++---------------------------------------------+--------+
+; Resource                                    ; Usage  ;
++---------------------------------------------+--------+
+; Estimated Total logic elements              ; 7      ;
+;                                             ;        ;
+; Total combinational functions               ; 7      ;
+; Logic element usage by number of LUT inputs ;        ;
+;     -- 4 input functions                    ; 3      ;
+;     -- 3 input functions                    ; 3      ;
+;     -- <=2 input functions                  ; 1      ;
+;                                             ;        ;
+; Logic elements by mode                      ;        ;
+;     -- normal mode                          ; 7      ;
+;     -- arithmetic mode                      ; 0      ;
+;                                             ;        ;
+; Total registers                             ; 1      ;
+;     -- Dedicated logic registers            ; 1      ;
+;     -- I/O registers                        ; 0      ;
+;                                             ;        ;
+; I/O pins                                    ; 2      ;
+; Embedded Multiplier 9-bit elements          ; 0      ;
+; Maximum fan-out node                        ; Add0~1 ;
+; Maximum fan-out                             ; 6      ;
+; Total fan-out                               ; 28     ;
+; Average fan-out                             ; 2.33   ;
++---------------------------------------------+--------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -201,19 +207,24 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
 ; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; |contador                  ; 13 (13)           ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 5    ; 0            ; |contador           ; work         ;
+; |contador                  ; 7 (7)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 2    ; 0            ; |contador           ; work         ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
 +------------------------------------------------------------+
-; Registers Removed During Synthesis                         ;
-+---------------------------------------+--------------------+
-; Register name                         ; Reason for Removal ;
-+---------------------------------------+--------------------+
-; \sel:auxSaida[4]                      ; Lost fanout        ;
-; Total Number of Removed Registers = 1 ;                    ;
-+---------------------------------------+--------------------+
+; Logic Cells Representing Combinational Loops               ;
++--------------------------------------------------------+---+
+; Logic Cell Name                                        ;   ;
++--------------------------------------------------------+---+
+; LessThan0~0                                            ;   ;
+; LessThan0~1                                            ;   ;
+; LessThan0~2                                            ;   ;
+; LessThan0~3                                            ;   ;
+; LessThan0~4                                            ;   ;
+; Number of logic cells representing combinational loops ; 5 ;
++--------------------------------------------------------+---+
+Note: All cells listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
 +------------------------------------------------------+
@@ -221,7 +232,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 9     ;
+; Total registers                              ; 1     ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -236,7 +247,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -246,25 +257,24 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Mon Sep 24 14:35:28 2018
+    Info: Processing started: Sun Sep 30 18:03:56 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off contador -c contador
-Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (11104): Parallel Compilation has detected 4 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 2 of the 2 physical processors detected instead.
 Info (12021): Found 2 design units, including 1 entities, in source file contador.vhd
-    Info (12022): Found design unit 1: contador-dataflow
+    Info (12022): Found design unit 1: contador-alg
     Info (12023): Found entity 1: contador
 Info (12127): Elaborating entity "contador" for the top level hierarchy
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 1 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 19 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 9 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 1 input pins
-    Info (21059): Implemented 4 output pins
-    Info (21061): Implemented 14 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 507 megabytes
-    Info: Processing ended: Mon Sep 24 14:35:32 2018
-    Info: Elapsed time: 00:00:04
+    Info (21059): Implemented 1 output pins
+    Info (21061): Implemented 7 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 526 megabytes
+    Info: Processing ended: Sun Sep 30 18:04:01 2018
+    Info: Elapsed time: 00:00:05
     Info: Total CPU time (on all processors): 00:00:03
 
 

@@ -1,0 +1,5 @@
+entity pwm is
+port(
+	
+);
+end entity;

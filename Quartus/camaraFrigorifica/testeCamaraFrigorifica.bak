@@ -1,0 +1,16 @@
+vcom camaraFrigorifica.vhd
+vsim camaraFrigorifica
+
+add wave clk
+add wave s1
+add wave s2
+add wave s3
+add wave s4
+add wave saida
+
+force clk 0 0, 1 25 -r 50 -cancel 1000
+force s1 "10010" 0 -cancel 1000
+force s2 "10011" 25 -cancel 1000
+force s3 "10011" 50 -cancel 1000
+force s4 "10011" 75 -cancel 1000
+run -all

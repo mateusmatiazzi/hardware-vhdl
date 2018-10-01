@@ -1,0 +1,13 @@
+vcom felipeflop.vhd
+vsim felipeflop
+
+add wave a
+add wave b
+add wave reset
+add wave clk
+
+force clk 0 0, 1 25 -r 50 -cancel 1000
+force a "0000" 0, "1011" 100, "0101" 200, "0001" 300 -cancel 1000
+force b "0000" 0, "0001" 100, "0111" 200, "0101" 300 -cancel 1000
+
+run -all
