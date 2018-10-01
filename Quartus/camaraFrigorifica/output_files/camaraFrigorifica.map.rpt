@@ -1,5 +1,5 @@
 Analysis & Synthesis report for camaraFrigorifica
-Sun Sep 30 18:54:25 2018
+Mon Oct 01 14:33:01 2018
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -16,8 +16,9 @@ Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
   8. Registers Removed During Synthesis
   9. Removed Registers Triggering Further Register Optimizations
  10. General Register Statistics
- 11. Elapsed Time Per Partition
- 12. Analysis & Synthesis Messages
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Elapsed Time Per Partition
+ 13. Analysis & Synthesis Messages
 
 
 
@@ -43,15 +44,15 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Sep 30 18:54:25 2018      ;
+; Analysis & Synthesis Status        ; Successful - Mon Oct 01 14:33:01 2018      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; camaraFrigorifica                          ;
 ; Top-level Entity Name              ; camaraFrigorifica                          ;
 ; Family                             ; Cyclone III                                ;
-; Total logic elements               ; 0                                          ;
-;     Total combinational functions  ; 0                                          ;
-;     Dedicated logic registers      ; 0                                          ;
-; Total registers                    ; 0                                          ;
+; Total logic elements               ; 92                                         ;
+;     Total combinational functions  ; 92                                         ;
+;     Dedicated logic registers      ; 43                                         ;
+; Total registers                    ; 43                                         ;
 ; Total pins                         ; 26                                         ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 0                                          ;
@@ -147,59 +148,54 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+--------------------+--------------------+
 
 
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 4           ;
-; Maximum allowed            ; 2           ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.0%      ;
-+----------------------------+-------------+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 2      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                        ;
-+----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                 ; Library ;
-+----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------+---------+
-; camaraFrigorifica.vhd            ; yes             ; User VHDL File  ; C:/Users/Mateus/Documents/LH/Quartus/camaraFrigorifica/camaraFrigorifica.vhd ;         ;
-+----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                         ; Library ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------+---------+
+; camaraFrigorifica.vhd            ; yes             ; User VHDL File  ; Z:/Git/hardware-vhdl/Quartus/camaraFrigorifica/camaraFrigorifica.vhd ;         ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary         ;
-+---------------------------------------------+-------+
-; Resource                                    ; Usage ;
-+---------------------------------------------+-------+
-;                                             ;       ;
-; Total combinational functions               ; 0     ;
-; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 0     ;
-;     -- 3 input functions                    ; 0     ;
-;     -- <=2 input functions                  ; 0     ;
-;                                             ;       ;
-; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 0     ;
-;     -- arithmetic mode                      ; 0     ;
-;                                             ;       ;
-; Total registers                             ; 0     ;
-;     -- Dedicated logic registers            ; 0     ;
-;     -- I/O registers                        ; 0     ;
-;                                             ;       ;
-; I/O pins                                    ; 26    ;
-; Embedded Multiplier 9-bit elements          ; 0     ;
-; Maximum fan-out node                        ; clk   ;
-; Maximum fan-out                             ; 1     ;
-; Total fan-out                               ; 26    ;
-; Average fan-out                             ; 0.50  ;
-+---------------------------------------------+-------+
++----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary              ;
++---------------------------------------------+------------+
+; Resource                                    ; Usage      ;
++---------------------------------------------+------------+
+; Estimated Total logic elements              ; 92         ;
+;                                             ;            ;
+; Total combinational functions               ; 92         ;
+; Logic element usage by number of LUT inputs ;            ;
+;     -- 4 input functions                    ; 16         ;
+;     -- 3 input functions                    ; 31         ;
+;     -- <=2 input functions                  ; 45         ;
+;                                             ;            ;
+; Logic elements by mode                      ;            ;
+;     -- normal mode                          ; 33         ;
+;     -- arithmetic mode                      ; 59         ;
+;                                             ;            ;
+; Total registers                             ; 43         ;
+;     -- Dedicated logic registers            ; 43         ;
+;     -- I/O registers                        ; 0          ;
+;                                             ;            ;
+; I/O pins                                    ; 26         ;
+; Embedded Multiplier 9-bit elements          ; 0          ;
+; Maximum fan-out node                        ; saida[0]~9 ;
+; Maximum fan-out                             ; 43         ;
+; Total fan-out                               ; 404        ;
+; Average fan-out                             ; 2.16       ;
++---------------------------------------------+------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -207,35 +203,30 @@ applicable agreement for further details.
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
 ; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; |camaraFrigorifica         ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 26   ; 0            ; |camaraFrigorifica  ; work         ;
+; |camaraFrigorifica         ; 92 (92)           ; 43 (43)      ; 0           ; 0            ; 0       ; 0         ; 26   ; 0            ; |camaraFrigorifica  ; work         ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+--------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                   ;
-+----------------------------------------+---------------------------------------------+
-; Register name                          ; Reason for Removal                          ;
-+----------------------------------------+---------------------------------------------+
-; count[0..30]                           ; Stuck at GND due to stuck port data_in      ;
-; saida[4]~reg0                          ; Stuck at GND due to stuck port clock_enable ;
-; saida[3]~reg0                          ; Stuck at GND due to stuck port clock_enable ;
-; saida[2]~reg0                          ; Stuck at GND due to stuck port clock_enable ;
-; saida[1]~reg0                          ; Stuck at GND due to stuck port clock_enable ;
-; saida[0]~reg0                          ; Stuck at GND due to stuck port clock_enable ;
-; aux[0..8]                              ; Lost fanout                                 ;
-; Total Number of Removed Registers = 45 ;                                             ;
-+----------------------------------------+---------------------------------------------+
++-------------------------------------------------------------+
+; Registers Removed During Synthesis                          ;
++----------------------------------------+--------------------+
+; Register name                          ; Reason for Removal ;
++----------------------------------------+--------------------+
+; aux[7..30]                             ; Lost fanout        ;
+; Total Number of Removed Registers = 24 ;                    ;
++----------------------------------------+--------------------+
 
 
-+-----------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                             ;
-+---------------+--------------------------------+----------------------------------------+
-; Register name ; Reason for Removal             ; Registers Removed due to This Register ;
-+---------------+--------------------------------+----------------------------------------+
-; saida[4]~reg0 ; Stuck at GND                   ; aux[0], aux[1], aux[2], aux[3]         ;
-;               ; due to stuck port clock_enable ;                                        ;
-+---------------+--------------------------------+----------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                             ;
++---------------+--------------------+----------------------------------------------------------------------------------------------------+
+; Register name ; Reason for Removal ; Registers Removed due to This Register                                                             ;
++---------------+--------------------+----------------------------------------------------------------------------------------------------+
+; aux[30]       ; Lost Fanouts       ; aux[29], aux[28], aux[27], aux[26], aux[25], aux[24], aux[23], aux[22], aux[21], aux[20], aux[19], ;
+;               ;                    ; aux[18], aux[17], aux[16], aux[15], aux[14], aux[13], aux[12], aux[11], aux[10], aux[9], aux[8],   ;
+;               ;                    ; aux[7]                                                                                             ;
++---------------+--------------------+----------------------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -243,14 +234,24 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 0     ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
+; Total registers                              ; 43    ;
+; Number of registers using Synchronous Clear  ; 31    ;
+; Number of registers using Synchronous Load   ; 5     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 5     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------+
+; 4:1                ; 31 bits   ; 62 LEs        ; 31 LEs               ; 31 LEs                 ; Yes        ; |camaraFrigorifica|count[6] ;
+; 4:1                ; 31 bits   ; 62 LEs        ; 62 LEs               ; 0 LEs                  ; Yes        ; |camaraFrigorifica|aux[0]   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------+
 
 
 +-------------------------------+
@@ -258,7 +259,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -268,51 +269,25 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Sun Sep 30 18:54:22 2018
+    Info: Processing started: Mon Oct 01 14:32:57 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off camaraFrigorifica -c camaraFrigorifica
-Info (11104): Parallel Compilation has detected 4 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 2 of the 2 physical processors detected instead.
+Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file camarafrigorifica.vhd
     Info (12022): Found design unit 1: camaraFrigorifica-alg
     Info (12023): Found entity 1: camaraFrigorifica
 Info (12127): Elaborating entity "camaraFrigorifica" for the top level hierarchy
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "saida[0]" is stuck at GND
-    Warning (13410): Pin "saida[1]" is stuck at GND
-    Warning (13410): Pin "saida[2]" is stuck at GND
-    Warning (13410): Pin "saida[3]" is stuck at GND
-    Warning (13410): Pin "saida[4]" is stuck at GND
-Info (17049): 9 registers lost all their fanouts during netlist optimizations.
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 24 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 21 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "clk"
-    Warning (15610): No output dependent on input pin "s1[0]"
-    Warning (15610): No output dependent on input pin "s1[1]"
-    Warning (15610): No output dependent on input pin "s1[2]"
-    Warning (15610): No output dependent on input pin "s1[3]"
-    Warning (15610): No output dependent on input pin "s1[4]"
-    Warning (15610): No output dependent on input pin "s2[0]"
-    Warning (15610): No output dependent on input pin "s2[1]"
-    Warning (15610): No output dependent on input pin "s2[2]"
-    Warning (15610): No output dependent on input pin "s2[3]"
-    Warning (15610): No output dependent on input pin "s2[4]"
-    Warning (15610): No output dependent on input pin "s3[0]"
-    Warning (15610): No output dependent on input pin "s3[1]"
-    Warning (15610): No output dependent on input pin "s3[2]"
-    Warning (15610): No output dependent on input pin "s3[3]"
-    Warning (15610): No output dependent on input pin "s3[4]"
-    Warning (15610): No output dependent on input pin "s4[0]"
-    Warning (15610): No output dependent on input pin "s4[1]"
-    Warning (15610): No output dependent on input pin "s4[2]"
-    Warning (15610): No output dependent on input pin "s4[3]"
-    Warning (15610): No output dependent on input pin "s4[4]"
-Info (21057): Implemented 26 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 118 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 21 input pins
     Info (21059): Implemented 5 output pins
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 28 warnings
-    Info: Peak virtual memory: 534 megabytes
-    Info: Processing ended: Sun Sep 30 18:54:25 2018
-    Info: Elapsed time: 00:00:03
+    Info (21061): Implemented 92 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 511 megabytes
+    Info: Processing ended: Mon Oct 01 14:33:01 2018
+    Info: Elapsed time: 00:00:04
     Info: Total CPU time (on all processors): 00:00:03
 
 
