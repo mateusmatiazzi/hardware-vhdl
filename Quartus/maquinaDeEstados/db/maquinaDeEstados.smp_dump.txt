@@ -1,0 +1,7 @@
+
+State Machine - |maquinaDeEstados|e_atual
+Name e_atual.e3 e_atual.e2 e_atual.e1 e_atual.e0 
+e_atual.e0 0 0 0 0 
+e_atual.e1 0 0 1 1 
+e_atual.e2 0 1 0 1 
+e_atual.e3 1 0 0 1 

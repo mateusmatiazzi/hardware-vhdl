@@ -1,0 +1,14 @@
+vcom maquinaDeEstados.vhd
+vsim maquinaDeEstados
+
+add wave a
+add wave clk
+add wave s
+add wave e_atual
+add wave reset
+
+force clk 0 0, 1 25 -r 50 -cancel 1000
+force a 0 0, 1 50, 0 150, 1 300, 0 350, 1 500 -cancel 1000
+force reset 0 0, 1 500, 0 550 -cancel 1000
+
+run -all

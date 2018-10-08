@@ -1,0 +1,14 @@
+|maquinaDeEstados
+a => Selector0.IN3
+a => p_estado.e1.DATAB
+a => Selector2.IN3
+a => Selector3.IN3
+a => Selector0.IN1
+a => Selector2.IN1
+a => Selector1.IN1
+a => Selector3.IN1
+clk => e_atual~1.DATAIN
+reset => e_atual~3.DATAIN
+s <= Selector0.DB_MAX_OUTPUT_PORT_TYPE
+
+
