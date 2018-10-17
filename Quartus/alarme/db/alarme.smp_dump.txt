@@ -1,0 +1,12 @@
+
+State Machine - |alarme|e_atual
+Name e_atual.T e_atual.T3 e_atual.T2 e_atual.T1 e_atual.A e_atual.A3 e_atual.A2 e_atual.A1 e_atual.I 
+e_atual.I 0 0 0 0 0 0 0 0 0 
+e_atual.A1 0 0 0 0 0 0 0 1 1 
+e_atual.A2 0 0 0 0 0 0 1 0 1 
+e_atual.A3 0 0 0 0 0 1 0 0 1 
+e_atual.A 0 0 0 0 1 0 0 0 1 
+e_atual.T1 0 0 0 1 0 0 0 0 1 
+e_atual.T2 0 0 1 0 0 0 0 0 1 
+e_atual.T3 0 1 0 0 0 0 0 0 1 
+e_atual.T 1 0 0 0 0 0 0 0 1 
