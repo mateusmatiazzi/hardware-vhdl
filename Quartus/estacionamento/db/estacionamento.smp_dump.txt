@@ -1,0 +1,10 @@
+
+State Machine - |estacionamento|e_atual
+Name e_atual.S3 e_atual.S2 e_atual.S1 e_atual.E3 e_atual.E2 e_atual.E1 e_atual.I 
+e_atual.I 0 0 0 0 0 0 0 
+e_atual.E1 0 0 0 0 0 1 1 
+e_atual.E2 0 0 0 0 1 0 1 
+e_atual.E3 0 0 0 1 0 0 1 
+e_atual.S1 0 0 1 0 0 0 1 
+e_atual.S2 0 1 0 0 0 0 1 
+e_atual.S3 1 0 0 0 0 0 1 

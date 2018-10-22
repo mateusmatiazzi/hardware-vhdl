@@ -1,0 +1,9 @@
+entity estacionamento is
+	generic (n: natural := 8);
+port 
+(
+	a, b, clk, reset: in bit;
+	sensores : in bit_vector(0 to n-1);
+	sirene : out bit
+);
+end entity;

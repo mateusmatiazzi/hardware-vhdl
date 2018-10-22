@@ -1,0 +1,16 @@
+vcom estacionamento.vhd
+vsim estacionamento
+
+add wave a
+add wave b
+add wave e_atual
+add wave clk
+add wave reset
+add wave lotado
+add wave ncarros
+
+force clk 0 0, 1 10 -r 20 -cancel 1000
+force a 0 0, 1 25, 0 75 -cancel 1000
+force b 0 0, 1 50, 0 100 -cancel 1000
+
+run -all
