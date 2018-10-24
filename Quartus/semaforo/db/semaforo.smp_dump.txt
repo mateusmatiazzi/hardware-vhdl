@@ -1,0 +1,8 @@
+
+State Machine - |semaforo|e_atual
+Name e_atual.RG e_atual.YR e_atual.GR e_atual.RY e_atual.YY 
+e_atual.YY 0 0 0 0 0 
+e_atual.RY 0 0 0 1 1 
+e_atual.GR 0 0 1 0 1 
+e_atual.YR 0 1 0 0 1 
+e_atual.RG 1 0 0 0 1 

@@ -1,0 +1,29 @@
+entity semaforo is
+	generic (segundo: natural := 50000000,
+	umEMeio: natural := 1.5*segundo,
+	doisEMeio: natural := 2.5*segundo,
+	tres: natural := 3*segundo);
+port 
+(
+	SW, clk : in bit;
+	LEDR : in bit_vector(1 downto 0);
+	LEDG : in bit_vector(1 downto 0)
+);
+end entity;
+architecture alg of semaforo is
+	signal count: natural;
+	type ESTADOS is (RG, RY, GR, YR, YY);
+	signal e_atual, p_estado : ESTADOS;
+begin
+	process(SW, clk)
+	begin
+		if SW = '1' then
+			e_atual <= YY;
+		end if;
+		if clk'event and clk = '1' then
+			e_atual <= p_estado;
+		end if;
+	end process;
+	
+	
+end architecture;

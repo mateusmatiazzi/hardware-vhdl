@@ -1,0 +1,13 @@
+vcom semaforo.vhd
+vsim semaforo
+
+add wave clk
+add wave sw
+add wave e_atual
+add wave count
+add wave LEDR
+add wave LEDG
+
+force sw 0 0, 1 3000ps -cancel 10000ps
+force clk 0 0,1 5ps -repeat 10ps -cancel 10000ps
+run -all
