@@ -1,0 +1,14 @@
+
+State Machine - |posmouse|estadoVAtual
+Name estadoVAtual.E3 estadoVAtual.E2 estadoVAtual.E1 estadoVAtual.I 
+estadoVAtual.I 0 0 0 0 
+estadoVAtual.E1 0 0 1 1 
+estadoVAtual.E2 0 1 0 1 
+estadoVAtual.E3 1 0 0 1 
+
+State Machine - |posmouse|estadoHAtual
+Name estadoHAtual.E3 estadoHAtual.E2 estadoHAtual.E1 estadoHAtual.I 
+estadoHAtual.I 0 0 0 0 
+estadoHAtual.E1 0 0 1 1 
+estadoHAtual.E2 0 1 0 1 
+estadoHAtual.E3 1 0 0 1 

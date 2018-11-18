@@ -1,0 +1,74 @@
+entity posmouse is 
+port(
+	clk, hA, hB, vA, vB, botaoE, botaoD: in bit;
+	x, y : out integer;
+	botoes : out bit_vector(3 downto 0)
+);
+end entity; 
+architecture arch_posmouse of posmouse is
+	signal auxX, auxY: integer := 0;
+	type ESTADOS is (I, E1, E2, E3);
+	signal estadoVAtual, estadoHAtual, proximoVEstado, proximoHEstado : ESTADOS;
+	
+	function botoes_std(x : bit, y : bit)
+		  return bit_vector is
+	begin
+	  if x and y then
+		 return "1010";
+	  elsif x and not y
+		 return "1001";
+	  elsif not x and not y
+		 return "0101";
+	  else
+		 return "0110";
+	  end if;
+	end botoes_std;
+	
+begin
+	process(clk) is 
+	begin
+		if clk'event and clk = '1' then
+			estadoHAtual <= proximoHEstado;
+			estadoVAtual <= proximoVEstado;
+		end if;
+	end process;
+	
+	process(estadoHAtual, estadoVAtual, hA, hB, vA, vB, botaoE, botaoD) is
+	begin
+		botoes <= botoes_std(botaoE, botaoD);
+		case estadoHAtual is
+			when I =>
+				if hA = '1' then
+					proximoHEstado <= E1;
+				else
+					proximoHEstado <= I;
+				end if;
+				
+			when E1 =>
+				if hA = '0' then
+					proximoHEstado <= I;
+				elsif hB = '1' then
+					proximoHEstado <= E2;
+				else
+					proximoHEstado <= E1;
+				end if;
+				
+			when E2 =>
+				if hB = '0' then
+					proximoHEstado <= E1;
+				elsif hA = '0' then
+					proximoHEstado <= E3;
+				else
+					proximoHEstado <= E2;
+					
+			when E3 =>
+				if hA = '1' then
+					proximoHEstado <= E2;
+				elsif hB = '0' then
+					proximoHEstado <= I;
+					auxX <= auxX + 1;
+				else
+					proximoHEstado <= E3;
+				end if;
+	end process;
+end architecture;

@@ -1,0 +1,61 @@
+library ieee;
+use ieee.numeric_bit.all;
+
+entity lampada is
+generic(
+	entradaEsperada : bit_vector(3 downto 0);
+	umSegundo : natural := 1
+);
+port(
+	clk : in bit;
+	reset : in bit;
+	a : in bit_vector(3 downto 0);
+	contador : out bit_vector(6 downto 0)
+);
+end entity;
+architecture arch_lampada of lampada is
+	signal count : natural;
+	type ESTADOS is (W, O);
+	signal estadoAtual, proximoEstado : ESTADOS;
+begin
+	process(clk) is 
+	begin
+		if reset = '1' then
+			count <= 0;
+			estadoAtual <= W;
+		else
+			if clk'event and clk = '1' then
+				estadoAtual <= proximoEstado;
+			end if;
+		end if;
+	end process;
+	
+	process(clk) is
+	begin
+		if(estadoAtual = O and count = umSegundo) then
+			count <= 0;
+		else
+			count <= count + 1;
+		end if;
+	end process;
+	
+	process(estadoAtual, count) is
+	begin
+		case estadoAtual is
+			when W =>
+				if a = entradaEsperada then
+					proximoEstado <= O;
+					contador <= contador + 1;
+				else
+					proximoEstado <= W;
+					contador <= contador;
+				end if;
+			
+			when O =>
+				if count = umSegundo then
+					proximoEstado <= W;
+				else
+					proximoEstado <= O;
+				end if;
+	end process;
+end architecture;

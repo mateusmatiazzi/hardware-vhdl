@@ -1,0 +1,40 @@
+m255
+K3
+13
+cModel Technology
+dC:\Users\Mateus\Documents\Git\perceptron-vhdl
+Edebouncep2
+Z0 w1542563739
+Z1 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z2 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z3 dC:\Users\Mateus\Documents\Git\hardware-vhdl\Quartus\debounceP2
+Z4 8debounceP2.vhd
+Z5 FdebounceP2.vhd
+l0
+L4
+Vi3YmHCBf^SJP@DYVOBO4P3
+!s100 RTB4@7O3c>[]Z2_mT<lQX2
+Z6 OV;C;10.1d;51
+32
+!i10b 1
+Z7 !s108 1542564019.424000
+Z8 !s90 -reportprogress|300|debounceP2.vhd|
+Z9 !s107 debounceP2.vhd|
+o-O0
+Z10 tExplicit 1
+Aarch_debouncep2
+R1
+R2
+Z11 DEx4 work 10 debouncep2 0 22 i3YmHCBf^SJP@DYVOBO4P3
+l19
+L16
+Z12 VYQQnh8>fbQ>M:j]:3nIJH2
+Z13 !s100 1EfA2zMKX<PlAc:QQ6l^E2
+R6
+32
+!i10b 1
+R7
+R8
+R9
+o-O0
+R10

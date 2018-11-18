@@ -1,0 +1,6 @@
+
+State Machine - |semaforocp|estadoAtual
+Name estadoAtual.G estadoAtual.Y estadoAtual.R 
+estadoAtual.R 0 0 0 
+estadoAtual.Y 0 1 1 
+estadoAtual.G 1 0 1 

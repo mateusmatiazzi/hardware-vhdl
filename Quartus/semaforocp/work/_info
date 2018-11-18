@@ -1,0 +1,40 @@
+m255
+K3
+13
+cModel Technology
+dC:\Users\Mateus\Documents\Git\hardware-vhdl\Quartus\debounceP2
+Esemaforocp
+Z0 w1542565893
+Z1 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z2 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z3 dC:\Users\Mateus\Documents\Git\hardware-vhdl\Quartus\semaforocp
+Z4 8semaforocp.vhd
+Z5 Fsemaforocp.vhd
+l0
+L4
+VZgk@De>bKLe`b>gS_;gI33
+!s100 SSPm4]N6neFRjHz5P98gM1
+Z6 OV;C;10.1d;51
+32
+!i10b 1
+Z7 !s108 1542565898.275000
+Z8 !s90 -reportprogress|300|semaforocp.vhd|
+Z9 !s107 semaforocp.vhd|
+o-O0
+Z10 tExplicit 1
+Aarch_semaforocp
+R1
+R2
+Z11 DEx4 work 10 semaforocp 0 22 Zgk@De>bKLe`b>gS_;gI33
+l18
+L14
+VZN:ja`ZdS:hFIPPH>AHch3
+!s100 >iL]L76T56Xem?>=GgekR2
+R6
+32
+!i10b 1
+R7
+R8
+R9
+o-O0
+R10

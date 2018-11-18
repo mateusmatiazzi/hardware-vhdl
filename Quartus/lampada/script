@@ -1,0 +1,14 @@
+vcom lampada.vhd
+vsim lampada
+
+add wave clk
+add wave reset
+add wave a
+add wave s
+add wave contador
+
+force clk 0 0, 1 20 -r 40 -cancel 1000
+force a "0000" 0, "0001" 100, "1000" 200, "1010" 300, "1011" 400, "1111" 500, "1011" 600, "0000" 650 -cancel 1000
+force reset 0 0, 1 800 -cancel 1000
+
+run -all 

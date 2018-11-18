@@ -1,0 +1,9 @@
+vcom semaforocp.vhd
+vsim semaforocp
+
+add wave clk
+add wave sinais
+
+force clk 0 0, 1 20 -r 40 -cancel 1000
+
+run -all

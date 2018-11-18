@@ -1,0 +1,21 @@
+vcom posmouse.vhd
+vsim posmouse
+
+add wave clk
+add wave hA
+add wave hB
+add wave vA
+add wave vB
+add wave botaoE
+add wave botaoD
+add wave x
+add wave y
+add wave botoes
+
+force clk 0 0, 1 20 -r 40 -cancel 1000
+force hA 0 0, 1 100, 0 200 -cancel 1000
+force hB 0 0, 1 150, 0 250 -cancel 1000
+force botaoE 0 0, 1 200, 0 500 -cancel 1000
+force botaoD 0 0, 1 400, 0 500 -cancel 1000
+
+run -all

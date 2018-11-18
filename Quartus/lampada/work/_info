@@ -1,0 +1,42 @@
+m255
+K3
+13
+cModel Technology
+dC:\Users\Mateus\Documents\Git\hardware-vhdl\Quartus\semaforocp
+Elampada
+Z0 w1542571429
+Z1 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z4 dC:\Users\Mateus\Documents\Git\hardware-vhdl\Quartus\lampada
+Z5 8lampada.vhd
+Z6 Flampada.vhd
+l0
+L5
+V1Hma]lL;]j_@<;Un;>E^d2
+!s100 M9OX]>`gcUJVf8f_UnJ^Q1
+Z7 OV;C;10.1d;51
+32
+!i10b 1
+Z8 !s108 1542571505.049000
+Z9 !s90 -reportprogress|300|lampada.vhd|
+Z10 !s107 lampada.vhd|
+o-O0
+Z11 tExplicit 1
+Aarch_lampada
+R1
+R2
+R3
+Z12 DEx4 work 7 lampada 0 22 1Hma]lL;]j_@<;Un;>E^d2
+l23
+L18
+Z13 VAYgbP_3dMiLXAVZ3THL=H0
+Z14 !s100 T]_=>TWZ?hziU^jO:lnfk3
+R7
+32
+!i10b 1
+R8
+R9
+R10
+o-O0
+R11
