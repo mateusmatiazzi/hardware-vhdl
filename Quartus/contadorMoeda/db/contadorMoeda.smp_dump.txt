@@ -1,0 +1,8 @@
+
+State Machine - |contadorMoeda|estadoAtual
+Name estadoAtual.S4 estadoAtual.S3 estadoAtual.S2 estadoAtual.S1 estadoAtual.I 
+estadoAtual.I 0 0 0 0 0 
+estadoAtual.S1 0 0 0 1 1 
+estadoAtual.S2 0 0 1 0 1 
+estadoAtual.S3 0 1 0 0 1 
+estadoAtual.S4 1 0 0 0 1 

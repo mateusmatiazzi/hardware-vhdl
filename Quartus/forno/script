@@ -1,0 +1,21 @@
+vcom forno.vhd
+vsim forno
+
+add wave clk
+add wave iniciar
+add wave parar
+add wave limpar
+add wave porta
+add wave tempo
+add wave funcionando
+add wave count
+add wave estadoAtual
+
+force clk 0 0, 1 20 -r 40 -cancel 1000
+force tempo "0000" 0, "1001" 100, "0000" 200 -cancel 1000
+force iniciar 0 0, 1 100, 0 200 -cancel 1000
+force porta 0 0, 1 100, 0 700 -cancel 1000
+force parar 0 0, 1 700 -cancel 1000
+force limpar 0 0, 1 400 -cancel 1000
+
+run -all

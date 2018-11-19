@@ -1,0 +1,13 @@
+vcom contadorMoeda.vhd
+vsim contadorMoeda
+
+add wave clk
+add wave reset
+add wave sensor
+add wave total
+
+force clk 0 0, 1 20 -r 40 -cancel 1000
+force sensor "0000" 0, "0001" 100, "0011" 200, "0001" 300, "0000" 400 -cancel 1000
+force reset 0 0, 1 500, 0 600 -cancel 1000
+
+run -all 

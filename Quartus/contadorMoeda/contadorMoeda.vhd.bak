@@ -1,0 +1,37 @@
+entity contadorMoeda is
+port(
+	clk : in bit;
+	reset : in bit;
+	sensor : in bit_vector(0 to 3);
+	total : out natural
+);
+end entity;
+architecture arch_contadorMoeda is
+	signal dinheiro : natural;
+	type ESTADOS is (I, S1, S2, S3, S4);
+	signal estadoAtual, proximoEstado : ESTADOS;
+begin
+	process(clk) is
+	begin
+		if clk'event and clk = '1' then
+			estadoAtual <= proximoEstado;
+		end if;
+	end process;
+
+	process(estadoAtual, sensor) is
+	variable tmp : natural;
+	begin
+		case estadoAtual is
+			when I =>
+				tmp <= 0;
+				if sensor(0) = '1' then
+					proximoEstado <= S1;
+					tmp <= 5;
+				else
+					proximoEstado <= I;
+				end if;
+			
+			when S1 =>
+	end process;
+	
+end architecture;

@@ -1,0 +1,38 @@
+entity forno is
+port(
+	clk : in std_logic;
+	iniciar, parar, limpar : in std_logic;
+	porta : in std_logic;
+	tempo : in std_logic_vector(3 downto 0);
+	funcionando : out std_logic
+);
+end entity;
+architecture arch_forno of forno is
+	signal count : natural;
+	type ESTADOS is (S, R);
+	signal estadoAtual, proximoEstado : ESTADOS;
+begin
+	process(clk) is
+	begin
+		if clk'event and clk = '1' then
+			estadoAtual <= proximoEstado;
+		end if;
+	end process;
+	
+	process(clk) is
+	variable tmp : natural;
+	begin
+		if clk'event and clk = '1' then
+			tmp := count;
+			if count > 0 and estadoAtual = R then
+				count <= count - 1;
+			elsif count > 0 then
+				count <= tmp;
+			else
+				count <= 0;
+			end if;
+		end if;
+	end process;
+	
+	process(iniciar, parar, limpar, porta)
+end architecture;

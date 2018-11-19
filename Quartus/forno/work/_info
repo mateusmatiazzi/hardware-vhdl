@@ -1,0 +1,42 @@
+m255
+K3
+13
+cModel Technology
+dC:\Users\Mateus\Documents\Git\hardware-vhdl\Quartus\posmouse
+Eforno
+Z0 w1542583561
+Z1 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z3 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z4 dC:\Users\Mateus\Documents\Git\hardware-vhdl\Quartus\forno
+Z5 8forno.vhd
+Z6 Fforno.vhd
+l0
+L5
+VU@55oUf]kW6ZUVbb5IY4<2
+!s100 0AN9:1JS7[DcW@ZIj;AkV0
+Z7 OV;C;10.1d;51
+32
+!i10b 1
+Z8 !s108 1542583604.470000
+Z9 !s90 -reportprogress|300|forno.vhd|
+Z10 !s107 forno.vhd|
+o-O0
+Z11 tExplicit 1
+Aarch_forno
+R1
+R2
+R3
+Z12 DEx4 work 5 forno 0 22 U@55oUf]kW6ZUVbb5IY4<2
+l18
+L14
+Z13 VzzIK_Ud@EYYY^6WAUbZV:1
+Z14 !s100 FW>[>@ZX34Jc7<TPm49LL0
+R7
+32
+!i10b 1
+R8
+R9
+R10
+o-O0
+R11
